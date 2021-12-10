@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+	<link rel="shortcut icon" type="png" href="https://ekalshiksha.in/static/webpages/images/Logo.ico">
+	<meta charset="utf-8">
+	<link
+	rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"
+  >
+	<meta http-equiv="X-UA-Comaptible" content="IE=edge">
+	<title>Ekal Shiksha</title>
+	<meta name="desciption" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="{% static 'webpages/style.css' %}">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.8/swiper-bundle.min.css"/>
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<!--Jquery-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+
+	<script type="text/javascript" src="{% static 'webpages/Js/script.js' %}"></script>
+
+
+
+	<script>
+		$(window).on('scroll', function() {
+			if ($(window).scrollTop()) {
+				$('nav').addClass('black');
+			} else {
+				$('nav').removeClass('black');
+			}
+		})
+
+	</script>
+</head>
+
+<body>
+	<!-- Navigation Bar -->
+	<nav class="navbar px-5" role="navigation" aria-label="main navigation">
+		<div class="navbar-brand">
+		  <a class="navbar-item" href=".{% url 'index' %}">
+			<img src="{% static 'webpages/images/Logo.ico' %}">
+			<strong class="ml-4 is-size-5">Ekal Shiksha</strong>
+		  </a>
+
+		  <a
+			role="button"
+			class="navbar-burger"
+			aria-label="menu"
+			aria-expanded="false"
+			data-target="navbar"
+		  >
+			<span aria-hidden="true"></span>
+			<span aria-hidden="true"></span>
+			<span aria-hidden="true"></span>
+		  </a>
+		</div>
+
+		<div id="navbar" class="navbar-menu">
+		  <div class="navbar-end">
+			<a href="{% url 'About' %}"class="navbar-item">About Us</a>
+			<div class="navbar-item has-dropdown is-hoverable" id="navbarDropdown">
+			  <a class="navbar-link">
+				Courses
+			  </a>
+			  <div class="navbar-dropdown">
+				<a href="{% url 'Course' 6 %}" class="navbar-item">
+				  Class 6th
+				</a>
+				<a  href="{% url 'Course' 7 %}"class="navbar-item">
+				  Class 7th
+				</a>
+				<a href="{% url 'Course' 8 %}" class="navbar-item">
+				  Class 8th
+				</a>
+				<a  href="{% url 'Course' 9 %}"class="navbar-item">
+				  Class 9th
+				</a>
+				<a  href="{% url 'Course' 10 %}"class="navbar-item">
+				  Class 10th
+				</a>
+				<a href="{% url 'Course' 110 %}" class="navbar-item">
+				  Class 11th Science
+				</a>
+				<a href="{% url 'Course' 111 %}" class="navbar-item">
+				  Class 11th Commerce
+				</a><a href="{% url 'Course' 112 %}" class="navbar-item">
+				  Class 11th Humanities
+				</a>
+				<a href="{% url 'Course' 120 %}" class="navbar-item">
+				  Class 12th Science
+				</a>
+				<a href="{% url 'Course' 121 %}" class="navbar-item">
+				  Class 12th Commerce
+				</a><a href="{% url 'Course' 122 %}" class="navbar-item">
+				  Class 12th Humanities
+				</a>
+			  </div>
+			</div>
+			<div class="navbar-item has-dropdown is-hoverable" id="navbarDropdown">
+			  <a class="navbar-link">
+				Study Material
+			  </a>
+			  <div class="navbar-dropdown">
+				<a href="/courses.html" class="navbar-item">
+				  Class 6th
+				</a>
+				<a class="navbar-item">
+				  Class 7th
+				</a>
+				<a class="navbar-item">
+				  Class 8th
+				</a>
+				<a class="navbar-item">
+				  Class 9th
+				</a>
+				<a class="navbar-item">
+				  Class 10th
+				</a>
+				<a class="navbar-item">
+				  Class 11th
+				</a>
+				<a class="navbar-item">
+				  Class 12th
+				</a>
+			  </div>
+			</div>
+			<a href="{% url 'Doubt' %}" class="navbar-item">Doubt Class</a>
+			<a class="navbar-item">Work With Us</a>
+		  </div>
+		</div>
+	  </nav>
+
+
+
+	<div class="service-swipe">
+		<div class="diffSection" id="services_section">
+			<center>
+				<p style="font-size: 50px; padding: 100px; padding-bottom: 40px; color: #fff;">Features of Ekal Shiksha</p>
+			</center>
+		</div>
+		<a href="#services_section">
+			<div class="s-card isc"><img src="{% static '/webpages/images/Add_a_heading__2_-removebg-preview.png' %}">
+				<p>Personalised classes</p>
+			</div>
+		</a>
+		<a href="#services_section">
+			<div class="s-card"><img src="{% static '/webpages/images/brainbooster.png' %}">
+				<p>No fear of judgement</p>
+			</div>
+		</a>
+		<a href="#services_section">
+			<div class="s-card"><img src="{% static '/webpages/images/online-tutorials.png' %}">
+				<p>Better interaction with teachers</p>
+			</div>
+		</a>
+		<a href="#services_section">
+			<div class="s-card isc"><img src="{% static '/webpages/images/Add_a_heading__5_-removebg-preview.png' %}">
+				<p>Time flexiblity</p>
+			</div>
+		</a>
+		<a href="#services_section">
+			<div class="s-card isc"><img src="{% static '/webpages/images/Add_a_heading__10_-removebg-preview.png' %}">
+				<p>Custom build lesson plan</p>
+			</div>
+		</a>
+		<a href="#services_section">
+			<div class="s-card isc"><img src="{% static '/webpages/images/Add_a_heading__9_-removebg-preview.png' %}">
+				<p>Result driven Learning</p>
+			</div>
+		</a>
+	</div>
+
+
+	<!-- ABOUT -->
+	<div class="diffSection" id="about_section">
+		<center>
+			<p style="font-size: 50px; padding: 100px;;">About Us</p>
+		</center>
+		<div class="about-content">
+			<div class="side-image">
+				<img class="sideImage" src="{% static '/webpages/images/Add_a_heading-removebg-preview.png' %}">
+			</div>
+			<div class="side-text">
+				<h2 style="font-size:1.5rem;line-height:1.2;color:#2F5D62;">“An investment in knowledge pays the best interest”</h2>
+				<h5 style="margin-bottom:5%; color:#480032;">- Benjamin Franklin</h5>
+				<p>Ekal Shiksha is an Ed-tech company which provides one on one individual online classes. It is an initiative which aims to revolutionize the standard teaching and learning methods. We believe that each student has his or her personal learning speed, method and curriculum which is very important for a teacher to understand and personalize their teaching methods according to the students not vice versa. This platform is especially built for those who have immense potential but are never focused on in group classes, the growth of such students is our moto.</p>
+
+			</div>
+		</div>
+	</div>
+
+
+	<!-- PORTFOLIO -->
+	<div class="diffSection" id="portfolio_section">
+		<center>
+			<p style="font-size: 50px; padding: 100px; padding-bottom: 40px;">Students love Us</p>
+		</center>
+		<div class="content">
+			<p>
+				“Education is the passport to the future, for tomorrow belongs to those who prepare for it today.” “Your attitude, not your aptitude, will determine your altitude.” “If you think education is expensive, try ignorance.” “The only person who is
+				educated is the one who has learned how to learn …and change.”
+			</p>
+		</div>
+	</div>
+	<div class="extra">
+		<p>We're increasing this data every year</p>
+		<div class="smbox">
+			<span>
+				<center>
+					<div class="data">250+</div>
+					<div class="det">Happy Students</div>
+				</center>
+			</span>
+			<span>
+				<center>
+					<div class="data">100+</div>
+					<div class="det">Topics</div>
+				</center>
+			</span>
+			<span>
+				<center>
+					<div class="data">3000+</div>
+					<div class="det">Teaching Hours</div>
+				</center>
+			</span>
+			<span>
+				<center>
+					<div class="data">4.5</div>
+					<div class="det">User Ratings</div>
+				</center>
+			</span>
+		</div>
+	</div>
+
+	<!-- grade container -->
+	<section>
+    <div class="container">
+        <div class="section-title">
+            <h2><b>Grades 6 - 12</b></h2>
+            <span class="section-separator"></span>
+            <p><b>We provide one on one learning for all classes between 6 to 12.</b></p>
+        </div>
+    </div>
+    <div class="testimonials-carousel-wrap">
+        <div class="listing-carousel-button listing-carousel-button-next"><i class="fa fa-caret-right" style="color: #fff"></i></div>
+        <div class="listing-carousel-button listing-carousel-button-prev"><i class="fa fa-caret-left" style="color: #fff"></i></div>
+        <div class="testimonials-carousel">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="testi-item">
+                            <div class="testi-avatar"><img src="{% static '/webpages/images/Add_a_heading__9_-removebg-preview.png' %}"></div>
+                            <div class="testimonials-text">
+																<h1 style="text-align:center; font-family: 'Open Sans', sans-serif;">Class 6</h1>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--second--->
+                    <div class="swiper-slide">
+                        <div class="testi-item">
+                            <div class="testi-avatar"><img src="{% static '/webpages/images/Add_a_heading__9_-removebg-preview.png' %}"></div>
+                            <div class="testimonials-text">
+															<h1 style="text-align:center; font-family: 'Open Sans', sans-serif;">Class 7</h1>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!--third-->
+
+                    <div class="swiper-slide">
+                        <div class="testi-item">
+                            <div class="testi-avatar"><img src="{% static '/webpages/images/Add_a_heading__9_-removebg-preview.png' %}"></div>
+                            <div class="testimonials-text"><h1 style="text-align:center; font-family: 'Open Sans', sans-serif;">Class 8</h1>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--fourth-->
+                    <div class="swiper-slide">
+                        <div class="testi-item">
+                            <div class="testi-avatar"><img src="{% static '/webpages/images/Add_a_heading__9_-removebg-preview.png' %}"></div>
+                            <div class="testimonials-text">
+															<h1 style="text-align:center; font-family: 'Open Sans', sans-serif;">Class 9</h1>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+
+
+                            </div>
+                        </div>
+                    </div>
+										<div class="swiper-slide">
+                        <div class="testi-item">
+                            <div class="testi-avatar"><img src="{% static '/webpages/images/Add_a_heading__9_-removebg-preview.png' %}"></div>
+                            <div class="testimonials-text">
+															<h1 style="text-align:center; font-family: 'Open Sans', sans-serif;">Class 10</h1>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+
+
+                            </div>
+                        </div>
+                    </div>
+										<div class="swiper-slide">
+                        <div class="testi-item">
+                            <div class="testi-avatar"><img src="{% static '/webpages/images/Add_a_heading__9_-removebg-preview.png' %}"></div>
+                            <div class="testimonials-text">
+															<h1 style="text-align:center; font-family: 'Open Sans', sans-serif;">Class 11</h1>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+
+
+                            </div>
+                        </div>
+                    </div>
+										<div class="swiper-slide">
+                        <div class="testi-item">
+                            <div class="testi-avatar"><img src="{% static '/webpages/images/Add_a_heading__9_-removebg-preview.png' %}"></div>
+                            <div class="testimonials-text">
+															<h1 style="text-align:center; font-family: 'Open Sans', sans-serif;">Class 12</h1>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="tc-pagination"></div>
+    </div>
+</section>
+</div>
+
+
+	<div class="diffSection lll" id="team_section">
+		<center>
+			<p style="font-size: 50px; padding-top: 100px; padding: 60px;">Get help with free Study Material</p>
+		</center>
+		<div class="totalcard ">
+			<div class="card">
+				<center><img src="https://learnbowl.com/assets/img/hero/book.png"></center>
+				<div class="card-title">CBSE Books</div>
+				<div id="detail">
+					<h5 style="text-align:left; margin-left:10%;margin-bottom:5%;">IT INCLUDES</h5>
+
+					<p>Free CBSE,<br /> handwritten and typed notes<br /> Downloads</p>
+					<br>
+
+					<div class="duty"></div>
+					<a href="https://on-app.in/app/home?orgCode=uhmmr" target="_blank"><button class="btn-b">Acess Now</button></button></a>
+				</div>
+				</center>
+			</div>
+			<div class="card">
+				<center><img src="https://learnbowl.com/assets/img/hero/book.png"></center>
+				<div class="card-title">Mock Test</div>
+				<div id="detail">
+					<h5 style="text-align:left; margin-left:10%; margin-bottom:5%;">IT INCLUDES</h5>
+
+					<p>Challenge yourself and test your prepration with our <br> mock Tests.</p>
+					<br>
+
+
+					<div class="duty"></div>
+					<a href="https://on-app.in/app/home?orgCode=uhmmr" target="_blank"><button class="btn">Acess Now </button></a>
+
+				</div>
+				</center>
+			</div>
+			<div class="card">
+				<center><img src="https://learnbowl.com/assets/img/hero/book.png"></center>
+				<div class="card-title">Practice Paper</div>
+				<div id="detail">
+					<h5 style="text-align:left; margin-left:10%; margin-bottom:5%;">IT INCLUDES</h5>
+
+					<p>Boost your prepration with our exclusive test papers,that makes you exam ready.</p>
+					<br>
+
+
+					<div class="duty"></div>
+					<a href="https://on-app.in/app/home?orgCode=uhmmr" target="_blank"><button class="btn-c">Acess Now </button></a>
+
+				</div>
+				</center>
+
+
+
+
+
+			</div>
+		</div>
+
+	</div>
+
+
+
+	<div id="makeitfull">
+		<a href="#"><img src="https://www.pikpng.com/pngl/b/347-3474471_font-awesome-5-regular-arrow-circle-up-green.png"></a>
+	</div>
+	<div class="review">
+		<div class="diffSection" id="review_section">
+			<center>
+				<p style="font-size: 40px; padding: 100px; padding-bottom: 40px; color: #2E3D49;">What Our Students Say</p>
+			</center>
+		</div>
+		<div class="rev-container">
+			<div class="rev-card">
+				<div class="identity">
+					<img src="{% static '/webpages/images/humanNotExist1.jpg' %}">
+					<p>TINA</p>
+					<h6>11th grade</h6>
+					<div class="rating"><img src="{% static '/webpages/images/star.png' %}"><img src="{% static '/webpages/images/star.png' %}"><img src="{% static '/webpages/images/star.png' %}"><img src="{% static '/webpages/images/star.png' %}"><img src="{% static '/webpages/images/star.png' %}"></div>
+				</div>
+				<div class="rev-cont">
+					<p id="title">Review:</p>
+					<p id="content">
+						The Teacher was vey patient and dedicated and knew the language well. This helped my son catch up with French over summer Holidays.I highly recommend it.
+					</p>
+				</div>
+			</div>
+			<div class="rev-card">
+				<div class="identity">
+					<img src="{% static '/webpages/images/humanNotExist2.jpg' %}">
+					<p>SHREYAS MAHESH</p>
+					<h6>12th grade</h6>
+					<div class="rating"><img src="{% static '/webpages/images/star.png' %}"><img src="{% static '/webpages/images/star.png' %}"><img src="{% static '/webpages/images/star.png' %}"><img src="{% static '/webpages/images/star.png' %}"><img src="{% static '/webpages/images/star.png' %}"></div>
+				</div>
+				<div class="rev-cont">
+					<p id="title">Review:</p>
+					<p id="content">
+						From day 1, all the lectures have been very engaging which helped me learn in a better way. Overall, I enjoyed the process and everyone has been very helpful.
+					</p>
+				</div>
+			</div>
+			<div class="rev-card">
+				<div class="identity">
+					<img src="{% static '/webpages/images/humanNotExist3.jpg' %}">
+					<p>SHWEAT PASRICHA</p>
+					<h6>10th grade</h6>
+					<div class="rating"><img src="{% static '/webpages/images/star.png' %}"><img src="{% static '/webpages/images/star.png' %}"><img src="{% static '/webpages/images/star.png' %}"><img src="{% static '/webpages/images/star.png' %}"><img src="{% static '/webpages/images/star.png' %}"></div>
+				</div>
+				<div class="rev-cont">
+					<p id="title">Review:</p>
+					<p id="content">
+						The faculty teachers very well and explains the concepts nicely. My son has been taking up the classes and it has been a good experience.
+					</p>
+				</div>
+			</div>
+			<div class="rev-card">
+				<div class="identity">
+					<img src="{% static '/webpages/images/humanNotExist4.jpg' %}">
+					<p>NITHYA DIAZ</p>
+					<h6>9th grade</h6>
+					<div class="rating"><img src="{% static '/webpages/images/star.png' %}"><img src="{% static '/webpages/images/star.png' %}"><img src="{% static '/webpages/images/star.png' %}"><img src="{% static '/webpages/images/star.png' %}"><img src="{% static '/webpages/images/star.png' %}"></div>
+				</div>
+				<div class="rev-cont">
+					<p id="title">Review:</p>
+					<p id="content">
+						The French instructors have an excellent teaching skills which makes it easy to understand. Alot of effort is taken into each concept. The teachers are very energetic and have a positive attitude. Great going, good luck!
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="diffSection" id="contactus_section">
+		<center>
+			<p style="font-size: 50px; padding: 100px">Register Here</p><br>
+
+		</center>
+		<div class="csec"></div>
+		<div class="back-contact">
+
+			<div class="cc">
+
+				<form method="post">
+					{% csrf_token %}
+					<label>Name <span class="imp">*</span></label><br>
+					{{form.Name}}<br>
+					<center>
+
+						<!-- <input type="text" name="" style=" width: 100%;" required="required"><br> -->
+					</center>
+
+					<label>Contact Number <span class="imp">*</span></label><br>
+					{{form.Number}}<br>
+
+					<label>Email <span class="imp">*</span></label><br>
+					{{form.Email}}<br>
+					<label for="grade" style="width: 100%" required="required">Students grade <span class="imp">*</span></label><br>
+					{{form.Class}}
+					<br>
+					<!-- <select class="grade" id="grade" name="grade">
+						<option style="padding:2%; background-color:green;" value="5">5th grade</option>
+						<option value="6">6th grade</option>
+						<option value="7">7th grade</option>
+						<option value="8">8th grade</option>
+						<option value="9">9th grade</option>
+						<option value="10">10th grade</option>
+						<option value="11">11th grade</option>
+						<option value="12">12th grade</option>
+						<option value="12+">12+ </option>
+					</select><br> -->
+
+					<br>
+					<label>Course <span class="imp">*</span></label><br>
+					{{form.Course}}<br>
+
+
+					<button type="submit" id="csubmit">BOOK Your free individual class</button>
+				</form>
+			</div>
+		</div>
+	</div>
+
+
+
+
+	<script src="https://apps.elfsight.com/p/platform.js" defer></script>
+<div class="elfsight-app-a8d7aa92-7d11-4a0c-942f-50f805aa5967"></div>
+	<br>
+	<script src="https://apps.elfsight.com/p/platform.js" defer></script>
+<div class="elfsight-app-edf0f170-793a-4557-9e3e-9dc9a02db98a"></div>
+<br>
+
+	<marquee style="background: linear-gradient(to right, #39A6A3, #2F5D62); margin-top: 50px;" direction="left" onmouseover="this.stop()" onmouseout="this.start()" scrollamount="20">
+		<div class="marqu">“Education is the passport to the future, for tomorrow belongs to those who prepare for it today.” “Your attitude, not your aptitude, will determine your altitude.” “If you think education is expensive, try ignorance.” “The
+			only person who is educated is the one who has learned how to learn …and change.”</div>
+	</marquee>
+
+	<footer>
+		<div class="footer-container">
+			<div class="left-col">
+				<img class="imlogo" src="https://ekalshiksha.in/static/webpages/images/Logo.png' %}" style="width: 200px;">
+				<div class="logo"></div>
+				<div class="social-media">
+					<a href="https://www.facebook.com/learnbowl"><img src="{% static '/webpages/images/fb.png' %}"></a>
+					<a href="https://www.instagram.com/learnbowl/"><img src="{% static '/webpages/images/insta.png' %}"></a>
+					<a href="#"><img src="{% static '/webpages/images/tt.png' %}"></a>
+					<a href="#"><img src="{% static '/webpages/images/ytube.png' %}"></a>
+					<a href="#"><img src="{% static '/webpages/images/linkedin.png' %}"></a>
+				</div><br><br>
+
+				 <p><img src="{% static '/webpages/images/location.png' %}"> Ekal Shiksha<br>Noida,India.</p><br>
+				<p>
+					<img src="{% static '/webpages/images/phone.png' %}"> 9716864415<br><img src="{% static '/webpages/images/mail.png' %}">&nbsp;  Contact@ekalshiksha.in</p>
+			</div>
+			<div class="right-col">
+				<h1 style="color: #fff">Stay Updated</h1>
+				<div class="border"></div><br>
+				<p>Enter Your Email to get our News and updates.</p>
+				<form class="newsletter-form">
+					<input class="txtb" type="email" placeholder="Enter Your Email">
+					<input class="btn" type="submit" value="Submit">
+				</form>
+			</div>
+
+		</div>
+		<br>
+		<center>
+			<p class="rights-text">Copyright © 2021 Created Ayush Kumar, All Rights Reserved.</p>
+		</center>
+		<br>
+	</footer>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.8/swiper-bundle.min.js"></script></body>
+	  <script>
+		document.addEventListener('DOMContentLoaded', () => {
+
+		// Get all "navbar-burger" elements
+		const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+		  // Check if there are any navbar burgers
+		  if ($navbarBurgers.length > 0) {
+
+			const navbarDropdown = [].slice.call(document.querySelectorAll("#navbarDropdown"));
+
+
+
+			// Add a click event on each of them
+			$navbarBurgers.forEach( el => {
+			  el.addEventListener('click', () => {
+
+				// Get the target from the "data-target" attribute
+				const target = el.dataset.target;
+				const $target = document.getElementById(target);
+
+				// Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+				el.classList.toggle('is-active');
+				$target.classList.toggle('is-active');
+
+				if($target.classList.contains("is-active")) {
+				  navbarDropdown.map((e) => {
+					e.lastElementChild.style.display = "none"
+				 })
+				} else {
+				  navbarDropdown.map((e) => {
+					e.lastElementChild.style.removeProperty("display")
+				 })
+				}
+
+				navbarDropdown.map((e) => {
+				  const button = e.firstElementChild;
+				  button.addEventListener("click", () => {
+					if (e.lastElementChild.style.display === "none") {
+					  e.lastElementChild.style.display = "block";
+					} else {
+					  e.lastElementChild.style.display = "none";
+					}
+				  });
+				});
+
+			  });
+			});
+		  }
+		});
+		</script>
+</html>

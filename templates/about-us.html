@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="index, follow">
+  <meta property="og:locale" content="en_IN">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="About Us - Know Why Are We Different from Others">
+  <meta property="og:description" content="Meta Description">
+  <meta property="og:url" content="{{ request.build_absolute_uri }}">
+  <meta property="og:site_name" content="Ekal Shiksha">
+  <meta property="og:image" content="https://ekalshiksha.in/static/webpages/images/Logo.png">
+  <meta name="twitter:card" content="summary" />
+  <meta name="robots" content="index, follow">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Work+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'webpages/hover-min.css' %}">
+  <script src="https://kit.fontawesome.com/9d4d248d66.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <link rel="stylesheet" href="{% static 'webpages/flickity.min.css' %}" media="screen">
+  <link rel="stylesheet" href="{% static 'webpages/style.css' %}">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link rel="shortcut icon" type="png" href="{% static '/webpages/images/Logo.ico' %}">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Work+Sans&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="{% static 'webpages/AboutUs.css' %}" media="screen" />
+  <script src="https://kit.fontawesome.com/9d4d248d66.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="{% static 'webpages/styles.css' %}">
+  <title>About Us - Know Why Are We Different from Other.</title>
+  <script>
+    ! function(f, b, e, v, n, t, s) {
+      if (f.fbq) return;
+      n = f.fbq = function() {
+        n.callMethod ?
+          n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+      };
+      if (!f._fbq) f._fbq = n;
+      n.push = n;
+      n.loaded = !0;
+      n.version = '2.0';
+      n.queue = [];
+      t = b.createElement(e);
+      t.async = !0;
+      t.src = v;
+      s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s)
+    }(window, document, 'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '3789975331106301');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=3789975331106301&ev=PageView&noscript=1" /></noscript>
+  <!-- End Facebook Pixel Code -->
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JR1HSFMVDL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-JR1HSFMVDL');
+  </script>
+</head>
+
+<body>
+
+  <nav class="navbar px-5 is-fixed-top" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="{% url 'index' %}">
+         <img alt="ekal shiksha logo" src="{% static 'webpages/images/Logo head.jpeg' %}">
+         <img alt="ekal shiksha" src="{% static 'webpages/images/Logo font.jpeg' %}">
+        <!-- <strong class="ml-2 brand is-size-5">Ekal Shiksha</strong> -->
+      </a>
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbar">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+
+    <div id="navbar" class="navbar-menu">
+      <div class="navbar-end">
+
+        <div class="navbar-item has-dropdown is-hoverable" id="navbarDropdown">
+          <a class="navbar-link">
+            Courses
+          </a>
+          <div class="navbar-dropdown">
+            <a href="/6th/" class="navbar-item">
+              Class 6th
+            </a>
+            <a href="/7th/" class="navbar-item">
+              Class 7th
+            </a>
+            <a href="/8th/" class="navbar-item">
+              Class 8th
+            </a>
+            <a href="/9th/" class="navbar-item">
+              Class 9th
+            </a>
+            <a href="/10th/" class="navbar-item">
+              Class 10th
+            </a>
+            <input class="dropdown-sub" type="checkbox" id="dropdown-sub" name="dropdown-sub" />
+            <label class="for-dropdown-sub button" for="dropdown-sub" style="padding-left:7%">Class 11th</label>
+            <div class="section-dropdown-sub">
+              <a href="/Science/11th/" class="navbar-item">
+                Class 11th Science
+              </a>
+              <a href="/Commerce/11th/" class="navbar-item">
+                Class 11th Commerce
+              </a>
+              <a href="/Humanities/11th/" class="navbar-item">
+                Class 11th Humanities
+              </a>
+            </div>
+            <div class="nested navbar-item dropdown ">
+              <div class="dropdown-trigger">
+                <button class="button " aria-haspopup="true" aria-controls="dropdown-menu" style="font-family: Work Sans, sans-serif;">
+                  <span>Class 12th</span></button>
+              </div>
+              <div class="dropdown-menu " id="dropdown-menu" role="menu">
+                <div class=" navbar-dropdown">
+                  <a href="/Science/12th/" class="navbar-item">
+                    Class 12th Science
+                  </a>
+                  <a href="/Commerce/12th/" class="navbar-item">
+                    Class 12th Commerce
+                  </a>
+                  <a href="/Humanities/12th/" class="navbar-item">
+                    Class 12th Humanities
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a href="{% url 'Doubt' %}" class="navbar-item">Doubt Class</a>
+        <div class="navbar-item has-dropdown is-hoverable" id="navbarDropdown">
+          <a class="navbar-link">
+            Study Material 
+          </a>
+          <div class="navbar-dropdown">
+            <a href="/StudyMaterial/#ncert-solution" class="navbar-item">
+              NCERT Solutions
+            </a>
+            <a href="/StudyMaterial/#ncert-book" class="navbar-item">
+              NCERT Books
+            </a>
+            <a href="/StudyMaterial/#ncert-mock-test" class="navbar-item">
+              NCERT Mock Test
+            </a>
+            <a href="/StudyMaterial/#ncert-assignment" class="navbar-item">
+              NCERT Assignments
+            </a>
+            
+          </div>
+        </div>
+            <div class="navbar-item has-dropdown is-hoverable" id="navbarDropdown">
+              <a class="navbar-link">
+                Micro Courses
+              </a>
+              <div class="navbar-dropdown">
+                <a href="/Micro/6/" class="navbar-item">
+                  Micro 6th
+                </a>
+                <a href="/Micro/7/" class="navbar-item">
+                  Micro 7th
+                </a>
+                <a href="/Micro/8/" class="navbar-item">
+                  Micro 8th
+                </a>
+                <a href="/Micro/9/" class="navbar-item">
+                  Micro 9th
+                </a>
+                <a href="/Micro/10/" class="navbar-item">
+                  Micro 10th
+                </a>
+                <input class="dropdown-sub" type="checkbox" id="dropdown-sub-1" name="dropdown-sub" />
+                <label class="for-dropdown-sub button" for="dropdown-sub-1" style="padding-left:7%">Micro 11th</label>
+                <div class="section-dropdown-sub">
+                  <a href="/Micro/11th_Science" class="navbar-item">
+                    Micro 11th Science
+                  </a>
+                  <a href="/Micro/11th_Commerce/" class="navbar-item">
+                    Micro 11th Commerce
+                  </a>
+                  <a href="/Micro/11th_Humanities/" class="navbar-item">
+                    Micro 11th Humanities
+                  </a>
+                </div>
+                <div class="nested navbar-item dropdown ">
+                  <div class="dropdown-trigger">
+                    <button class="button " aria-haspopup="true" aria-controls="dropdown-menu" style="font-family: Work Sans, sans-serif;">
+                      <span>Micro 12th</span></button>
+                  </div>
+                  <div class="dropdown-menu " id="dropdown-menu" role="menu">
+                    <div class=" navbar-dropdown">
+                      <a href="/Micro/12th_Science/" class="navbar-item">
+                        Micro 12th Science
+                      </a>
+                      <a href="/Micro/12th_Commerce/" class="navbar-item">
+                        Micro 12th Commerce
+                      </a>
+                      <a href="/Micro/12th_Humanities/" class="navbar-item">
+                        Micro 12th Humanities
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        <a href="{% url 'contact' %}" class="navbar-item">Contact us</a>
+
+        <a href="https://web.studentekalshiksha.in" class="navbar-item">SignUp</a>
+        <div class="navbar-item has-dropdown is-hoverable" id="navbarDropdown">
+          <a class="navbar-link">
+            More
+          </a>
+          <div class="navbar-dropdown" style="left:auto;right: 1rem;">
+              <a href="{% url 'About' %}" class="navbar-item">About Us</a>
+              <a href="{% url 'blog' %}" class="navbar-item">Blog</a>
+              <a href="{% url 'work' %}" class="navbar-item">Teach With Us</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="
+        columns
+        is-centered
+        is-flex-mobile
+        is-flex-direction-column
+        is-align-items-center
+        pt-6
+      ">
+
+
+    <div class="column is-8 is-10-mobile mt-6">
+      <nav class="breadcrumb" aria-label="breadcrumbs">
+        <ul>
+          <li><a href="{% url 'index' %}">Ekal Shiksha</a></li>
+          <li class="is-active">
+            <a href="#" aria-current="page">About us</a>
+          </li>
+        </ul>
+      </nav>
+
+
+      <div class="aboutus">
+        <h1 class="is-size-2 pb-4" style="text-align:center">About Us</h1>
+        <div class="img1">
+          <div class="img-logo">
+            <img src="{% static 'webpages/images/Copy of 3.png'%}"  width="720px" style="position:relative;top:10%;height: 270px;">
+          </div>
+          <div class="block1">
+            <!-- <hr> -->
+            <p class="is-size-5 ">
+              After five years of expertise in the education industry and dealing with the careers of almost 5000 students of K-12 segments, we became captivated by the fact that all the children are born with different capacities, capabilities,
+              natures, mindsets, business-related and learning patterns.
+            </p>
+          </div>
+        </div>
+        <div class="block">
+
+          <div class="details" style="position:relative;margin-top:-50px;">
+            <p class="is-size-5 details-para">
+              Then, we realised that the traditional group teaching method is not so effective for them in maintaining a broad, global perspective. After acknowledging the problems faced by children, we inferred that children need a platform where
+              they can learn as per their way. Soon after that, we decided to launch our learning platform ‘Ekal Shiksha’ to provide one teacher to one student for their enrichment.
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+
+      <div class="block">
+
+        <p class="is-size-5">
+          Significantly, our sole objective is to concentrate on the individual learning capacity of students and help them in enhancing their skills after a deep comprehension of their unique as well as individual learning needs.
+          At Ekal Shiksha, we let young minds study at their own pace. We have accommodated well-trained and proficient mentors from all over the country. They can lay the flexibility of choosing and designing the lesson plans and learning methods
+          for each student. For instance, it will prove beneficial as students can learn without fearing the judgement of teachers and their batchmates. Along with that, we also have our doubt rectification team that be available next to students
+          24*7 at a very accessible fee structure.
+        </p>
+      </div>
+      <div class="hr">
+        <hr>
+      </div>
+      <div class="l-img">
+        <div class="explained-img">
+          <img src="{% static 'webpages/images/Teacher.png'%}" >
+        </div>
+        <br>
+        <div class=" end-detail">
+          <p class="is-size-5 has-text-weight-bold end-detail">
+            The name of our platform, Ekal Shiksha, itself defines its purpose.
+            <br>
+            Ekal ~ Individual and Shiksha ~ Education.
+          </p>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+  <br>
+  <div class="video">
+    <br>
+    <br>
+    <center><iframe src="https://www.youtube.com/embed/xrBG6R33-eM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <center>
+  </div>
+
+
+
+  <div>
+    <div class="diff-Section lll" id="team_section">
+      <center>
+        <p style="font-size: 50px; margin-top: 50px; ">Originators of Ekal Shiksha</p>
+      </center>
+      <div class="totalcard ">
+        <div class="card readmore">
+          <center><img style="margin-top:10%" src="{% static 'webpages/images/Sanchit.jpg' %}"></center>
+          <div class="card-title">Sanchit Singhal (Founder)</div>
+          <div id="detail">
+            <!-- <h5 style="text-align:left; margin-left:10%;margin-bottom:5%;">IT INCLUDES</h5> -->
+
+            <p style="justify-content: space-between;">A highly amicable person who likes interacting with students, parents and teachers to help the students succeed academically. Sanchit, being an educator for the past 6 years, has a passion for
+              educational research for innovating the teaching strategies laid down by mentors. Moreover, he always listens to student’s academic, social and behavioural concerns in a non-judgemental way so that their goals do not get disrupted.</p>
+            <!-- <br> -->
+            <a href="" class="read-more">Read More</a>
+
+            <div class="duty"></div>
+            <!-- <a href="https://on-app.in/app/home?orgCode=uhmmr" target="_blank"><button class="btn-b">Acess Now</button></button></a> -->
+          </div>
+          </center>
+        </div>
+        <div class="card readmore">
+          <center><img style="margin-top:10%" src="{% static 'webpages/images/Vanshika.jpg' %}"></center>
+          <div class="card-title">Vanshika Garg (Co-founder)</div>
+          <div id="detail">
+            <!-- <h5 style="text-align:left; margin-left:10%; margin-bottom:5%;">IT INCLUDES</h5> -->
+
+            <p style="justify-content: space-between;">A firm believer in communication in all possible forms. She started as a teacher where her teaching style was very patient, friendly and accomodating. Also, Vanshika values real-world learning
+              and engages with her students while teaching by identifying the resources that students need to make the grade. By providing actionable feedback to each student, Vanshika helps the students focus on the results..</p>
+            <!-- <br> -->
+            <a href="" class="read-more">Read More</a>
+            
+            
+
+
+            <div class="duty"></div>
+            <!-- <a href="https://on-app.in/app/home?orgCode=uhmmr" target="_blank"><button class="btn">Acess Now </button></a> -->
+
+          </div>
+          </center>
+        </div>
+        <div class="card readmore">
+          <center><img style="margin-top:10%" src="{% static 'webpages/images/Bhavya.jpg' %}"></center>
+          <div class="card-title">Bhavya Sharma (Co-founder)</div>
+          <div id="detail">
+            <!-- <h5 style="text-align:left; margin-left:10%; margin-bottom:5%;">IT INCLUDES</h5> -->
+
+            <p style="justify-content: space-between; ">A software engineer by profession and a teacher by his desire. He has strategic thinking and strong communication skills. His technical integrity and good mentorship provide in-depth knowledge
+              to students for their upliftment and enrichment. Bhavya ensures that students are listening, acting and improving in every class they take with Ekal Shiksha.</p>
+            <!-- <br><br> -->
+            
+
+
+            <div class="duty"></div>
+            <!-- <a href="https://on-app.in/app/home?orgCode=uhmmr" target="_blank"><button class="btn-c">Acess Now </button></a> -->
+
+          </div>
+          </center>
+
+
+
+
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer style="padding:3%;margin-top: 1%; ">
+    <div class="container bottom_border">
+      <div class="columns">
+        <div class="column is-3 mr-3">
+          <h5 class="headin5_amrc col_white_amrc pt2"><strong class="has-text-white">&#169; Ekal Shiksha 2021</strong></h5>
+          <!--headin5_amrc-->
+          <p class="mb10">Ekal Shiksha is an Ed-tech company which provides one on one individual online classes.</p>
+          <p><i class="fa fa-location-arrow"></i> C-54, Sector-2 Noida, Gautam Budh Nagar, Uttar Pradesh </p>
+          <p><i class="fa fa-phone"></i> <a href="tel:9625578335"> 9625578335.</a> </p>
+          <a href="mailto:contact@ekalshiksha.in">
+            <p><i class="fa fa fa-envelope"></i> contact@ekalshiksha.in </p>
+          </a>
+
+
+        </div>
+
+
+        <div class="column nav-column is-4">
+          <h5 class="headin5_amrc col_white_amrc pt2">Classes</h5>
+          <!--headin5_amrc-->
+          <ul class="footer_ul_amrc is-flex">
+            <div class="pr-6">
+              <li><a href="/6th/">Class 6</a></li>
+              <li><a href="/7th/">Class 7</a></li>
+              <li><a href="/8th/">Class 8</a></li>
+              <li><a href="/9th/">Class 9</a></li>
+              <li><a href="/10th/">Class 10</a></li>
+            </div>
+            <div class="pr-6">
+              <li><a href="/Science/11th/">Class 11 Science</a></li>
+              <li><a href="/Commerce/11th/">Class 11 Commerce</a></li>
+              <li><a href="/Humanities/11th/">Class 11 Humanities</a></li>
+              <li><a href="/Science/11th/">Class 12 Science</a></li>
+              <li><a href="/Commerce/12th/">Class 12 Commerce</a></li>
+              <li><a href="/Humanities/12th/">Class 12 Humanities</a></li>
+            </div>
+          </ul>
+          <!--footer_ul_amrc ends here-->
+        </div>
+
+        <div class="column nav-column is-4">
+          <h5 class="headin5_amrc col_white_amrc pt2">Study Material</h5>
+          <!--headin5_amrc-->
+          <ul class="footer_ul_amrc is-flex">
+            <div class="pr-6">
+              <li><a href="https://on-app.in/app/home?orgCode=uhmmr">Class 6</a></li>
+              <li><a href="https://on-app.in/app/home?orgCode=uhmmr">Class 7</a></li>
+              <li><a href="https://on-app.in/app/home?orgCode=uhmmr">Class 8</a></li>
+              <li><a href="https://on-app.in/app/home?orgCode=uhmmr">Class 9</a></li>
+              <li><a href="https://on-app.in/app/home?orgCode=uhmmr">Class 10</a></li>
+            </div>
+            <div class="pr-6">
+              <li><a href="https://on-app.in/app/home?orgCode=uhmmr">Class 11 Science</a></li>
+              <li><a href="https://on-app.in/app/home?orgCode=uhmmr">Class 11 Commerce</a></li>
+              <li><a href="https://on-app.in/app/home?orgCode=uhmmr">Class 11 Humanities</a></li>
+              <li><a href="https://on-app.in/app/home?orgCode=uhmmr">Class 12 Science</a></li>
+              <li><a href="https://on-app.in/app/home?orgCode=uhmmr">Class 12 Commerce</a></li>
+              <li><a href="https://on-app.in/app/home?orgCode=uhmmr">Class 12 Humanities</a></li>
+            </div>
+          </ul>
+          <!--footer_ul_amrc ends here-->
+        </div>
+        <div class="column">
+          <h5 class="headin5_amrc col_white_amrc pt2">Blogs</h5>
+          <!--headin5_amrc-->
+          <ul class="footer_ul_amrc">
+            <li><a href="/blog/">Blogs</a></li>
+
+          </ul>
+          <!--footer_ul_amrc ends here-->
+        </div>
+        <div class="column">
+          <h5 class="headin5_amrc col_white_amrc pt2"> About</h5>
+          <!--headin5_amrc-->
+          <ul class="footer_ul_amrc">
+            <li><a href="/AboutUs/">About Us</a></li>
+
+          </ul>
+          <!--footer_ul_amrc ends here-->
+        </div>
+
+      </div>
+    </div>
+
+
+
+
+    <div class="container">
+      <ul class="foote_bottom_ul_amrc is-flex-mobile is-flex-wrap-wrap">
+        <li><a href="{% url 'index' %}">Home</a></li>
+        <li><a href="/AboutUs/">About</a></li>
+        <li><a href="/Doubts/">Doubt Class</a></li>
+
+      </ul>
+      <!--foote_bottom_ul_amrc ends here-->
+
+      <ul class="social_footer_ul">
+        <li><a href="https://www.facebook.com/ekalshiksha/"><i class="fab fa-facebook-f"></i></a></li>
+        <li><a href="https://twitter.com/ekalshiksha?lang=en"><i class="fab fa-twitter"></i></a></li>
+        <li><a href="https://in.linkedin.com/company/ekal-shiksha"><i class="fab fa-linkedin"></i></a></li>
+        <li><a href="https://www.instagram.com/ekal_shiksha/?hl=en"><i class="fab fa-instagram"></i></a></li>
+      </ul>
+      <!--social_footer_ul ends here-->
+    </div>
+
+  </footer>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+      // Get all "navbar-burger" elements
+      const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+      // Check if there are any navbar burgers
+      if ($navbarBurgers.length > 0) {
+
+        const navbarDropdown = [].slice.call(document.querySelectorAll("#navbarDropdown"));
+
+
+
+        // Add a click event on each of them
+        $navbarBurgers.forEach(el => {
+          el.addEventListener('click', () => {
+
+            // Get the target from the "data-target" attribute
+            const target = el.dataset.target;
+            const $target = document.getElementById(target);
+
+            // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+            el.classList.toggle('is-active');
+            $target.classList.toggle('is-active');
+
+            if ($target.classList.contains("is-active")) {
+              navbarDropdown.map((e) => {
+                e.lastElementChild.style.display = "none"
+              })
+            } else {
+              navbarDropdown.map((e) => {
+                e.lastElementChild.style.removeProperty("display")
+              })
+            }
+
+            navbarDropdown.map((e) => {
+              const button = e.firstElementChild;
+              button.addEventListener("click", () => {
+                if (e.lastElementChild.style.display === "none") {
+                  e.lastElementChild.style.display = "block";
+                } else {
+                  e.lastElementChild.style.display = "none";
+                }
+              });
+            });
+
+          });
+        });
+      }
+    });
+  </script>
+
+  <script>
+    var dropdownElementList = [].slice.call(
+      document.querySelectorAll(".drop-down")
+    );
+    var dropdownElement = dropdownElementList.map((e) => {
+      var button = e.firstElementChild;
+      button.addEventListener("click", () => {
+        if (e.lastElementChild.style.display === "none") {
+          e.lastElementChild.style.display = "block";
+          e.firstElementChild.childNodes[1].lastElementChild.style.display = "block"
+          e.firstElementChild.childNodes[1].firstElementChild.style.display = "none"
+        } else {
+          e.lastElementChild.style.display = "none";
+          e.firstElementChild.childNodes[1].lastElementChild.style.display = "none"
+          e.firstElementChild.childNodes[1].firstElementChild.style.display = "block"
+        }
+      });
+    });
+  </script>
+  <script>
+    
+      $readMoreJS.init({
+        target: '.readmore', // Selector of the element the plugin applies to (any CSS selector, eg: '#', '.'). Default: ''
+        numOfWords: 0, // Number of words to initially display (any number). Default: 50
+        toggle: true, // If true, user can toggle between 'read more' and 'read less'. Default: true
+        moreLink: '<button class="get-started" style="margin:auto;">Read More</button>', // The text of 'Read more' link. Default: 'read more ...'
+        lessLink: '<button class="get-started" style="margin:auto;">Read Less</button>' // The text of 'Read less' link. Default: 'read less'
+      });
+    
+  </script>
+
+</body>
+
+</html>

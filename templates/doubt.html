@@ -1,0 +1,1014 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+  <link rel="shortcut icon" type="png" href="{% static 'webpages/images/Logo.ico' %}">
+  <meta charset="utf-8">
+  <meta name='description' content='Just share your problem and get a best individual doubt clearing classes session from class 6th to 12th by selecting a particular time for your class according to your needs.'>
+  <meta http-equiv="X-UA-Comaptible" content="IE=edge">
+  <meta name="robots" content="index, follow">
+  <meta property="og:locale" content="en_IN">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Personalised Individual Doubt Clearing Classes for 6th to 12th Class">
+  <meta property="og:description" content="Just share your problem and get a best individual doubt clearing classes session from class 6th to 12th by selecting a particular time for your class according to your needs.">
+  <meta property="og:url" content="{{ request.build_absolute_uri }}">
+  <meta property="og:site_name" content="Ekal Shiksha">
+  <meta property="og:image" content="https://ekalshiksha.in/static/webpages/images/Logo.png">
+  <meta name="twitter:card" content="summary" />
+  <title>Personalised Individual Doubt Clearing Classes for 6th to 12th Class</title>
+  <meta name="desciption" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="{% static 'webpages/doubt.css' %}">
+  <script src="https://kit.fontawesome.com/4066c952c5.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css" />
+  <link rel="stylesheet" href="{% static 'webpages/style.css' %}">
+  <script src="https://kit.fontawesome.com/9d4d248d66.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Work+Sans&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+
+  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous"> -->
+
+  <!-- <link rel="stylesheet" href="swiper-bundle.min.css"> -->
+  <!--Jquery-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+
+  <script type="text/javascript" src="{% static 'webpages/Js/doubt.js' %}"></script>
+
+
+  <script>
+    ! function(f, b, e, v, n, t, s) {
+      if (f.fbq) return;
+      n = f.fbq = function() {
+        n.callMethod ?
+          n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+      };
+      if (!f._fbq) f._fbq = n;
+      n.push = n;
+      n.loaded = !0;
+      n.version = '2.0';
+      n.queue = [];
+      t = b.createElement(e);
+      t.async = !0;
+      t.src = v;
+      s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s)
+    }(window, document, 'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '3789975331106301');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img alt="ekalshiksha facebook" height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=3789975331106301&ev=PageView&noscript=1" /></noscript>
+  <!-- End Facebook Pixel Code -->
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JR1HSFMVDL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-JR1HSFMVDL');
+  </script>
+  <script>
+    $(window).on('scroll', function() {
+      if ($(window).scrollTop()) {
+        $('nav').addClass('black');
+      } else {
+        $('nav').removeClass('black');
+      }
+    })
+  </script>
+  <script>
+    function myFunction() {
+      var dots = document.getElementById("dots");
+      var moreText = document.getElementById("more");
+      var btnText = document.getElementById("myBtn");
+
+      if (dots.style.display === "none") {
+        dots.style.display = "inline";
+        btnText.innerHTML = "Read more";
+        moreText.style.display = "none";
+        if (window.matchMedia("(max-width: 500px)").matches) {
+          document.querySelector(".bbop").style.height = "900px";
+        }
+      } else {
+        dots.style.display = "none";
+        btnText.innerHTML = "Read less";
+        moreText.style.display = "inline";
+        if (window.matchMedia("(max-width: 500px)").matches) {
+          document.querySelector(".bbop").style.height = "1150px";
+        }
+      }
+
+    }
+  </script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <style media="screen">
+    a {
+      text-decoration: none !important;
+    }
+  </style>
+
+</head>
+
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar px-5 is-fixed-top" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="{% url 'index' %}">
+         <img alt="ekal shiksha logo" src="{% static 'webpages/images/Logo head.jpeg' %}">
+         <img alt="ekal shiksha" src="{% static 'webpages/images/Logo font.jpeg' %}">
+        <!-- <strong class="ml-2 brand is-size-5">Ekal Shiksha</strong> -->
+      </a>
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbar">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+
+    <div id="navbar" class="navbar-menu">
+      <div class="navbar-end">
+
+        <div class="navbar-item has-dropdown is-hoverable" id="navbarDropdown">
+          <a class="navbar-link">
+            Courses
+          </a>
+          <div class="navbar-dropdown">
+            <a href="/6th/" class="navbar-item">
+              Class 6th
+            </a>
+            <a href="/7th/" class="navbar-item">
+              Class 7th
+            </a>
+            <a href="/8th/" class="navbar-item">
+              Class 8th
+            </a>
+            <a href="/9th/" class="navbar-item">
+              Class 9th
+            </a>
+            <a href="/10th/" class="navbar-item">
+              Class 10th
+            </a>
+            <input class="dropdown-sub" type="checkbox" id="dropdown-sub" name="dropdown-sub" />
+            <label class="for-dropdown-sub button" for="dropdown-sub" style="padding-left:7%">Class 11th</label>
+            <div class="section-dropdown-sub">
+              <a href="/Science/11th/" class="navbar-item">
+                Class 11th Science
+              </a>
+              <a href="/Commerce/11th/" class="navbar-item">
+                Class 11th Commerce
+              </a>
+              <a href="/Humanities/11th/" class="navbar-item">
+                Class 11th Humanities
+              </a>
+            </div>
+            <div class="nested navbar-item dropdown ">
+              <div class="dropdown-trigger">
+                <button class="button " aria-haspopup="true" aria-controls="dropdown-menu" style="font-family: Work Sans, sans-serif;">
+                  <span>Class 12th</span></button>
+              </div>
+              <div class="dropdown-menu " id="dropdown-menu" role="menu">
+                <div class=" navbar-dropdown">
+                  <a href="/Science/12th/" class="navbar-item">
+                    Class 12th Science
+                  </a>
+                  <a href="/Commerce/12th/" class="navbar-item">
+                    Class 12th Commerce
+                  </a>
+                  <a href="/Humanities/12th/" class="navbar-item">
+                    Class 12th Humanities
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a href="{% url 'Doubt' %}" class="navbar-item">Doubt Class</a>
+        <div class="navbar-item has-dropdown is-hoverable" id="navbarDropdown">
+          <a class="navbar-link">
+            Study Material 
+          </a>
+          <div class="navbar-dropdown">
+            <a href="/StudyMaterial/#ncert-solution" class="navbar-item">
+              NCERT Solutions
+            </a>
+            <a href="/StudyMaterial/#ncert-book" class="navbar-item">
+              NCERT Books
+            </a>
+            <a href="/StudyMaterial/#ncert-mock-test" class="navbar-item">
+              NCERT Mock Test
+            </a>
+            <a href="/StudyMaterial/#ncert-assignment" class="navbar-item">
+              NCERT Assignments
+            </a>
+            
+          </div>
+        </div>
+            <div class="navbar-item has-dropdown is-hoverable" id="navbarDropdown">
+              <a class="navbar-link">
+                Micro Courses
+              </a>
+              <div class="navbar-dropdown">
+                <a href="/Micro/6/" class="navbar-item">
+                  Micro 6th
+                </a>
+                <a href="/Micro/7/" class="navbar-item">
+                  Micro 7th
+                </a>
+                <a href="/Micro/8/" class="navbar-item">
+                  Micro 8th
+                </a>
+                <a href="/Micro/9/" class="navbar-item">
+                  Micro 9th
+                </a>
+                <a href="/Micro/10/" class="navbar-item">
+                  Micro 10th
+                </a>
+                <input class="dropdown-sub" type="checkbox" id="dropdown-sub-1" name="dropdown-sub" />
+                <label class="for-dropdown-sub button" for="dropdown-sub-1" style="padding-left:7%">Micro 11th</label>
+                <div class="section-dropdown-sub">
+                  <a href="/Micro/11th_Science" class="navbar-item">
+                    Micro 11th Science
+                  </a>
+                  <a href="/Micro/11th_Commerce/" class="navbar-item">
+                    Micro 11th Commerce
+                  </a>
+                  <a href="/Micro/11th_Humanities/" class="navbar-item">
+                    Micro 11th Humanities
+                  </a>
+                </div>
+                <div class="nested navbar-item dropdown ">
+                  <div class="dropdown-trigger">
+                    <button class="button " aria-haspopup="true" aria-controls="dropdown-menu" style="font-family: Work Sans, sans-serif;">
+                      <span>Micro 12th</span></button>
+                  </div>
+                  <div class="dropdown-menu " id="dropdown-menu" role="menu">
+                    <div class=" navbar-dropdown">
+                      <a href="/Micro/12th_Science/" class="navbar-item">
+                        Micro 12th Science
+                      </a>
+                      <a href="/Micro/12th_Commerce/" class="navbar-item">
+                        Micro 12th Commerce
+                      </a>
+                      <a href="/Micro/12th_Humanities/" class="navbar-item">
+                        Micro 12th Humanities
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        <a href="{% url 'contact' %}" class="navbar-item">Contact us</a>
+
+        <a href="https://web.studentekalshiksha.in" class="navbar-item">SignUp</a>
+        <div class="navbar-item has-dropdown is-hoverable" id="navbarDropdown">
+          <a class="navbar-link">
+            More
+          </a>
+          <div class="navbar-dropdown" style="left:auto;right: 1rem;">
+              <a href="{% url 'About' %}" class="navbar-item">About Us</a>
+              <a href="{% url 'blog' %}" class="navbar-item">Blog</a>
+              <a href="{% url 'work' %}" class="navbar-item">Teach With Us</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="">
+    <p style="color:#fff;">.</p>
+    <!-- <p style="color:#fff;">.</p> -->
+    <!-- <p style="color:#fff;">.</p> -->
+    <p style="color:#fff;">.</p>
+
+  </div>
+
+  <div class="bbop back-img doubt-container background" style="position:relative; background-image:linear-gradient(rgba(23,78,64,0.8),rgba(23,78,64,0.8)),url('/static/webpages/images/doubt classs.jpeg');">
+    <h1 class="bop is-size-2 " style="text-align: center;">Need Doubt Clearing Classes? </h1>
+    <br>
+    <!-- <p class="bop is-size-5 px-6 readmore">Special Doubt Class is mandatory for understanding a concept in detail and scoring exceptional marks in the exams.
+      Did you ever come across a situation when your subject teacher was unavailable by the time you had numerous doubts in your mind while preparing for your exams?
+      Ekal Shiksha is providing you with a personalised individual doubt class for your ease. Also, it will discuss well-prepared notes and important exam- related questions.
+      We boost a student's confidence in any of the subjects across Class 6 to Class 12 he/she wishes to.
+      Also, we cover the CBSE board and other state boards.Our doubt class app will ensure handy solutions for all the subjects.
+      You can easily book your doubt class with us. Within 2 hours of booking, an expert will assist you in ensuring a firm hold on each concept.</span></p> -->
+    <p class="is-size-5 px-6 readmore">If you work hard but feel a certain hesitation or discomfort while expressing your doubts and concerns in front of many other students, then there might be a requirement of individual doubt clearing classes. Doubts that go unattended can come to revisit you as your worst nightmares in the examination and severely impact your confidence about the subject.<br> </p>
+    <p class="is-size-5 px-6 readmore">Online doubt solving can be of great use to the students and prove to be one of the most beneficial tools available to them. Thus, it becomes extremely vital that any and all of your doubts are entertained in detailed doubt clearing classes properly, you should feel secure and comfortable while expressing those doubts, and finally a simplified and instant doubt solving must be provided to you by a good teacher or mentor who has an expertise in the subject.</p>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br><br><br><br>
+    </div>
+    <!-- <br> -->
+
+    <div class="section two fp-auto-height-responsive" style="background-image:linear-gradient(rgba(23,78,64,0.8),rgba(23,78,64,0.8)),url('/static/webpages/images/doubt-class.png'); background-size: cover; ">
+      <div class="container-div2">
+        <div class="hexagon-anchors">
+          <div class="hexa-anchor">
+            <ul>
+              <a onclick="display(1)"><li class="border position-a1 anchors-active" id="a1"><h3> Student's Convenient</h3></li></a>
+              <a onclick="display(2)"><li class="border position-a2" id="a2"><h3>Concern for Individual</h3></li></a>
+            </ul>
+          </div>
+          <div class="circle-anchor" style="width:80%;">
+          </div>
+          <div class="hexa-anchor">
+            <ul>
+               <a onclick="display(3)"><li class="border position-a3" id="a3"><h3>Safe and Holistic Environment</h3></li></a>
+              <a onclick="display(4)"><li class="border position-a4" id="a4"> <h3>Instant Doubt Resolve</h3></li></a>
+              <a onclick="display(5)"><li class="border position-a5" id="a5"> <h3>FREE Demonstration Class</h3></li></a>
+            </ul>
+          </div>
+        </div>
+        <div class="content">
+          <p class="unhide is-size-5" style="color:#ffffff;" id="p1">One of the major challenges for a student is to manage the times of different classes with their self studying schedules so as to avoid a clash of
+            time between the two. Ekal Shiksha strives to solve this issue for the students with their <span>doubt clearing classes</span>.
+            They can get <span>instant doubt solving</span> whenever they want. <span>Online doubt solving</span> also ensures that students enjoy studying from the
+            comfort of their homes without having to travel to far way places. They can also schedule these <span>doubt clearing classes</span> in advance
+            to ensure a proper way around their schedule and the available subject expert will be at your service to provide you with the best
+            doubt resolution.</p>
+          <p class="hide is-size-5" style="color:#ffffff;" id="p2">
+            Every student has their own unique pace of learning, patterns of understanding and ability of grasping new concepts.
+            Ekal Shiksha provides these unique sessions of <span>online doubt solving</span> to students while recognizing their individual dynamism and
+            assigns a specific mentor to each student who then provides doubt clarification to students while keeping in minds their
+            learning requirements through their <Span>doubt clearing classes</span>. We also ensure that no doubt ever lingers on, and thus offer
+            <span>instant doubt solving</span> to each and everyone. This way, the students don’t have to adjust their speed of learning or preferred
+            method of studying according to teachers or other students but rather are provided with mentors who will comply with their
+            standards and help them pass with flying colors.
+          </p>
+          <p class="hide is-size-5" style="color:#ffffff;" id="p3">One of the major challenges for a student is to manage the times of different classes with their self studying schedules so as to avoid a clash of
+            time between the two. Ekal Shiksha strives to solve this issue for the students with their <span>doubt clearing classes</span>.
+            They can get <span>instant doubt solving</span> whenever they want. <span>Online doubt solving</span> also ensures that students enjoy studying from the
+            comfort of their homes without having to travel to far way places. They can also schedule these <span>doubt clearing classes</span> in advance
+            to ensure a proper way around their schedule and the available subject expert will be at your service to provide you with the best
+            doubt resolution.</p>
+          <p class="hide is-size-5" style="color:#ffffff;" id="p4">A doubt can easily be indefinitely delayed and restrict one’s academic progress. When a doubt arises and you immediately get it clarified,
+          it motivates you to keep going with your ongoing studies and ensures hassle FREE studying. Students get easy and convenient access to <span>instant
+            doubt solving</span> with our top subject experts so that you no more have to linger upon a query that comes up and smoothly understand every new concept
+          introduced to you with our <span>doubt clearing classes.</p>
+
+          <p class="hide is-size-5"style="color:#ffffff;"  id="p5">Many students often feel hesitant or held back whenever a doubt pops up in their mind during a class out of fear of judgment
+              by their peers of fear of getting scolded by the teacher. With Ekal Shiksha’s .</p>
+        </div>
+      </div>
+      <div class="contactus-anchor" data-aos="fade-up">
+        <a href="{% url 'contact' %}">Contact Us</a>
+      </div>
+      <!-- <div class="service-swipe is-flex is-flex-wrap-wrap is-align-items-center is-justify-content-center">
+        <a href="#services_section">
+          <div class="s-card doubt-card isc">
+            <!-- <img src="{% static '/webpages/images/Add_a_heading__2_-removebg-preview.png' %}"> -->
+      <!-- <h1>INSTANT DOUBT RESOLUTIONS</h1>
+            <div class="description">
+              <p style="color:#ffffff;font-size:12px;">A doubt can easily be indefinitely delayed and restrict one’s academic progress. When a doubt arises and you immediately get it clarified,
+                it motivates you to keep going with your ongoing studies and ensures hassle FREE studying. Students get easy and convenient access to <span>instant
+                doubt solving</span> with our top subject experts so that you no more have to linger upon a query that comes up and smoothly understand every new concept
+                introduced to you with our <span>doubt clearing classes.</span> </p>
+            </div>
+          </div>
+        </a>
+        <a href="#services_section">
+          <div class="s-card doubt-card isc"> -->
+      <!-- <img src="{% static '/webpages/images/Add_a_heading__2_-removebg-preview.png' %}"> -->
+      <!-- <h1>CONCERN FOR INDIVIDUALITY</h1>
+            <div class="description" >
+              <p style="color:#ffffff;font-size:12px;font-family: "Work Sans", sans-serif">Every student has their own unique pace of learning, patterns of understanding and ability of grasping new concepts.
+                Ekal Shiksha provides these unique sessions of <span>online doubt solving</span> to students while recognizing their individual dynamism and
+                 assigns a specific mentor to each student who then provides doubt clarification to students while keeping in minds their
+                 learning requirements through their <Span>doubt clearing classes</span>. We also ensure that no doubt ever lingers on, and thus offer
+                 <span>instant doubt solving</span> to each and everyone. This way, the students don’t have to adjust their speed of learning or preferred
+                 method of studying according to teachers or other students but rather are provided with mentors who will comply with their
+                 standards and help them pass with flying colors.</p>
+            </div>
+          </div>
+        </a>
+        <a href="#services_section">
+          <div class="s-card doubt-card isc"> -->
+      <!-- <img src="{% static '/webpages/images/Add_a_heading__2_-removebg-preview.png' %}"> -->
+      <!-- <h1>STUDENTS’ CONVENIENCE</h1>
+          <div class="description">
+            <p style="color:#ffffff;font-size:12px;margin:auto;font-family: "Work Sans", sans-serif">One of the major challenges for a student is to manage the times of different classes with their self studying schedules so as to avoid a clash of
+               time between the two. Ekal Shiksha strives to solve this issue for the students with their <span>doubt clearing classes</span>.
+               They can get <span>instant doubt solving</span> whenever they want. <span>Online doubt solving</span> also ensures that students enjoy studying from the
+               comfort of their homes without having to travel to far way places. They can also schedule these <span>doubt clearing classes</span> in advance
+               to ensure a proper way around their schedule and the available subject expert will be at your service to provide you with the best
+               doubt resolution.</p>
+          </div>
+          </div>
+        </a>
+        <a href="#services_section">
+          <div class="s-card isc doubt-card"> -->
+      <!-- <img src="{% static '/webpages/images/Add_a_heading__2_-removebg-preview.png' %}"> -->
+      <!-- <h1>SAFE AND HOLISTIC ENVIRONMENT</h1>
+            <div class="description">
+              <p style="color:#ffffff;font-size:12px;font-family: "Work Sans", sans-serif">Many students often feel hesitant or held back whenever a doubt pops up in their mind during a class out of fear of judgment
+                by their peers of fear of getting scolded by the teacher. With Ekal Shiksha’s <span>doubt clearing classes</span>, the mentors practice
+                utmost patience and empathy in dealing with the students and provide them with a comfortable and safe space to express their
+                queries and get <span>instant doubt solving</span>. No doubt is ever a silly question; and we at Ekal Shiksha are here to make the best
+                 use of this provision of <span>online doubt solving</span> and we encourage students to get their doubts cleared without any hesitation.</p>
+            </div>
+          </div>
+        </a>
+        <a href="#services_section">
+          <div class="s-card isc doubt-card"> -->
+      <!-- <img src="{% static '/webpages/images/Add_a_heading__2_-removebg-preview.png' %}"> -->
+      <!-- <h1>FREE DEMONSTRATION CLASS</h1>
+            <div class="description">
+              <p style="color:#ffffff;font-size:12px;font-family: "Work Sans", sans-serif">Once you connect with Ekal Shiksha for any <span>doubt clearing classes</span>, we first get acquainted with your learning capabilities and
+                 unique potential and then offer you absolutely FREE first demonstration class which will help you familiarize yourself with
+                  the pattern we follow for quick and <span>instant doubt solving</span> and also forma rapport with your allocated mentor. This ensures
+                  that you learn easily and help us comprehend your needs and requirements in a holistic and comprehensive manner for an
+                  enriching experience and easy <span>online doubt solving</span>.</p>
+            </div>
+          </div>
+        </a>
+      </div> -->
+      <!-- </div>  -->
+      <!-- <div class="custom-shape-divider-top-1629899930">
+      <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" >
+        <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25"
+          class="shape-fill"></path>
+        <path
+          d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z"
+          opacity=".5" class="shape-fill"></path>
+        <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"></path>
+      </svg>
+    </div> -->
+    </div>
+    <br>
+    <div class="section fp-auto-height-responsive mb-container" style="background-color:rgba(31,114,78,0.8); background-size: cover; ">
+      <div class="mb-circles">
+        <ul>
+          <a onclick="mbDisplay(1)"><li class="border mb-anchors-active" id="mb-a1" style="padding-top:8%;"> Student's Convenient</li></a>
+          <a onclick="mbDisplay(2)"><li class="border"id="mb-a2" style="padding-top:8%;"> Concern for Individual</li></a>
+          <a onclick="mbDisplay(3)"><li class="border" id="mb-a3">Safe and Holistic Environment</li></a>
+         <a onclick="mbDisplay(4)"><li class="border" id="mb-a4"style="padding-top:9%;"> Instant Doubt Resolve</li></a>
+         <a onclick="mbDisplay(5)"><li class="border" id="mb-a5"> FREE Demonstration Class</li></a>
+        </ul>
+      </div>
+      <div class="mb-content">
+        <p class="unhide" style="color:#ffffff;" id="mb-p1">One of the major challenges for a student is to manage the times of different classes with their self studying schedules so as to avoid a clash of
+          time between the two. Ekal Shiksha strives to solve this issue for the students with their <span>doubt clearing classes</span>.
+          They can get <span>instant doubt solving</span> whenever they want. <span>Online doubt solving</span> also ensures that students enjoy studying from the
+          comfort of their homes without having to travel to far way places. They can also schedule these <span>doubt clearing classes</span> in advance
+          to ensure a proper way around their schedule and the available subject expert will be at your service to provide you with the best
+          doubt resolution.</p>
+        <p class="hide" style="color:#ffffff;" id="mb-p2">
+          Every student has their own unique pace of learning, patterns of understanding and ability of grasping new concepts.
+          Ekal Shiksha provides these unique sessions of <span>online doubt solving</span> to students while recognizing their individual dynamism and
+          assigns a specific mentor to each student who then provides doubt clarification to students while keeping in minds their
+          learning requirements through their <Span>doubt clearing classes</span>. We also ensure that no doubt ever lingers on, and thus offer
+          <span>instant doubt solving</span> to each and everyone. This way, the students don’t have to adjust their speed of learning or preferred
+          method of studying according to teachers or other students but rather are provided with mentors who will comply with their
+          standards and help them pass with flying colors.
+        </p>
+        <p class="hide" style="color:#ffffff;" id="mb-p3">One of the major challenges for a student is to manage the times of different classes with their self studying schedules so as to avoid a clash of
+          time between the two. Ekal Shiksha strives to solve this issue for the students with their <span>doubt clearing classes</span>.
+          They can get <span>instant doubt solving</span> whenever they want. <span>Online doubt solving</span> also ensures that students enjoy studying from the
+          comfort of their homes without having to travel to far way places. They can also schedule these <span>doubt clearing classes</span> in advance
+          to ensure a proper way around their schedule and the available subject expert will be at your service to provide you with the best
+          doubt resolution.</p>
+        <p class="hide" style="color:#ffffff;" id="mb-p4">A doubt can easily be indefinitely delayed and restrict one’s academic progress. When a doubt arises and you immediately get it clarified,
+        it motivates you to keep going with your ongoing studies and ensures hassle FREE studying. Students get easy and convenient access to <span>instant
+          doubt solving</span> with our top subject experts so that you no more have to linger upon a query that comes up and smoothly understand every new concept
+        introduced to you with our <span>doubt clearing classes.</p>
+        <p class="hide"style="color:#ffffff;"  id="mb-p5">Many students often feel hesitant or held back whenever a doubt pops up in their mind during a class out of fear of judgment
+            by their peers of fear of getting scolded by the teacher. With Ekal Shiksha’s .</p>
+      </div>
+      <div class="contactus-anchor" data-aos="fade-up">
+        <a href="{% url 'contact' %}">Contact Us</a>
+      </div>
+    </div>
+    <!-- <br> -->
+
+      <div class="main-container">
+        <div class="container-cards">
+          <ul>
+            <li>
+              <div class="card-front">
+                <div class="card-front__tp card-front__tp--city">
+                  <img alt="ekalshiksha doubt resolves" src="{% static 'webpages/images/Instant-resolves-doubt (1).png'%}" >
+                  <h2 class="card-front__heading">
+                    Instant Doubt Resolve
+                  </h2>
+                </div>
+                  <div class="background-card position-card1"></div>
+              </div>
+
+            </li>
+
+            <li>
+              <div class="card-front">
+                <div class="card-front__tp card-front__tp--city">
+                  <img alt="ekalshiksha Convinient & flexible" src="{% static 'webpages/images/Convenient-and-flexible (1).png'%}" >
+                  <h2 class="card-front__heading">
+                    Convinient and Flexible
+                  </h2>
+                </div>
+                <div class="background-card position-card2"></div>
+              </div>
+            </li>
+
+            <li>
+              <div class="card-front">
+                <div class="card-front__tp card-front__tp--city">
+                  <img alt="ekalshiksha teacher allocation" src="{% static 'webpages/images/Instant-teacher--allocation (1).png'%}" >
+                  <h2 class="card-front__heading">
+                    Instant Teacher Allocation
+                  </h2>
+                </div>
+                <div class="background-card position-card3"></div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="heading">
+          <h2 class="bop" style="padding:5% 0;">Why Choose Our Instant Doubt<br>Clearing or Solving Classes?</h2>
+        </div>
+        <div class="container-cards">
+          <ul>
+            <li>
+              <div class="card-front">
+                <div class="card-front__tp card-front__tp--city">
+                  <img alt="ekalshiksha doubt-free" src="{% static 'webpages/images/First-Doubt--is-free (1).png'%}" >
+                  <h2 class="card-front__heading">
+                    First Doubt FREE
+                  </h2>
+                </div>
+                <div class="background-card position-card1"></div>
+              </div>
+            </li>
+
+            <li>
+              <div class="card-front">
+                <div class="card-front__tp card-front__tp--city">
+                  <img alt="pressure or hesitation(ekalshiksha)" src="{% static 'webpages/images/No-pressure-or-hesitation.png'%}" >
+                  <h2 class="card-front__heading">
+                    No Pressure or Hesitation
+                  </h2>
+                </div>
+                <div class="background-card position-card2"></div>
+              </div>
+            </li>
+
+            <li>
+              <div class="card-front">
+                <div class="card-front__tp card-front__tp--city">
+                  <img alt="ekalshiksha pocket-friendly" src="{% static 'webpages/images/Pocket-Friendly.png'%}" >
+                  <h2 class="card-front__heading">
+                    Pocket-Friendly
+                  </h2>
+                </div>
+                <div class="background-card position-card3"></div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      <!-- <div class="cards">
+      <div class="card card-1">
+        <div class="card__exit"><i class="fas fa-bolt"></i></div>
+        <p class="card__icon"><i class="fas fa-chalkboard-teacher"></i></p>
+        <h2 class="card__title is-size-6">Instantly resolves doubts</h2>
+        <p class="card__apply">
+          <a class="card__link" href="#"> <i class="fas fa-arrow-right"></i></a>
+        </p>
+      </div>
+      <div class="card card-2">
+        <div class="card__exit"><i class="fas fa-bolt"></i></div>
+        <p class="card__icon"><i class="fas fa-disease"></i></p>
+        <h2 class="card__title is-size-6">Convenient and Flexible</h2>
+        <p class="card__apply">
+          <a class="card__link" href="#"> <i class="fas fa-arrow-right"></i></a>
+        </p>
+      </div>
+      <div class="card card-3">
+        <div class="card__exit"><i class="fas fa-bolt"></i></div>
+        <p class="card__icon"><i class="far fa-calendar-check"></i></p>
+        <h2 class="card__title is-size-6">Instant teacher allocation</h2>
+        <p class="card__apply">
+          <a class="card__link" href="#"> <i class="fas fa-arrow-right"></i></a>
+        </p>
+      </div>
+      <div class="card card-4">
+        <div class="card__exit"><i class="fas fa-bolt"></i></div>
+        <p class="card__icon"><i class="fas fa-hand-spock"></i></p>
+        <h2 class="card__title is-size-6">First Doubt is FREE</h2>
+        <p class="card__apply">
+          <a class="card__link" href="#"> <i class="fas fa-arrow-right"></i></a>
+        </p>
+      </div>
+      <div class="card card-5">
+        <div class="card__exit"><i class="fas fa-bolt"></i></div>
+        <p class="card__icon"><i class="fas fa-fist-raised"></i></p>
+        <h2 class="card__title is-size-6">No pressure or hesitation</h2>
+        <p class="card__apply">
+          <a class="card__link" href="#"> <i class="fas fa-arrow-right"></i></a>
+        </p>
+      </div>
+      <div class="card card-1">
+        <div class="card__exit"><i class="fas fa-bolt"></i></div>
+        <p class="card__icon"><i class="fas fa-rupee-sign"></i>
+        <p>
+        <h2 class="card__title is-size-6">Pocket-Friendly</h2>
+        <p class="card__apply">
+          <a class="card__link" href="#"> <i class="fas fa-arrow-right"></i></a>
+        </p>
+      </div>
+    </div> -->
+    </div>
+    <hr>
+    <div class="how-it-works" >
+      <img alt="works-ekalshiksha" src="{% static 'webpages/images/how-we-works.png'%}"  width=100%>
+    </div>
+    <div class="work">
+      <!-- <img style="width:100%; height:120%; border-radius:40px;box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);" src="{% static 'webpages/images/doubt.png' %}" > -->
+      <!-- <div style="text-align: center;">
+  <h1 style="margin-bottom:3%;padding-top:2%;color:#fff;font-size:2rem;">Book your own individual class now</h1>
+  <a href="{% url 'index' %}"><button class="modal-button button button is-success is-rounded is-large"  data-target = "#modal" style="margin-bottom:2%;background-color: #F9F9F9;color: #00303F;" >Book Now</button></a> -->
+
+      <!-- <div id = "modal" class = "modal">
+    <div class = "modal-background"></div>
+    <div class = "modal-content">
+       <div class = "box">
+        <form method='post'>
+          {% csrf_token %}
+              <label>Name</label>
+              {{form.Name}}
+              <label>Email</label>
+              {{form.Email}}
+            <label>Phone Number</label>
+            {{form.Number}}
+            <label>Course</label>
+           {{form.Course}}
+              <label>Grade</label><br>
+             {{form.Class}}
+            <br>
+          <br>
+            <div class="field is-grouped">
+              <div class="control">
+                <button class="button is-link">Submit</button>
+              </div>
+              </div>
+        </form>
+       </div>
+    </div>
+    <button class = "modal-close is-large" aria-label = "close"></button>
+ </div> -->
+
+
+      <div class="block">
+        <p style="width:90%;margin:5%; color: #fff;" class="is-size-5">
+          Ekal Shiksha provides the easiest roadmap to success. Each student upon enrollment is offered a FREE interaction with our counselor for an assessment of one’s unique learning pace, grasping capacity and mindset. Based upon these parameters,
+          we allocate the perfect mentor for you catering all your needs. You can then avail a FREE demonstration class with us and confirm your mentor according to your rapport and preference.
+        </p>
+      </div>
+
+      <br>
+      <div style="text-align:center;margin-bottom:0%;">
+        <!-- <h1 style="margin-bottom:0.5%;padding-top:1.2%;color:#fff;font-size:1.5rem;">Book your own individual class now</h1> -->
+        <a href="{% url 'contact' %}"><button class="button is-ghost is-large" style="margin-bottom:2%;border: 2px solid #F9F9F9;color:#ffffff;text-decoration: none;">Book your<b>&nbsp;FREE&nbsp;</b>Individual Doubt Class</button></a>
+      </div>
+    </div>
+    <marquee style="background: linear-gradient(to left, #848883, #174e40); margin-top: 0;" direction="left" onmouseover="this.stop()" onmouseout="this.start()" scrollamount="6">
+      <div class="marqu">“Education is the passport to the future, for tomorrow belongs to those who prepare for it today.” “Your attitude, not your aptitude, will determine your altitude.” “If you think education is expensive, try ignorance.” “The
+        only person who is educated is the one who has learned how to learn …and change.”</div>
+    </marquee>
+
+    <footer style="padding:3%;margin-top: 1%; ">
+      <div class="container bottom_border">
+        <div class="columns">
+          <div class="column is-3 mr-3">
+            <h5 class="headin5_amrc col_white_amrc pt2"><strong class="has-text-white">&#169; Ekal Shiksha 2021</strong></h5>
+            <!--headin5_amrc-->
+            <p class="mb10">Ekal Shiksha is an Ed-tech company which provides one on one individual online classes.</p>
+            <p><i class="fa fa-location-arrow"></i> C-54, Sector-2 Noida, Gautam Budh Nagar, Uttar Pradesh </p>
+            <p><i class="fa fa-phone"></i> <a href="tel:9625578335"> 9625578335.</a> </p>
+            <a href="mailto:contact@ekalshiksha.in">
+              <p><i class="fa fa fa-envelope"></i> contact@ekalshiksha.in </p>
+            </a>
+
+
+          </div>
+
+
+          <div class="column nav-column is-4">
+            <h5 class="headin5_amrc col_white_amrc pt2">Classes</h5>
+            <!--headin5_amrc-->
+            <ul class="footer_ul_amrc is-flex">
+              <div class="pr-6">
+                <li><a href="/6th/">Class 6</a></li>
+                <li><a href="/7th/">Class 7</a></li>
+                <li><a href="/8th/">Class 8</a></li>
+                <li><a href="/9th/">Class 9</a></li>
+                <li><a href="/10th/">Class 10</a></li>
+              </div>
+              <div class="pr-6">
+                <li><a href="/Science/11th/">Class 11 Science</a></li>
+                <li><a href="/Commerce/11th/">Class 11 Commerce</a></li>
+                <li><a href="/Humanities/11th/">Class 11 Humanities</a></li>
+                <li><a href="/Science/11th/">Class 12 Science</a></li>
+                <li><a href="/Commerce/12th/">Class 12 Commerce</a></li>
+                <li><a href="/Humanities/12th/">Class 12 Humanities</a></li>
+              </div>
+            </ul>
+            <!--footer_ul_amrc ends here-->
+          </div>
+
+          <div class="column nav-column is-4">
+            <h5 class="headin5_amrc col_white_amrc pt2">Study Material</h5>
+            <!--headin5_amrc-->
+            <ul class="footer_ul_amrc is-flex">
+              <div class="pr-6">
+                <li><a href="https://on-app.in/app/home?orgCode=uhmmr">Class 6</a></li>
+                <li><a href="https://on-app.in/app/home?orgCode=uhmmr">Class 7</a></li>
+                <li><a href="https://on-app.in/app/home?orgCode=uhmmr">Class 8</a></li>
+                <li><a href="https://on-app.in/app/home?orgCode=uhmmr">Class 9</a></li>
+                <li><a href="https://on-app.in/app/home?orgCode=uhmmr">Class 10</a></li>
+              </div>
+              <div class="pr-6">
+                <li><a href="https://on-app.in/app/home?orgCode=uhmmr">Class 11 Science</a></li>
+                <li><a href="https://on-app.in/app/home?orgCode=uhmmr">Class 11 Commerce</a></li>
+                <li><a href="https://on-app.in/app/home?orgCode=uhmmr">Class 11 Humanities</a></li>
+                <li><a href="https://on-app.in/app/home?orgCode=uhmmr">Class 12 Science</a></li>
+                <li><a href="https://on-app.in/app/home?orgCode=uhmmr">Class 12 Commerce</a></li>
+                <li><a href="https://on-app.in/app/home?orgCode=uhmmr">Class 12 Humanities</a></li>
+              </div>
+            </ul>
+            <!--footer_ul_amrc ends here-->
+          </div>
+          <div class="column">
+            <h5 class="headin5_amrc col_white_amrc pt2">Blogs</h5>
+            <!--headin5_amrc-->
+            <ul class="footer_ul_amrc">
+              <li><a href="/blogs/">Blogs</a></li>
+
+            </ul>
+            <!--footer_ul_amrc ends here-->
+          </div>
+          <div class="column">
+            <h5 class="headin5_amrc col_white_amrc pt2"> About</h5>
+            <!--headin5_amrc-->
+            <ul class="footer_ul_amrc">
+              <li><a href="/AboutUs/">About Us</a></li>
+
+            </ul>
+            <!--footer_ul_amrc ends here-->
+          </div>
+
+        </div>
+      </div>
+
+
+
+
+      <div class="container">
+        <ul class="foote_bottom_ul_amrc is-flex-mobile is-flex-wrap-wrap">
+          <li><a href="{% url 'index' %}">Home</a></li>
+          <li><a href="/AboutUs/">About</a></li>
+          <li><a href="/Doubts/">Doubt Class</a></li>
+
+        </ul>
+        <!--foote_bottom_ul_amrc ends here-->
+
+        <ul class="social_footer_ul">
+          <li><a href="https://www.facebook.com/ekalshiksha/"><i class="fab fa-facebook-f"></i></a></li>
+          <li><a href="https://twitter.com/ekalshiksha?lang=en"><i class="fab fa-twitter"></i></a></li>
+          <li><a href="https://in.linkedin.com/company/ekal-shiksha"><i class="fab fa-linkedin"></i></a></li>
+          <li><a href="https://www.instagram.com/ekal_shiksha/?hl=en"><i class="fab fa-instagram"></i></a></li>
+        </ul>
+        <!--social_footer_ul ends here-->
+      </div>
+
+    </footer>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+
+        // Get all "navbar-burger" elements
+        const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+        // Check if there are any navbar burgers
+        if ($navbarBurgers.length > 0) {
+
+          const navbarDropdown = [].slice.call(document.querySelectorAll("#navbarDropdown"));
+
+
+
+          // Add a click event on each of them
+          $navbarBurgers.forEach(el => {
+            el.addEventListener('click', () => {
+
+              // Get the target from the "data-target" attribute
+              const target = el.dataset.target;
+              const $target = document.getElementById(target);
+
+              // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+              el.classList.toggle('is-active');
+              $target.classList.toggle('is-active');
+
+              if ($target.classList.contains("is-active")) {
+                navbarDropdown.map((e) => {
+                  e.lastElementChild.style.display = "none"
+                })
+              } else {
+                navbarDropdown.map((e) => {
+                  e.lastElementChild.style.removeProperty("display")
+                })
+              }
+
+              navbarDropdown.map((e) => {
+                const button = e.firstElementChild;
+                button.addEventListener("click", () => {
+                  if (e.lastElementChild.style.display === "none") {
+                    e.lastElementChild.style.display = "block";
+                  } else {
+                    e.lastElementChild.style.display = "none";
+                  }
+                });
+              });
+
+            });
+          });
+        }
+      });
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+    AOS.init({
+duration: 1200,
+})
+    </script>
+    <script>
+      function display(val){
+        if (val === 1){
+          $('#p1').removeClass('hide')
+          $('#p2').addClass('hide');
+          $('#p3').addClass('hide');
+          $('#p4').addClass('hide');
+          $('#p5').addClass('hide');
+          $('#p6').addClass('hide');
+          $("#a1").addClass('anchors-active');
+          $("#a2").removeClass('anchors-active');
+          $("#a3").removeClass('anchors-active');
+          $("#a4").removeClass('anchors-active');
+          $("#a5").removeClass('anchors-active');
+        }
+        else if (val === 2) {
+          $('#p2').removeClass('hide');
+          $('#p1').addClass('hide');
+          $('#p3').addClass('hide');
+          $('#p4').addClass('hide');
+          $('#p5').addClass('hide');
+          $('#p6').addClass('hide');
+          $("#a2").addClass('anchors-active');
+          $("#a1").removeClass('anchors-active');
+          $("#a3").removeClass('anchors-active');
+          $("#a4").removeClass('anchors-active');
+          $("#a5").removeClass('anchors-active');
+        }
+        else if (val === 3) {
+          $('#p3').removeClass('hide');
+          $('#p1').addClass('hide');
+          $('#p2').addClass('hide');
+          $('#p4').addClass('hide');
+          $('#p5').addClass('hide');
+          $('#p6').addClass('hide');
+          $("#a3").addClass('anchors-active');
+          $("#a2").removeClass('anchors-active');
+          $("#a1").removeClass('anchors-active');
+          $("#a4").removeClass('anchors-active');
+          $("#a5").removeClass('anchors-active');
+        }
+        else if (val === 4) {
+          $('#p4').removeClass('hide');
+          $('#p1').addClass('hide');
+          $('#p2').addClass('hide');
+          $('#p3').addClass('hide');
+          $('#p5').addClass('hide');
+          $('#p6').addClass('hide');
+          $("#a4").addClass('anchors-active');
+          $("#a2").removeClass('anchors-active');
+          $("#a3").removeClass('anchors-active');
+          $("#a1").removeClass('anchors-active');
+          $("#a5").removeClass('anchors-active');
+        }
+        else {
+          $('#p5').removeClass('hide');
+          $('#p1').addClass('hide');
+          $('#p2').addClass('hide');
+          $('#p4').addClass('hide');
+          $('#p3').addClass('hide');
+          $('#p6').addClass('hide');
+          $("#a5").addClass('anchors-active');
+          $("#a2").removeClass('anchors-active');
+          $("#a3").removeClass('anchors-active');
+          $("#a4").removeClass('anchors-active');
+          $("#a1").removeClass('anchors-active');
+        }
+      };
+    </script>
+    <script>
+      function mbDisplay(val){
+        if (val === 1){
+          $('#mb-p1').removeClass('hide')
+          $('#mb-p2').addClass('hide');
+          $('#mb-p3').addClass('hide');
+          $('#mb-p4').addClass('hide');
+          $('#mb-p5').addClass('hide');
+          $('#mb-p6').addClass('hide');
+          $("#mb-a1").addClass('mb-anchors-active');
+          $("#mb-a2").removeClass('mb-anchors-active');
+          $("#mb-a3").removeClass('mb-anchors-active');
+          $("#mb-a4").removeClass('mb-anchors-active');
+          $("#mb-a5").removeClass('mb-anchors-active');
+        }
+        else if (val === 2) {
+          $('#mb-p2').removeClass('hide');
+          $('#mb-p1').addClass('hide');
+          $('#mb-p3').addClass('hide');
+          $('#mb-p4').addClass('hide');
+          $('#mb-p5').addClass('hide');
+          $('#mb-p6').addClass('hide');
+          $("#mb-a2").addClass('mb-anchors-active');
+          $("#mb-a1").removeClass('mb-anchors-active');
+          $("#mb-a3").removeClass('mb-anchors-active');
+          $("#mb-a4").removeClass('mb-anchors-active');
+          $("#mb-a5").removeClass('mb-anchors-active');
+        }
+        else if (val === 3) {
+          $('#mb-p3').removeClass('hide');
+          $('#mb-p1').addClass('hide');
+          $('#mb-p2').addClass('hide');
+          $('#mb-p4').addClass('hide');
+          $('#mb-p5').addClass('hide');
+          $('#mb-p6').addClass('hide');
+          $("#mb-a3").addClass('mb-anchors-active');
+          $("#mb-a2").removeClass('mb-anchors-active');
+          $("#mb-a1").removeClass('mb-anchors-active');
+          $("#mb-a4").removeClass('mb-anchors-active');
+          $("#mb-a5").removeClass('mb-anchors-active');
+        }
+        else if (val === 4) {
+          $('#mb-p4').removeClass('hide');
+          $('#mb-p1').addClass('hide');
+          $('#mb-p2').addClass('hide');
+          $('#mb-p3').addClass('hide');
+          $('#mb-p5').addClass('hide');
+          $('#mb-p6').addClass('hide');
+          $("#mb-a4").addClass('mb-anchors-active');
+          $("#mb-a2").removeClass('mb-anchors-active');
+          $("#mb-a3").removeClass('mb-anchors-active');
+          $("#mb-a1").removeClass('mb-anchors-active');
+          $("#mb-a5").removeClass('mb-anchors-active');
+        }
+        else {
+          $('#mb-p5').removeClass('hide');
+          $('#mb-p1').addClass('hide');
+          $('#mb-p2').addClass('hide');
+          $('#mb-p4').addClass('hide');
+          $('#mb-p3').addClass('hide');
+          $("#mb-a5").addClass('mb-anchors-active');
+          $("#mb-a2").removeClass('mb-anchors-active');
+          $("#mb-a3").removeClass('mb-anchors-active');
+          $("#mb-a4").removeClass('mb-anchors-active');
+          $("#mb-a1").removeClass('mb-anchors-active');
+        }
+      };
+    </script>
+    <script>
+      $(".modal-button").click(function() {
+        var target = $(this).data("target");
+        $("html").addClass("is-clipped");
+        $(target).addClass("is-active");
+      });
+
+      $(".modal-close").click(function() {
+        $("html").removeClass("is-clipped");
+        $(this).parent().removeClass("is-active");
+      });
+    </script>
+    <script src="{% static 'webpages/Js/readMoreJS.min.js' %}"></script>
+    <script>
+      if (screen.width < 500) {
+        $readMoreJS.init({
+          target: '.readmore', // Selector of the element the plugin applies to (any CSS selector, eg: '#', '.'). Default: ''
+          numOfWords: 100, // Number of words to initially display (any number). Default: 50
+          toggle: true, // If true, user can toggle between 'read more' and 'read less'. Default: true
+          moreLink: '<button class="get-started" style="margin:auto;">Read More</button>', // The text of 'Read more' link. Default: 'read more ...'
+          lessLink: '<button class="get-started" style="margin:auto;">Read Less</button>' // The text of 'Read less' link. Default: 'read less'
+        });
+      }
+    </script>
+</body>
+
+</html>

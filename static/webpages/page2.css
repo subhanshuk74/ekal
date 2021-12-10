@@ -1,0 +1,355 @@
+
+.card{
+    border-radius: 4px;
+    background: #fff;
+    box-shadow: 0 6px 10px rgba(0,0,0,.08), 0 0 6px rgba(0,0,0,.05);
+      transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
+  padding: 14px 80px 18px 36px;
+}
+.nested.dropdown:hover > .dropdown-menu {
+    display: inline-block;
+  }
+.dropdown-menu {
+    top: -15px;
+    margin-left: 100%;
+  }
+.dropdown-trigger  button {
+      padding: 0px 0px;
+      border: 0px;
+      font-size: 14px;
+      font-weight: 400;
+      height: 2em;
+}
+.card:hover{
+     transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+}
+.chap-detail{
+  background: #F3F0D7;
+}
+.s-card2 h3{
+  font-weight: 600;
+}
+
+.s-card2 img{
+  position: absolute;
+  top: 20px;
+  right: 15px;
+  max-height: 120px;
+}
+
+.card-1{
+  background-image: url(https://ionicframework.com/img/getting-started/ionic-native-card.png);
+      background-repeat: no-repeat;
+    background-position: right;
+    background-size: 70px;
+    width: 50%;
+}
+
+.card-2{
+   background-image: url(https://ionicframework.com/img/getting-started/components-card.png);
+      background-repeat: no-repeat;
+    background-position: right;
+    background-size: 80px;
+}
+
+.card-3{
+  background-image: url(https://ionicframework.com/img/getting-started/components-card.png);
+     background-repeat: no-repeat;
+   background-position: right;
+   background-size: 80px;
+}
+.card-4{
+  background-image: url(https://ionicframework.com/img/getting-started/components-card.png);
+     background-repeat: no-repeat;
+   background-position: right;
+   background-size: 80px;
+}
+.chap-detail{
+  padding: 2%;
+}
+.chap-detail ul li{
+  display: inline-block;
+  padding: 1%;
+  width: 48%;
+}
+@media(max-width: 990px){
+  .card{
+    margin: 20px;
+  }
+}
+.middle-col{
+  display: flex;
+flex-direction: row;
+font-weight: normal;
+padding-top: 15%;
+color: #F3F4ED;		 }
+.sub-menu1{
+display: flex;
+flex-direction: column;
+}
+.sub-menu2{
+display: flex;
+flex-direction: column;
+}
+.menu-1{
+display:flex;
+flex-direction: row;}
+.menu-11{
+display: flex;
+flex-direction: column;
+}
+middle-col{
+  font-size: 15px;
+  font-weight: 400;
+  text-align: left;
+  padding-top: 10%;;
+  width: 70%;
+}
+
+
+
+.youtube{
+	width: 80%;
+	margin: 80px auto;
+}
+.youtube h1{
+	padding: 60px 0;
+	color:green;
+	font-size: 44px;
+	text-align: center;
+}
+.head{
+  font-weight: 500;
+  font-size: 1.6rem;
+  color:black;
+  margin-top: 7%;
+  margin-bottom: 2%;
+}
+@keyframes animated {
+  100% {
+    left: 0;
+  }
+}
+
+.carousel-cell {
+  width: 33%;
+  /* height: 300px; */
+  margin-right: 10px;
+  border-radius: 5px;
+}
+
+.navbar-brand > a.navbar-item:hover,
+a.navbar-item:focus {
+  color: black;
+}
+
+.col_white_amrc { color:#FFF;}
+footer { width:100%; background-color:#263238; min-height:250px; padding:10px 0px 25px 0px ;}
+.pt2 { padding-top:40px ; margin-bottom:20px ;}
+footer p { font-size:13px; color:#CCC; padding-bottom:0px; margin-bottom:8px;}
+.mb10 { padding-bottom:15px ;}
+.footer_ul_amrc { margin:0px ; list-style-type:none ; font-size:14px; padding:0px 0px 10px 0px ; }
+.footer_ul_amrc li {padding:0px 0px 5px 0px;}
+.footer_ul_amrc li a{ color:#CCC;}
+.footer_ul_amrc li a:hover{ color:#fff; text-decoration:none;}
+.fleft { float:left;}
+.padding-right { padding-right:10px; }
+
+.footer_ul2_amrc {margin:0px; list-style-type:none; padding:0px;}
+.footer_ul2_amrc li p { display:table; }
+.footer_ul2_amrc li a:hover { text-decoration:none;}
+.footer_ul2_amrc li i { margin-top:5px;}
+
+.bottom_border { border-bottom:1px solid #323f45; padding-bottom:20px;}
+.foote_bottom_ul_amrc {
+	list-style-type:none;
+	padding:0px;
+	display:table;
+	margin-top: 10px;
+	margin-right: auto;
+	margin-bottom: 10px;
+	margin-left: auto;
+}
+.foote_bottom_ul_amrc li { display:inline;}
+.foote_bottom_ul_amrc li a { color:#999; margin:0 12px;}
+
+.social_footer_ul { display:table; margin:15px auto 0 auto; list-style-type:none;  }
+.social_footer_ul li { padding-left:20px; padding-top:10px; float:left; }
+.social_footer_ul li a { color:#CCC; border:1px solid #CCC; padding:8px;border-radius:50%;}
+.social_footer_ul li i {  width:20px; height:20px; text-align:center;}
+
+.main-heading {
+  font-size: 3.5rem;
+}
+
+#app-store-btn {
+  width: 120px; height: 40px;
+}
+
+#play-store-btn {
+  width: 150px; height: 58px;
+}
+
+@media (max-width: 768px) {
+  .syllabus-wrapper {
+    width: 85%;
+  }
+
+  .socials {
+    border-right: none;
+  }
+
+  .social-btns {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .yt-wrapper {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .section {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+  .carousel-cell {
+    width: 100%;
+  }
+
+  .custom-shape-divider-top-1630603934 svg {
+    height: 80px;
+  }
+
+  footer {
+	padding-left: 1.5rem;
+	padding-right: 1.5rem;
+}
+}
+
+@media (max-width: 1024px) {
+  .navbar-menu {
+    margin-bottom: 20px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .main-heading {
+    font-size: 5rem;
+  }
+  .is-size-5 {
+    font-size: 2rem !important;
+  }
+  .is-size-2 {
+    font-size: 3.5rem !important;
+  }
+  .is-size-6 {
+    font-size: 1.5rem !important;
+  }
+  .is-size-4 {
+    font-size: 2.5rem !important;
+  }
+  .is-size-1 {
+    font-size: 4rem !important;
+  }
+  .navbar-item {
+    font-size: 1.5rem;
+  }
+  #app-store-btn {
+    width: 160px; height: 54px;
+  }
+
+  #play-store-btn {
+    width: 190px; height: 80px;
+  }
+}.marqu {
+  text-align: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 20px;
+  padding: 10px;
+}
+.row{
+  display: flex;
+  flex-grow: 1;
+  flex-wrap: wrap;
+  margin: 2%;
+}
+.col-md-4{
+  margin-bottom: 4%;
+  margin-left: 2%;
+  flex-grow: 1;
+  /* margin-right: 2%; */
+}
+.card p{
+  margin-bottom: 17%;
+  margin-top: 10%;
+}
+
+.download-card2{
+  padding: 2%;
+  /* margin: 20px 12px; */
+}
+.download-card2 p{
+  font-size: .8rem;
+}
+
+.service-swipe .s-card2 {
+  justify-content: space-around;
+  padding: 10px;
+  /* align-items: center; */
+  /* text-align: center; */
+  width: 350px;
+  height: 200px;
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.05),
+    0 0 50px rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  cursor: pointer;
+  transition-duration: 0.5s;
+  background-image: url(https://ionicframework.com/img/getting-started/ionic-native-card.png);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: 70px;
+  padding-left: 9%;
+  padding-right: 9%;
+}
+
+.s-card2 h3{
+  padding: 2%;
+  text-align: left;
+  font-weight: 600;
+  padding-top: 5%;
+}
+.service-swipe .s-card2 p {
+  color: #000000;
+  text-align: left;
+  font-size: 1em;
+  padding-top: 5%;
+  color: #212121;
+  padding-bottom:10%;
+  font-family: "Open Sans", sans-serif;
+}
+
+.service-swipe .s-card2:hover {
+  /* box-shadow: 0 0 50px rgba(255, 255, 255, 1); */
+  transform: scale(1.1,1.1);
+}
+
+@media (max-width: 768px){
+  .row{
+    flex-direction: column;
+  }
+  .card{
+    margin-top: 5%;
+  }
+  .card p{
+    margin-bottom: 7%;
+    margin-top: 4%;
+  }
+  h1{
+    width: 97%;
+  }
+}
+.container h1{
+  margin-top: 5%;
+}

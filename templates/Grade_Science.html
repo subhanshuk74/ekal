@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+  {% block content %}
+  <meta charset="utf-8">
+  <meta name="description" content="{{object.desc}}">
+  <!-- <meta name="keywords" content={{object.Keywords}}> -->
+  <meta name="robots" content="index, follow">
+  <meta property="og:locale" content="en_IN">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{object.Title}}">
+  <meta property="og:description" content="{{object.desc}}">
+  <meta property="og:url" content="{{ request.build_absolute_uri }}">
+  <meta property="og:site_name" content="Ekal Shiksha">
+  <meta property="og:image" content="https://ekalshiksha.in/static/webpages/images/Logo.png">
+  <meta name="twitter:card" content="summary" />
+  <link rel="shortcut icon" type="png" href="{% static '/webpages/images/Logo.ico' %}">
+
+  <meta http-equiv="X-UA-Comaptible" content="IE=edge">
+  <title>{{object.Title}}</title>
+
+  <meta name="viewport" content="width=400; user-scalable=0;" />
+  <link rel="stylesheet" type="text/css" href="{% static 'webpages/style2.css' %}">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.8/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- <meta name="description" content="Class 6 is a significant step in the learning paths as it acts as a foundation for a student’s school life. A good mentorship can pave their ways for the future."> -->
+  <!-- <meta name="keywords" content="Class 6 , Class 6 English, Class 6 Maths, Class 6 Science, Class 6 SST"> -->
+  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous"> -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <link rel="stylesheet" type="text/css" href="{% static 'webpages/fullpage.css' %}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Work+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'webpages/hover-min.css' %}">
+  <script src="https://kit.fontawesome.com/9d4d248d66.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+  <script src="https://kit.fontawesome.com/9d4d248d66.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="{% static 'webpages/flickity.min.css' %}" media="screen">
+  <link rel="stylesheet" href="{% static 'webpages/style.css' %}">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- <link rel="stylesheet" href="swiper-bundle.min.css"> -->
+  <!--Jquery-->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+
+  <script type="text/javascript" src="{% static 'webpages/Js/script2.js' %}"></script>
+
+  <script>
+    $(window).on('scroll', function() {
+      if ($(window).scrollTop()) {
+        $('nav').addClass('black');
+      } else {
+        $('nav').removeClass('black');
+      }
+    })
+  </script>
+  <script>
+    function myFunction() {
+      var dots = document.getElementById("dots");
+      var moreText = document.getElementById("more");
+      var btnText = document.getElementById("myBtn");
+
+      if (dots.style.display === "none") {
+        dots.style.display = "inline";
+        btnText.innerHTML = "Read more";
+        moreText.style.display = "none";
+        if (window.matchMedia("(max-width: 500px)").matches) {
+          document.querySelector(".bbop").style.height = "1100px";
+        }
+      } else {
+        dots.style.display = "none";
+        btnText.innerHTML = "Read less";
+        moreText.style.display = "inline";
+        if (window.matchMedia("(max-width: 500px)").matches) {
+          document.querySelector(".bbop").style.height = "1530px";
+        }
+      }
+
+    }
+  </script>
+  <script>
+    ! function(f, b, e, v, n, t, s) {
+      if (f.fbq) return;
+      n = f.fbq = function() {
+        n.callMethod ?
+          n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+      };
+      if (!f._fbq) f._fbq = n;
+      n.push = n;
+      n.loaded = !0;
+      n.version = '2.0';
+      n.queue = [];
+      t = b.createElement(e);
+      t.async = !0;
+      t.src = v;
+      s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s)
+    }(window, document, 'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '3789975331106301');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img alt="ekalshiksha facebook" height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=3789975331106301&ev=PageView&noscript=1" /></noscript>
+  <!-- End Facebook Pixel Code -->
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JR1HSFMVDL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-JR1HSFMVDL');
+  </script>
+  <script src="{% static 'webpages/Js/swiper-bundle.min.js' %}"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      direction: "vertical",
+      slidesPerView: 1,
+      spaceBetween: 30,
+      mousewheel: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+  </script>
+  <style>
+    .swiper-container {
+      width: 100%;
+      padding-top: 10%;
+      padding-bottom: 10%;
+      min-height: 60vh;
+      background: #383838;
+      text-align: center;
+    }
+
+    .swiper-slide {
+      background-position: center;
+      background-size: cover;
+      width: 300px;
+      height: 300px;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+    }
+
+    a {
+      text-decoration: none !important;
+    }
+  </style>
+
+
+</head>
+
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar px-5 is-fixed-top" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="{% url 'index' %}">
+         <img alt="ekal shiksha logo" src="{% static 'webpages/images/Logo head.jpeg' %}">
+         <img alt="ekal shiksha" src="{% static 'webpages/images/Logo font.jpeg' %}">
+        <!-- <strong class="ml-2 brand is-size-5">Ekal Shiksha</strong> -->
+      </a>
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbar">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+
+    <div id="navbar" class="navbar-menu">
+      <div class="navbar-end">
+
+        <div class="navbar-item has-dropdown is-hoverable" id="navbarDropdown">
+          <a class="navbar-link">
+            Courses
+          </a>
+          <div class="navbar-dropdown">
+            <a href="/6th/" class="navbar-item">
+              Class 6th
+            </a>
+            <a href="/7th/" class="navbar-item">
+              Class 7th
+            </a>
+            <a href="/8th/" class="navbar-item">
+              Class 8th
+            </a>
+            <a href="/9th/" class="navbar-item">
+              Class 9th
+            </a>
+            <a href="/10th/" class="navbar-item">
+              Class 10th
+            </a>
+            <input class="dropdown-sub" type="checkbox" id="dropdown-sub" name="dropdown-sub" />
+            <label class="for-dropdown-sub button" for="dropdown-sub" style="padding-left:7%">Class 11th</label>
+            <div class="section-dropdown-sub">
+              <a href="/Science/11th/" class="navbar-item">
+                Class 11th Science
+              </a>
+              <a href="/Commerce/11th/" class="navbar-item">
+                Class 11th Commerce
+              </a>
+              <a href="/Humanities/11th/" class="navbar-item">
+                Class 11th Humanities
+              </a>
+            </div>
+            <div class="nested navbar-item dropdown ">
+              <div class="dropdown-trigger">
+                <button class="button " aria-haspopup="true" aria-controls="dropdown-menu" style="font-family: Work Sans, sans-serif;">
+                  <span>Class 12th</span></button>
+              </div>
+              <div class="dropdown-menu " id="dropdown-menu" role="menu">
+                <div class=" navbar-dropdown">
+                  <a href="/Science/12th/" class="navbar-item">
+                    Class 12th Science
+                  </a>
+                  <a href="/Commerce/12th/" class="navbar-item">
+                    Class 12th Commerce
+                  </a>
+                  <a href="/Humanities/12th/" class="navbar-item">
+                    Class 12th Humanities
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+            <!-- <a href="/Science/11th/" class="navbar-item">
+              Class 11th Science
+            </a>
+            <a href="/Commerce/11th/" class="navbar-item">
+              Class 11th Commerce
+            </a><a href="/Humanities/11th/" class="navbar-item">
+              Class 11th Humanities
+            </a>
+            <a href="/Science/12th/" class="navbar-item">
+              Class 12th Science
+            </a>
+            <a href="/Commerce/12th/" class="navbar-item">
+              Class 12th Commerce
+            </a><a href="/Humanities/12th/" class="navbar-item">
+              Class 12th Humanities
+            </a>
+          </div>
+        </div> -->
+
+
+
+
+
+        <a href="{% url 'Doubt' %}" class="navbar-item">Doubt Class</a>
+        <div class="navbar-item has-dropdown is-hoverable" id="navbarDropdown">
+          <a class="navbar-link">
+            Study Material 
+          </a>
+          <div class="navbar-dropdown">
+            <a href="/StudyMaterial/#ncert-solution" class="navbar-item">
+              NCERT Solutions
+            </a>
+            <a href="/StudyMaterial/#ncert-book" class="navbar-item">
+              NCERT Books
+            </a>
+            <a href="/StudyMaterial/#ncert-mock-test" class="navbar-item">
+              NCERT Mock Test
+            </a>
+            <a href="/StudyMaterial/#ncert-assignment" class="navbar-item">
+              NCERT Assignments
+            </a>
+            
+          </div>
+        </div>
+            <div class="navbar-item has-dropdown is-hoverable" id="navbarDropdown">
+              <a class="navbar-link">
+                Micro Courses
+              </a>
+              <div class="navbar-dropdown">
+                <a href="/Micro/6/" class="navbar-item">
+                  Micro 6th
+                </a>
+                <a href="/Micro/7/" class="navbar-item">
+                  Micro 7th
+                </a>
+                <a href="/Micro/8/" class="navbar-item">
+                  Micro 8th
+                </a>
+                <a href="/Micro/9/" class="navbar-item">
+                  Micro 9th
+                </a>
+                <a href="/Micro/10/" class="navbar-item">
+                  Micro 10th
+                </a>
+                <input class="dropdown-sub" type="checkbox" id="dropdown-sub-1" name="dropdown-sub" />
+                <label class="for-dropdown-sub button" for="dropdown-sub-1" style="padding-left:7%">Micro 11th</label>
+                <div class="section-dropdown-sub">
+                  <a href="/Micro/11th_Science" class="navbar-item">
+                    Micro 11th Science
+                  </a>
+                  <a href="/Micro/11th_Commerce/" class="navbar-item">
+                    Micro 11th Commerce
+                  </a>
+                  <a href="/Micro/11th_Humanities/" class="navbar-item">
+                    Micro 11th Humanities
+                  </a>
+                </div>
+                <div class="nested navbar-item dropdown ">
+                  <div class="dropdown-trigger">
+                    <button class="button " aria-haspopup="true" aria-controls="dropdown-menu" style="font-family: Work Sans, sans-serif;">
+                      <span>Micro 12th</span></button>
+                  </div>
+                  <div class="dropdown-menu " id="dropdown-menu" role="menu">
+                    <div class=" navbar-dropdown">
+                      <a href="/Micro/12th_Science/" class="navbar-item">
+                        Micro 12th Science
+                      </a>
+                      <a href="/Micro/12th_Commerce/" class="navbar-item">
+                        Micro 12th Commerce
+                      </a>
+                      <a href="/Micro/12th_Humanities/" class="navbar-item">
+                        Micro 12th Humanities
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        <a href="{% url 'contact' %}" class="navbar-item">Contact us</a>
+
+        <a href="https://web.studentekalshiksha.in" class="navbar-item">SignUp</a>
+        <div class="navbar-item has-dropdown is-hoverable" id="navbarDropdown">
+          <a class="navbar-link">
+            More
+          </a>
+          <div class="navbar-dropdown" style="left:auto;right: 1rem;">
+              <a href="{% url 'About' %}" class="navbar-item">About Us</a>
+              <a href="{% url 'blog' %}" class="navbar-item">Blog</a>
+              <a href="{% url 'work' %}" class="navbar-item">Teach With Us</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+<!--
+  <br>
+  <br> -->
+  <div class="bbop background" style="position:sticky;">
+    <br>
+    <br>
+    <h1 class="bop is-size-2" style="padding-top:0%; ">{{object.Grade_Title}}</h1>
+    <br>
+
+    <p class="is-size-5 px-6 readmore">{{object.info}}
+      <br>
+      <br>
+      <br>
+    </p>
+    <br>
+    <br>
+  </div>
+
+  <!-- <div class="custom-shape-divider-top-1629234527">
+    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+      <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+    </svg>
+  </div> -->
+  </div>
+
+  <div class="whole">
+    <div class="header">
+      <h2 style="font-size:2rem;margin-bottom:1.5%; font-weight:500;padding-top:7%;">Subject we are going to cover for online classes for class {{object.GId}}th Science</h2>
+      <br>
+      <h2 style="margin-bottom:4%;" class="is-size-4">An epitome of excellence</h2>
+      <br>
+
+
+    </div>
+    <div class="container" style="padding-bottom:5%; margin-left:11%;">
+      <br><br>
+      <!------------------------------------------------------------>
+
+      <div class="div px-6 py-4 mb-6" data-aos="fade-left" data-aos-duration="1000" data-aos-once="true">
+        <div class="img">
+          <img alt="ekalshiksha maths" style="margin:0 5%;float:left;  flex-grow: 1;
+" src="{% static 'webpages/images/280-2806383_images-of-math-image.png' %}" >
+        </div>
+        <div style=" justify-content: space ;flex-grow: 1;margin:0 5%;" class="">
+          <br>
+          <h2 class="is-size-4">Maths</h2>
+          <br>
+          <p class="is-size-6">{{object.Math}}</p>
+          <br>
+        </div>
+      </div>
+
+      <!-------------------------------------------------------------->
+      <div class="div px-6 py-4 mb-6" data-aos="fade-right" data-aos-duration="1000" data-aos-once="true">
+        <div class="img">
+          <img alt="ekalshiksha Physics" style="margin:0 5%; float:left; flex-grow: 1;
+   " src='https://image.freepik.com/free-vector/hand-drawn-science-background_23-2148535018.jpg' >
+        </div>
+        <div style=" justify-content: space ;flex-grow: 1;margin:0 5%;" class="">
+          <br>
+          <h2 class="is-size-4">Physics</h2>
+          <br>
+          <p class="is-size-6">{{object.Physics}} </p>
+          <br>
+        </div>
+      </div>
+      <!-- ------------------------------------------------------------->
+      <div class="div px-6 py-4 mb-6" data-aos="flip-up" data-aos-duration="1000" data-aos-once="true">
+        <div class="img kk">
+          <img alt="ekalshiksha Chemistry" style="margin:0 5%; float:left;  flex-grow: 1;
+   " src="https://c8.alamy.com/comp/FRRE4D/social-studies-word-cloud-concept-with-abstract-background-FRRE4D.jpg" >
+        </div>
+        <div style=" justify-content: space ;flex-grow: 1;margin:0 5%;" class="">
+          <br>
+          <h2 class="is-size-4">Chemistry</h2>
+          <br>
+          <p class="is-size-6">{{object.Chemistry}}</p>
+          <br>
+        </div>
+      </div>
+      <!-- ------------------------------------------------------------->
+      <div class="div px-6 py-4 mb-6" data-aos="flip-down" data-aos-duration="1000" data-aos-once="true">
+        <div class="img kk">
+          <img alt="ekalshiksha Biology" style="margin: 5%; float:left;  flex-grow: 1;
+   " src="https://image.shutterstock.com/image-vector/design-concept-word-english-website-260nw-1043962963.jpg" >
+        </div>
+        <div style="justify-content: space ;flex-grow: 1;margin:0 5%;" class="">
+          <br>
+          <h2 class="is-size-4">Biology</h2>
+          <br>
+          <p class="is-size-6">{{object.Bio}}</p>
+          <br>
+        </div>
+      </div>
+      <div class="div px-6 py-4 mb-6" data-aos="flip-down" data-aos-duration="1000" data-aos-once="true">
+        <div class="img kk">
+          <img alt="ekalshiksha english" style="margin: 5%; float:left;  flex-grow: 1;
+   " src="https://image.shutterstock.com/image-vector/design-concept-word-english-website-260nw-1043962963.jpg" >
+        </div>
+        <div style="justify-content: space ;flex-grow: 1;margin:0 5%;" class="">
+          <br>
+          <h2 class="is-size-4">English</h2>
+          <br>
+          <p class="is-size-6">{{object.English}}</p>
+          <br>
+        </div>
+      </div>
+    </div>
+    {% endblock%}
+
+
+    <div style="	background-image:linear-gradient(rgba(23,78,64,0.8),rgba(23,78,64,0.8)),url('/static/webpages/images/what we have for you child.svg');background-size: cover;padding-top:5%;" class="swiper-container mySwiper">
+    <!-- <div style="background-color:#175b58;padding-top:5%;" class="swiper-container mySwiper"> -->
+      <h2 class="bop " style="padding-bottom:4%;color: #fff;font-size:3rem;font-weight:500">What we have for your child</h2>
+
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img alt="ekalshiksha lesson plan" src="{% static '/webpages/images/1 (2).png' %}" >
+        </div>
+        <div class="swiper-slide">
+          <img alt="ekalshiksha individual teacher" src="{% static '/webpages/images/2 (2).png' %}" />
+        </div>
+        <div class="swiper-slide">
+          <img alt="ekalshiksha free classes" src="{% static '/webpages/images/3 (2).png' %}" />
+        </div>
+        <div class="swiper-slide">
+          <img alt="ekalshiksha regular assignments" src="{% static '/webpages/images/5 (2).png' %}" />
+        </div>
+        <div class="swiper-slide">
+          <img alt="ekalshiksha auto-massage" src="{% static '/webpages/images/6 (2).png' %}" />
+        </div>
+        <div class="swiper-slide">
+          <img alt="ekalshiksha test" src="{% static '/webpages/images/7 (2).png' %}" />
+        </div>
+        <div class="swiper-slide">
+          <img alt="ekalshiksha parental-app" src="{% static '/webpages/images/8 (2).png' %}" />
+        </div>
+        <!-- <div class="swiper-slide">
+            <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
+          </div> -->
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+    <!-- Swiper -->
+    <!-- <div style="background-image:url('/static/webpages/images/bg-01.png');padding-top:5%;" class="swiper-container mySwiper"> -->
+      <!-- <div style="background-color:#175b58;padding-top:5%;" class="swiper-container mySwiper"> -->
+        <!-- <h2 class="bop " style="padding-bottom:4%;color: #fff;font-size:2.5rem;font-weight:500">What we have for your child</h2>
+
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="{% static '/webpages/images/1 (2).png' %}" >
+          </div>
+          <div class="swiper-slide">
+            <img src="{% static '/webpages/images/2 (2).png' %}" />
+          </div>
+          <div class="swiper-slide">
+            <img src="{% static '/webpages/images/3 (2).png' %}" />
+          </div>
+          <div class="swiper-slide">
+            <img src="{% static '/webpages/images/5 (2).png' %}" />
+          </div>
+          <div class="swiper-slide">
+            <img src="{% static '/webpages/images/6 (2).png' %}" />
+          </div>
+          <div class="swiper-slide">
+            <img src="{% static '/webpages/images/7 (2).png' %}" />
+          </div>
+          <div class="swiper-slide">
+            <img src="{% static '/webpages/images/8 (2).png' %}" />
+          </div> -->
+          <!-- <div class="swiper-slide">
+              <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
+            </div>
+            <div class="swiper-slide">
+              <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
+            </div> -->
+        <!-- </div>
+        <div class="swiper-pagination"></div>
+      </div> -->
+      <!-- <div style="background-image:url('/static/webpages/images/bg-01.png');" class="swiper-container mySwiper flex-container"> -->
+      <!-- <div style="background-color:#175b58;padding-top:5%;" class="swiper-container mySwiper"> -->
+      <!-- <div class="flex-heading">
+        <br>
+        <h2 class="bop flex-head" style="padding-bottom:4%;color: #fff;font-weight:500">What we have for your child</h2>
+      </div>
+
+      <div class="honeycomb-cell">
+        <div class="cell-pack1">
+          <div class="cell1"><h3 style="padding-top:20%;">Customized Lesson Plans</h3></div><p>.</p>
+          <div class="cell2"><h3 >Parental App</h3></div>
+        </div>
+        <div class="cell-pack2">
+          <div class="cell3"><h3></h3></div><p>.</p>
+          <div class="cell4"><h3 >Chapter Wise Test</h3></div>
+
+        </div>
+
+      </div> -->
+
+
+
+    <!-- <div class="swiper-container mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">Slide 1</div>
+        <div class="swiper-slide">Slide 2</div>
+        <div class="swiper-slide">Slide 3</div>
+        <div class="swiper-slide">Slide 4</div>
+        <div class="swiper-slide">Slide 5</div>
+        <div class="swiper-slide">Slide 6</div>
+        <div class="swiper-slide">Slide 7</div>
+        <div class="swiper-slide">Slide 8</div>
+        <div class="swiper-slide">Slide 9</div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div> -->
+    <!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> -->
+
+    <!-- Initialize Swiper -->
+    <!-- <script>
+      var swiper = new Swiper(".mySwiper", {
+        direction: "vertical",
+        slidesPerView: 1,
+        spaceBetween: 30,
+        mousewheel: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+    </script> -->
+    <br>
+
+
+    <!-- ------------------------------------------------------------->
+
+    <!-- ------------------------------------------------------------->
+  </div>
+  <div class="circles-div" style="padding-bottom:4%;">
+    <div class="circle-container" style="gap:0;">
+          <!-- <div class="circle-grade"><h2 class="circle-step">Step 01</h2><p class="circle-text">Interact with our Counsellor for FREE</p> </div>
+          <div class="circle-connection"></div>
+          <div class="circle-grade" style="border: 4px dotted #000000;padding-top:2%;"><div class="inner-circle"><p class="has-text-white">How It Works</p></div></div>
+          <div class="circle-connection"></div>
+          <div class="circle-grade"><h2 class="circle-step">Step 04</h2><p class="circle-text">Confirm Your Mentor</p></div>
+    </div>
+      <div class="circle-connection2 position-connection rotate-connection"></div>
+      <div class="circle-connection2 size position-connection2 rotate-connection2"></div>
+    <div class="circle-container gap" style="padding-left:25%;padding-top:0;">
+          <div class="circle-grade"><h2 class="circle-step">Step 02</h2><p class="circle-text">Get Perfect Allocation of Mentor</p> </div>
+          <div class="circle-grade"><h2 class="circle-step">Step 03</h2><p class="circle-text">Get Your First FREE Class with Us</p> </div> -->
+            <img alt="ekalshiksha work" src="{% static 'webpages/images/ho we works(class).svg'%}" >
+    </div>
+    </div>
+  <div class="work" style="	background-image:linear-gradient(rgba(23,78,64,0.8),rgba(23,78,64,0.8));background-size: cover;">
+    <!-- <img style="width:100%; height:100%; border-radius:40px;box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);" src="{% static 'webpages/images/RoadMap.png' %}" > -->
+    <!-- <div style="text-align: center;">
+
+
+    <h2 style="margin-bottom:3%;padding-top:2%;color:#fff;font-size:2rem;">Book your own individual class now</h2>
+    <a href="{% url 'contact' %}"><button class="button button is-success is-rounded is-large"  style="margin-bottom:2%;background-color: #F9F9F9;color: #00303F;" >Book Now</button></a> -->
+
+    <!-- <div id = "modal" class = "modal">
+      <div class = "modal-background"></div>
+      <div class = "modal-content">
+         <div class = "box">
+          <form method='post'>
+
+            {% csrf_token %}
+                <label>Name</label>
+                {{form.Name}}
+
+
+                <label>Email</label>
+                {{form.Email}}
+
+
+              <label>Phone Number</label>
+              {{form.Number}}
+
+
+              <label>Course</label>
+             {{form.Course}}
+
+
+
+                <label>Grade</label><br>
+               {{form.Class}}
+              <br>
+            <br>
+              <div class="field is-grouped">
+                <div class="control">
+                  <button class="button is-link">Submit</button>
+                </div>
+                </div>
+          </form>
+         </div>
+
+      </div>
+      <button class = "modal-close is-large" aria-label = "close"></button>
+   </div> -->
+
+
+    <div class="block">
+      <p style="width:90%;margin:5%;color:#fff" class="is-size-5">
+        Ekal Shiksha provides the easiest roadmap to success. Each student upon enrollment is offered a FREE interaction with our counselor for an assessment of one’s unique learning pace, grasping capacity and mindset. Based upon these parameters,
+        we allocate the perfect mentor for you catering all your needs. You can then avail a FREE demonstration class with us and confirm your mentor according to your rapport and preference.
+      </p>
+    </div>
+    <div style="text-align:center;margin-bottom:0%;">
+      <!-- <h2 style="margin-bottom:0.5%;padding-top:1.2%;color:#fff;font-size:1.5rem;">Book your own individual class now</h2> -->
+      <a href="{% url 'contact' %}"><button class="button button is-success is-rounded is-large" style="margin-bottom:0%;background-color: #F9F9F9;color: #00303F;">Book your<b>&nbsp;FREE&nbsp;</b>Individual Class</button></a>
+    </div>
+    <p style="width:90%;margin:5%;color: #fff" class="is-size-5">We refer to those books which are referred to in your schools, our classes are completely flexible and can be customized according to your school curriculum.
+    </p>
+  </div>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 3000,
+      once: true,
+    });
+  </script>
+
+
+
+  <marquee style="background: linear-gradient(to left, #848883, #174e40); margin-top: 0;" direction="left" onmouseover="this.stop()" onmouseout="this.start()" scrollamount="6">
+    <div class="marqu">“Education is the passport to the future, for tomorrow belongs to those who prepare for it today.”
+      “Your attitude, not your aptitude, will determine your altitude.” “If you think education is expensive, try ignorance.” “The
+      only person who is educated is the one who has learned how to learn …and change.”</div>
+  </marquee>
+
+  <footer style="padding:3%;margin-top: 1%; ">
+    <div class="container bottom_border">
+      <div class="columns">
+        <div class="column is-3 mr-3">
+          <h5 class="headin5_amrc col_white_amrc pt2"><strong class="has-text-white">&#169; Ekal Shiksha 2021</strong></h5>
+          <!--headin5_amrc-->
+          <p class="mb10">Ekal Shiksha is an Ed-tech company which provides one on one individual online classes.</p>
+          <p><i class="fa fa-location-arrow"></i> C-54, Sector-2 Noida, Gautam Budh Nagar, Uttar Pradesh </p>
+          <p><i class="fa fa-phone"></i> <a href="tel:9625578335"> 9625578335.</a> </p>
+          <a href="mailto:contact@ekalshiksha.in">
+            <p><i class="fa fa fa-envelope"></i> contact@ekalshiksha.in </p>
+          </a>
+
+
+        </div>
+
+
+        <div class="column nav-column is-4">
+          <h5 class="headin5_amrc col_white_amrc pt2">Classes</h5>
+          <!--headin5_amrc-->
+          <ul class="footer_ul_amrc is-flex">
+            <div class="pr-6">
+              <li><a href="/6th/">Class 6</a></li>
+              <li><a href="/7th/">Class 7</a></li>
+              <li><a href="/8th/">Class 8</a></li>
+              <li><a href="/9th/">Class 9</a></li>
+              <li><a href="/10th/">Class 10</a></li>
+            </div>
+            <div class="pr-6">
+              <li><a href="/Science/11th/">Class 11 Science</a></li>
+              <li><a href="/Commerce/11th/">Class 11 Commerce</a></li>
+              <li><a href="/Humanities/11th/">Class 11 Humanities</a></li>
+              <li><a href="/Science/11th/">Class 12 Science</a></li>
+              <li><a href="/Commerce/12th/">Class 12 Commerce</a></li>
+              <li><a href="/Humanities/12th/">Class 12 Humanities</a></li>
+            </div>
+          </ul>
+          <!--footer_ul_amrc ends here-->
+        </div>
+
+        <div class="column nav-column is-4">
+          <h5 class="headin5_amrc col_white_amrc pt2">Study Material</h5>
+          <!--headin5_amrc-->
+          <ul class="footer_ul_amrc is-flex">
+            <div class="pr-6">
+              <li><a href="https://on-app.in/app/home?orgCode=uhmmr">Class 6</a></li>
+              <li><a href="https://on-app.in/app/home?orgCode=uhmmr">Class 7</a></li>
+              <li><a href="https://on-app.in/app/home?orgCode=uhmmr">Class 8</a></li>
+              <li><a href="https://on-app.in/app/home?orgCode=uhmmr">Class 9</a></li>
+              <li><a href="https://on-app.in/app/home?orgCode=uhmmr">Class 10</a></li>
+            </div>
+            <div class="pr-6">
+              <li><a href="https://on-app.in/app/home?orgCode=uhmmr">Class 11 Science</a></li>
+              <li><a href="https://on-app.in/app/home?orgCode=uhmmr">Class 11 Commerce</a></li>
+              <li><a href="https://on-app.in/app/home?orgCode=uhmmr">Class 11 Humanities</a></li>
+              <li><a href="https://on-app.in/app/home?orgCode=uhmmr">Class 12 Science</a></li>
+              <li><a href="https://on-app.in/app/home?orgCode=uhmmr">Class 12 Commerce</a></li>
+              <li><a href="https://on-app.in/app/home?orgCode=uhmmr">Class 12 Humanities</a></li>
+            </div>
+          </ul>
+          <!--footer_ul_amrc ends here-->
+        </div>
+        <div class="column">
+          <h5 class="headin5_amrc col_white_amrc pt2">Blogs</h5>
+          <!--headin5_amrc-->
+          <ul class="footer_ul_amrc">
+            <li><a href="/blogs/">Blogs</a></li>
+
+          </ul>
+          <!--footer_ul_amrc ends here-->
+        </div>
+        <div class="column">
+          <h5 class="headin5_amrc col_white_amrc pt2"> About</h5>
+          <!--headin5_amrc-->
+          <ul class="footer_ul_amrc">
+            <li><a href="/AboutUs/">About Us</a></li>
+
+          </ul>
+          <!--footer_ul_amrc ends here-->
+        </div>
+
+      </div>
+    </div>
+
+
+
+
+    <div class="container">
+      <ul class="foote_bottom_ul_amrc is-flex-mobile is-flex-wrap-wrap">
+        <li><a href="{% url 'index' %}">Home</a></li>
+        <li><a href="/AboutUs/">About</a></li>
+        <li><a href="/Doubts/">Doubt Class</a></li>
+
+      </ul>
+      <!--foote_bottom_ul_amrc ends here-->
+
+      <ul class="social_footer_ul">
+        <li><a href="https://www.facebook.com/ekalshiksha/"><i class="fab fa-facebook-f"></i></a></li>
+        <li><a href="https://twitter.com/ekalshiksha?lang=en"><i class="fab fa-twitter"></i></a></li>
+        <li><a href="https://in.linkedin.com/company/ekal-shiksha"><i class="fab fa-linkedin"></i></a></li>
+        <li><a href="https://www.instagram.com/ekal_shiksha/?hl=en"><i class="fab fa-instagram"></i></a></li>
+      </ul>
+      <!--social_footer_ul ends here-->
+    </div>
+
+  </footer>
+
+  <script src="{% static '/webpages/Js/swiper-bundle.min.js' %}">
+
+  </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+      // Get all "navbar-burger" elements
+      const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+      // Check if there are any navbar burgers
+      if ($navbarBurgers.length > 0) {
+
+        const navbarDropdown = [].slice.call(document.querySelectorAll("#navbarDropdown"));
+
+
+
+        // Add a click event on each of them
+        $navbarBurgers.forEach(el => {
+          el.addEventListener('click', () => {
+
+            // Get the target from the "data-target" attribute
+            const target = el.dataset.target;
+            const $target = document.getElementById(target);
+
+            // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+            el.classList.toggle('is-active');
+            $target.classList.toggle('is-active');
+
+            if ($target.classList.contains("is-active")) {
+              navbarDropdown.map((e) => {
+                e.lastElementChild.style.display = "none"
+              })
+            } else {
+              navbarDropdown.map((e) => {
+                e.lastElementChild.style.removeProperty("display")
+              })
+            }
+
+            navbarDropdown.map((e) => {
+              const button = e.firstElementChild;
+              button.addEventListener("click", () => {
+                if (e.lastElementChild.style.display === "none") {
+                  e.lastElementChild.style.display = "block";
+                } else {
+                  e.lastElementChild.style.display = "none";
+                }
+              });
+            });
+
+          });
+        });
+      }
+    });
+  </script>
+
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      effect: "coverflow",
+      grabCursor: true,
+      centeredSlides: true,
+      speed: 500,
+      loop: true,
+      slidesPerView: "auto",
+
+      coverflowEffect: {
+        rotate: 50,
+        stretch: 0,
+        depth: 100,
+        modifier: 1,
+        slideShadows: true,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+      },
+    });
+    var mySwiper = document.querySelector('.swiper-container').swiper
+
+    mySwiper.slideNext();
+
+    var mySwiper = new Swiper('.swiper-container', {
+      autoplay: {
+        delay: 1500,
+      },
+      effect: "coverflow",
+      grabCursor: true,
+      centeredSlides: true,
+      speed: 500,
+      loop: true,
+      slidesPerView: "auto",
+
+      coverflowEffect: {
+        rotate: 50,
+        stretch: 0,
+        depth: 100,
+        modifier: 1,
+        slideShadows: true,
+      },
+    });
+  </script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      offset: 40,
+      anchorPlacement: 'top-bottom'
+    });
+  </script>
+</body>
+<script src="{% static 'webpages/Js/readMoreJS.min.js' %}"></script>
+<script>
+  if (screen.width < 500) {
+    $readMoreJS.init({
+      target: '.readmore', // Selector of the element the plugin applies to (any CSS selector, eg: '#', '.'). Default: ''
+      numOfWords: 100, // Number of words to initially display (any number). Default: 50
+      toggle: true, // If true, user can toggle between 'read more' and 'read less'. Default: true
+      moreLink: '<button class="get-started" style="margin:auto;">Read More</button>', // The text of 'Read more' link. Default: 'read more ...'
+      lessLink: '<button class="get-started" style="margin:auto;">Read Less</button>' // The text of 'Read less' link. Default: 'read less'
+    });
+  }
+</script>
+
+</html>

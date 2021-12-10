@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap');
+
+.article{
+  padding: 2% 10%;
+}
+.article-title h1{
+  font-family: 'Roboto', sans-serif;
+  font-size: 3rem;
+}
+.article-title h3{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.4rem;
+}
+.nested.dropdown:hover > .dropdown-menu {
+    display: inline-block;
+  }
+.dropdown-menu {
+    top: -15px;
+    margin-left: 100%;
+  }
+.dropdown-trigger  button {
+      padding: 0px 0px;
+      border: 0px;
+      font-size: 14px;
+      font-weight: 400;
+      height: 2em;
+}

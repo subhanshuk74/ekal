@@ -1,0 +1,1693 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+  <link rel="shortcut icon" type="png" href="{% static '/webpages/images/Logo.ico' %}">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Comaptible" content="IE=edge">
+  <meta name="robots" content="index, follow">
+  <meta property="og:locale" content="en_IN">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Meta Title">
+  <meta property="og:description" content="Meta Description">
+  <meta property="og:url" content="page Url">
+  <meta property="og:site_name" content="Ekal Shiksha">
+  <meta property="og:image" content="https://ekalshiksha.in/static/webpages/images/Logo.png">
+  <meta name="twitter:card" content="summary" />
+  <title>Ekal Shiksha</title>
+  <meta name="desciption" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="{% static 'webpages/style.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static '/webpages/minor.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static '/webpages/style.css' %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.8/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+  <script src="https://kit.fontawesome.com/9d4d248d66.js" crossorigin="anonymous"></script>
+
+
+  <!-- <link rel="stylesheet" href="swiper-bundle.min.css"> -->
+  <!--Jquery-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+  <script type="text/javascript" src="{% static '/webpages/Js/minor.js' %}"></script>
+
+
+
+  <script>
+    $(window).on('scroll', function() {
+      if ($(window).scrollTop()) {
+        $('nav').addClass('black');
+      } else {
+        $('nav').removeClass('black');
+      }
+    })
+  </script>
+
+  <script>
+    function myFunction() {
+      var dots = document.getElementById("dots");
+      var moreText = document.getElementById("more");
+      var btnText = document.getElementById("myBtn");
+
+      if (dots.style.display === "none") {
+        dots.style.display = "inline";
+        btnText.innerHTML = "Read more";
+        moreText.style.display = "none";
+        if (window.matchMedia("(max-width: 500px)").matches) {
+          document.querySelector(".bbop").style.height = "900px";
+        }
+      } else {
+        dots.style.display = "none";
+        btnText.innerHTML = "Read less";
+        moreText.style.display = "inline";
+        if (window.matchMedia("(max-width: 500px)").matches) {
+          document.querySelector(".bbop").style.height = "1430px";
+        }
+      }
+
+    }
+  </script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      direction: "vertical",
+      slidesPerView: 1,
+      spaceBetween: 30,
+      mousewheel: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+  </script>
+  <style>
+    .swiper-container {
+      width: 100%;
+      padding-top: 10%;
+      padding-bottom: 10%;
+      min-height: 60vh;
+      background: #383838;
+      text-align: center;
+    }
+
+    .swiper-slide {
+      background-position: center;
+      background-size: cover;
+      width: 300px;
+      height: 300px;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <!-- <header id="header"> -->
+  <!-- <nav style="position:fixed; width:100%;" class="navbar px-5" role="navigation" aria-label="main navigation"> -->
+    <nav class="navbar px-5 is-fixed-top" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="{% url 'index' %}">
+           <img alt="ekal shiksha logo" src="{% static 'webpages/images/Logo head.jpeg' %}">
+           <img alt="ekal shiksha" src="{% static 'webpages/images/Logo font.jpeg' %}">
+          <!-- <strong class="ml-2 brand is-size-5">Ekal Shiksha</strong> -->
+        </a>
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbar">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+  
+      <div id="navbar" class="navbar-menu">
+        <div class="navbar-end">
+  
+          <div class="navbar-item has-dropdown is-hoverable" id="navbarDropdown">
+            <a class="navbar-link">
+              Courses
+            </a>
+            <div class="navbar-dropdown">
+              <a href="/6th/" class="navbar-item">
+                Class 6th
+              </a>
+              <a href="/7th/" class="navbar-item">
+                Class 7th
+              </a>
+              <a href="/8th/" class="navbar-item">
+                Class 8th
+              </a>
+              <a href="/9th/" class="navbar-item">
+                Class 9th
+              </a>
+              <a href="/10th/" class="navbar-item">
+                Class 10th
+              </a>
+              <input class="dropdown-sub" type="checkbox" id="dropdown-sub" name="dropdown-sub" />
+              <label class="for-dropdown-sub button" for="dropdown-sub" style="padding-left:7%">Class 11th</label>
+              <div class="section-dropdown-sub">
+                <a href="/Science/11th/" class="navbar-item">
+                  Class 11th Science
+                </a>
+                <a href="/Commerce/11th/" class="navbar-item">
+                  Class 11th Commerce
+                </a>
+                <a href="/Humanities/11th/" class="navbar-item">
+                  Class 11th Humanities
+                </a>
+              </div>
+              <div class="nested navbar-item dropdown ">
+                <div class="dropdown-trigger">
+                  <button class="button " aria-haspopup="true" aria-controls="dropdown-menu" style="font-family: Work Sans, sans-serif;">
+                    <span>Class 12th</span></button>
+                </div>
+                <div class="dropdown-menu " id="dropdown-menu" role="menu">
+                  <div class=" navbar-dropdown">
+                    <a href="/Science/12th/" class="navbar-item">
+                      Class 12th Science
+                    </a>
+                    <a href="/Commerce/12th/" class="navbar-item">
+                      Class 12th Commerce
+                    </a>
+                    <a href="/Humanities/12th/" class="navbar-item">
+                      Class 12th Humanities
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a href="{% url 'Doubt' %}" class="navbar-item">Doubt Class</a>
+          <div class="navbar-item has-dropdown is-hoverable" id="navbarDropdown">
+            <a class="navbar-link">
+              Study Material 
+            </a>
+            <div class="navbar-dropdown">
+              <a href="/StudyMaterial/#ncert-solution" class="navbar-item">
+                NCERT Solutions
+              </a>
+              <a href="/StudyMaterial/#ncert-book" class="navbar-item">
+                NCERT Books
+              </a>
+              <a href="/StudyMaterial/#ncert-mock-test" class="navbar-item">
+                NCERT Mock Test
+              </a>
+              <a href="/StudyMaterial/#ncert-assignment" class="navbar-item">
+                NCERT Assignments
+              </a>
+              
+            </div>
+          </div>
+          <!-- <div id="navbar" class="navbar-menu1"> -->
+            <!-- <div class="navbar-end"> -->
+  
+              <div class="navbar-item has-dropdown is-hoverable" id="navbarDropdown">
+                <a class="navbar-link">
+                  Micro Courses
+                </a>
+                <div class="navbar-dropdown">
+                  <a href="/Micro/6/" class="navbar-item">
+                    Micro 6th
+                  </a>
+                  <a href="/Micro/7/" class="navbar-item">
+                    Micro 7th
+                  </a>
+                  <a href="/Micro/8/" class="navbar-item">
+                    Micro 8th
+                  </a>
+                  <a href="/Micro/9/" class="navbar-item">
+                    Micro 9th
+                  </a>
+                  <a href="/Micro/10/" class="navbar-item">
+                    Micro 10th
+                  </a>
+                  <input class="dropdown-sub" type="checkbox" id="dropdown-sub-1" name="dropdown-sub" />
+                  <label class="for-dropdown-sub button" for="dropdown-sub-1" style="padding-left:7%">Micro 11th</label>
+                  <div class="section-dropdown-sub">
+                    <a href="/Micro/11th_Science" class="navbar-item">
+                      Micro 11th Science
+                    </a>
+                    <a href="/Micro/11th_Commerce/" class="navbar-item">
+                      Micro 11th Commerce
+                    </a>
+                    <a href="/Micro/11th_Humanities/" class="navbar-item">
+                      Micro 11th Humanities
+                    </a>
+                  </div>
+                  <div class="nested navbar-item dropdown ">
+                    <div class="dropdown-trigger">
+                      <button class="button " aria-haspopup="true" aria-controls="dropdown-menu" style="font-family: Work Sans, sans-serif;">
+                        <span>Micro 12th</span></button>
+                    </div>
+                    <div class="dropdown-menu " id="dropdown-menu" role="menu">
+                      <div class=" navbar-dropdown">
+                        <a href="/Micro/12th_Science/" class="navbar-item">
+                          Micro 12th Science
+                        </a>
+                        <a href="/Micro/12th_Commerce/" class="navbar-item">
+                          Micro 12th Commerce
+                        </a>
+                        <a href="/Micro/12th_Humanities/" class="navbar-item">
+                          Micro 12th Humanities
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          <a href="{% url 'contact' %}" class="navbar-item">Contact us</a>
+  
+          <a href="https://web.studentekalshiksha.in" class="navbar-item">SignUp</a>
+          <div class="navbar-item has-dropdown is-hoverable" id="navbarDropdown">
+            <a class="navbar-link">
+              More
+            </a>
+            <div class="navbar-dropdown" style="left:auto;right: 1rem;">
+                <a href="{% url 'About' %}" class="navbar-item">About Us</a>
+                <a href="{% url 'blog' %}" class="navbar-item">Blog</a>
+                <a href="{% url 'work' %}" class="navbar-item">Teach With Us</a>
+            </div>
+          </div>
+        <!-- </div> -->
+      <!-- </div> -->
+      </div>
+      </div>
+    </nav>
+
+  <div class="side-menu" id="side-menu">
+    <!-- <div class="close" onclick="sideMenu(1)"><img alt="ekalshiksha icon" src="{% static '/webpages/images/icon/close.png' %}" ></div> -->
+
+    <ul>
+      <li><a href="#about_section">About</a></li>
+      <div class="dropdown">
+        <div style="margin-left: 42%;justify-content: center; color:#fff;" class="dropbtn">Courses</div>
+        <!--  Main Dropdown -->
+        <div style="margin-left: 45%;justify-content: center;" class="dropdown-one">
+          <div class="dItem" href="#">Class 6</div>
+          <div class="dItem" href="#">Class 7</div>
+          <div class="dItem" href="#">Class 8</div>
+          <div class="dItem" href="#">Class 9</div>
+          <div class="dItem" href="#">Class 10</div>
+
+          <div id="link1" class="dItem llll" href="#">Class 11
+            <!--  Inside Dropdown -->
+            <div class="dropdown-two">
+              <div class="dItem" id="file" href="#">Science</div>
+              <div class="dItem" id="file" href="#">Commerce</div>
+              <div class="dItem" id="file" href="#">Arts</div>
+            </div>
+          </div>
+          <div id="link1" class="dItem" href="#">Class 12
+            <!--  Inside Dropdown -->
+            <div class="dropdown-two">
+              <div class="dItem" id="file" href="#">Science</div>
+              <div class="dItem" id="file" href="#">Commerce</div>
+              <div class="dItem" id="file" href="#">Arts</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <!-- </div> -->
+      <li><a href="#team_section">Study Material</a></li>
+      <li><a href="#services_section">Doubt class</a></li>
+      <li><a href="#contactus_section">Work with us</a></li>
+      <li><a href="#feedBACK">Register</a></li>
+    </ul>
+  </div>
+  <!-- </header> -->
+  <!-- Navigation Bar -->
+  <!-- <header id="header">
+    <nav>
+      <div class="logo"><a href="index.html"><img src="{% static '/webpages/images/Logo.png' %}" alt="logo"></a></div>
+      <ul>
+        <li><a class="" href="">About Us</a></li>
+        <div class="navbar">
+
+        </div>
+        <div class="active dropdown">
+          <div style="color:#fff;" class=" dropbtn">Courses</div>
+          < Main Dropdown -->
+  <!-- <div class="dropdown-one">
+            <div style="color:black;" class="dItem" href="#">Class 6</div>
+            <div style="color:black;" class="dItem" href="#">Class 7</div>
+            <div style="color:black;" class="dItem" href="#">Class 8</div>
+            <div style="color:black;" class="dItem" href="#">Class 9</div>
+            <div style="color:black;" class="dItem" href="#">Class 10</div>
+
+            <div id="link1" class="dItem" href="#">Class 11
+                Inside Dropdown
+              <div class="dropdown-two">
+                <div class="dItem" id="file" href="#">Science</div>
+                <div class="dItem" id="file" href="#">Commerce</div>
+                <div class="dItem" id="file" href="#">Arts</div>
+              </div>
+            </div>
+            <div id="link1" class="dItem" href="#">Class 12
+              <!--  Inside Dropdown
+              <div class="dropdown-two">
+                <div class="dItem" id="file" href="#">Science</div>
+                <div class="dItem" id="file" href="#">Commerce</div>
+                <div class="dItem" id="file" href="#">Arts</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+
+
+        <li><a href="#team_section">Study Material</a></li>
+        <li><a href="#contactus_section">Doubt Class</a></li>
+        <li><a href="#https://forms.gle/TiTUDviivCKKxPQ98">Work with us</a></li>
+        <li><a href="#contactus_section">Register</a></li>
+      </ul>
+       <div class="srch"><input type="text" class="search" placeholder="Search here..."><img src="{% static '/webpages/images/icon/search.png' %}" alt="search" onclick=slide()></div>
+      <a class="get-started" href="login.html">Get Started</a>
+      <img src="{% static '/webpages/images/icon/menu.png' %}" class="menu" onclick="sideMenu(0)" alt="menu">
+    </nav>
+
+    <div class="side-menu" id="side-menu">
+      <div class="close" onclick="sideMenu(1)"><img src="{% static '/webpages/images/icon/close.png' %}" ></div>
+
+      <ul>
+        <li><a href="#about_section">About</a></li>
+        <div class="dropdown">
+          <div style="margin-left: 42%;justify-content: center; color:#fff;" class="dropbtn">Courses</div>
+          <!--  Main Dropdown
+          <div style="margin-left: 45%;justify-content: center;" class="dropdown-one">
+            <div class="dItem" href="#">Class 6</div>
+            <div class="dItem" href="#">Class 7</div>
+            <div class="dItem" href="#">Class 8</div>
+            <div class="dItem" href="#">Class 9</div>
+            <div class="dItem" href="#">Class 10</div>
+
+            <div id="link1" class="dItem llll" href="#">Class 11
+              <!--  Inside Dropdown
+              <div class="dropdown-two">
+                <div class="dItem" id="file" href="#">Science</div>
+                <div class="dItem" id="file" href="#">Commerce</div>
+                <div class="dItem" id="file" href="#">Arts</div>
+              </div>
+            </div>
+            <div id="link1" class="dItem" href="#">Class 12
+              <!--  Inside Dropdown
+              <div class="dropdown-two">
+                <div class="dItem" id="file" href="#">Science</div>
+                <div class="dItem" id="file" href="#">Commerce</div>
+                <div class="dItem" id="file" href="#">Arts</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <!-- </div>
+        <li><a href="#team_section">Study Material</a></li>
+        <li><a href="#services_section">Doubt class</a></li>
+        <li><a href="#contactus_section">Work with us</a></li>
+        <li><a href="#feedBACK">Register</a></li>
+      </ul>
+    </div>
+  </header> -->
+
+  <div class="bbop" style="position:relative; background-image:linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.7)),url('https://pavbca.com/walldb/original/c/2/8/744965.jpg'); ">
+    <h1 class="bop" style=" text-align:left;padding-left:7.2% ">Micro Courses</h1>
+    <br>
+    <p style="  justify-content: space-between;">We offer a variety of micro courses to choose from. Which is handcrafted by our exoerts teachers with chapterwise explainations and Doubt clarification</p>
+
+
+    <!-- <div class="custom-shape-divider-top-1629743826">
+      <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25"
+          class="shape-fill"></path>
+        <path
+          d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z"
+          opacity=".5" class="shape-fill"></path>
+        <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"></path>
+      </svg>
+    </div> -->
+    <div class="course-btn">
+      <br>
+      <button id="myBtn">Explore courses</button>
+    </div>
+
+  </div>
+  <!-- <div class="comingsoon">
+    <center> <img src="https://i.gifer.com/P4id.gif" >
+      <center>
+        <div class="download-app">
+          <div class="column is-flex is-align-items-center">
+            <a class="pr-3" href="https://apps.apple.com/in/app/classplus/id1324522260"><img src="{% static 'webpages/images/app-store-badge.svg' %}" style="width: 120px; height: 40px;" style="width: 130px; height: 40px;" ></a>
+            <a href="https://on-app.in/app/home?orgCode=uhmmr"><img src="{% static 'webpages/images/google-play-badge.svg' %}" style="width: 150px; height: 58px;" style="width: 130px; height: 40px;" ></a>
+          </div>
+        </div> -->
+
+  </div>
+  {% for i in subject %}
+  <div class="micro">
+    
+    <div class="micro-subjects">
+    <div class="sub-titles">
+      <h2 style="background-color: #B8DFD8;color: #6A515E; border-radius: 10px; font-size: 2.3rem;">{{i.sub_name}}</h2>
+    </div>
+      
+      <div class="owl-carousel owl-theme cards-md" style="width: 100%;">
+      <!-- <div class="micro-des"> -->
+        {% for j in chap %}
+        {% for k in j %}
+        {% if i.sub == k.subject_id %}
+          <a href="{% url 'contact' %}" class="card1" style="height: 19rem;">
+            <img alt="ekalshiksha chapter" src="{{k.img_url}}" style="width: 100%; height: 100%;"/>
+            <div class="card__overlay" style="background:#B8DFD8;">
+              <div class="card__header" style="background:#B8DFD8;">
+                <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>
+                <!-- <img alt="ekalshiksha chapter" class="card__thumb" src="{% static 'webpages/images/1 (2).png' %}"  style="width:50px; height:50px;"/> -->
+                <div class="card__header-text">
+                  <h3 class="card__title">{{k.chap_name}}</h3>
+                </div>
+
+              </div>
+              
+            </div>
+          </a>
+          {% endif %}
+          {% endfor %}
+          {% endfor %}
+    <!-- </div> -->
+    </div>
+  </div>
+    <!-- <a href="" class="read-btn">Read More</a> -->
+  </div>
+  {% endfor %}
+  <!-- {% for i in subject %}
+
+  <div class="" >
+
+    <h1 class="" style=" text-align:left;padding-top:3%;margin-top:3%;width:90%;margin-left:5%;padding-left:4%;background-color:#B5FFD9;">{{i.sub_name}}</h1>
+
+    <div style="text-align:center;width:90%;margin-left:5%;display:flex;
+    align-items: center;margin-bottom:3%; border-radius:5px; background-color:#B5FFD9;padding-top:3%" class="owl-carousel owl-theme">
+
+      {% for j in chap %}
+      {% for k in j %}
+
+
+
+
+      {% if i.sub == k.subject_id %}
+
+      <div style="background-color:#fff;border-radius: 5px;padding-bottom:5%;margin:auto" class="item">
+        <img
+src="{{k.img_url}}" alt="jai ho">
+        <h4 class="" style="background: #cccccc;
+  border-radius: 50px;
+  font-size: 12px;
+  margin: 4% 5%;
+  width:40%;
+  color: #fff;
+  padding: 2px 5px;
+  cursor: pointer;
+  background-color:#47bcd4;">{{k.chap_name}}</h4>
+        <h4 style="color:black;padding:5%;text-align:left;">A complete crash course in English:Zero to Hero</h4>
+        <p style="text-align:left; width:80%;margin: 7%; color:#545d7a">
+          An exploration into the truck's polarising design
+        </p>
+
+        <!-- <tr>{{i}}</tr> <br> -->
+
+            <!-- <small>2h ago</small>
+          </div>
+        </div>
+
+      </div>{% endif %}
+      {% endfor %} -->
+      <!-- {% endfor %} -->
+
+    <!-- </div> -->
+
+  <!-- </div> -->
+  <!-- {% endfor %} -->
+
+  <!-- <div class="">
+
+    <h1 class="" style=" text-align:left;padding-top:3%;width:90%;margin-left:5%;padding-left:4%;background-color:#B5FFD9;">Science</h1>
+
+    <div style="text-align:center;width:90%;margin-left:5%;margin-bottom:3%; border-radius:5px; background-color:#B5FFD9;padding-top:3%" class="owl-carousel owl-theme">
+      <div style="background-color:#fff;border-radius: 5px; padding-bottom:5%;" class="item"><img style="margin: ;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+    " src="https://c0.wallpaperflare.com/preview/483/210/436/car-green-4x4-jeep.jpg" >
+        <h4 class="" style="background: #cccccc;
+    border-radius: 50px;
+    font-size: 12px;
+    margin: 4% 5%;
+    width:40%;
+    color: #fff;
+    padding: 2px 5px;
+    cursor: pointer;
+    background-color:#47bcd4;">English</h4>
+        <h4 style="color:black;padding:5%;text-align:left;">A complete crash course in English:Zero to Hero</h4>
+        <p style="text-align:left; width:80%;margin: 7%; color:#545d7a">
+          An exploration into the truck's polarising design
+        </p>
+        <div style="display: flex;
+    margin-top: auto;text-align:left;" class="user">
+          <img style="border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;" src="https://yt3.ggpht.com/a/AGF-l7-0J1G0Ue0mcZMw-99kMeVuBmRxiPjyvIYONg=s900-c-k-c0xffffffff-no-rj-mo" alt="user" />
+          <div class="user-info">
+            <h5 style="  margin: 0;color:black;">July Dec</h5>
+            <small>2h ago</small>
+          </div>
+        </div>
+      </div>
+      <div style="background-color:#fff;border-radius: 5px; padding-bottom:5%;" class="item"><img style="margin: ;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+        " src="https://c0.wallpaperflare.com/preview/483/210/436/car-green-4x4-jeep.jpg" >
+        <h4 class="" style="background: #cccccc;
+        border-radius: 50px;
+        font-size: 12px;
+        margin: 4% 5%;
+        width:40%;
+        color: #fff;
+        padding: 2px 5px;
+        cursor: pointer;
+        background-color:#47bcd4;">English</h4>
+        <h4 style="color:black;padding:5%;text-align:left;">A complete crash course in English:Zero to Hero</h4>
+        <p style="text-align:left; width:80%;margin: 7%; color:#545d7a">
+          An exploration into the truck's polarising design
+        </p>
+        <div style="display: flex;
+        margin-top: auto;text-align:left;" class="user">
+          <img style="border-radius: 50%;
+                width: 40px;
+                height: 40px;
+                margin-right: 10px;" src="https://yt3.ggpht.com/a/AGF-l7-0J1G0Ue0mcZMw-99kMeVuBmRxiPjyvIYONg=s900-c-k-c0xffffffff-no-rj-mo" alt="user" />
+          <div class="user-info">
+            <h5 style="  margin: 0;color:black;">July Dec</h5>
+            <small>2h ago</small>
+          </div>
+        </div>
+      </div>
+      <div style="background-color:#fff;border-radius: 5px; padding-bottom:5%;" class="item"><img style="margin: ;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+            " src="https://c0.wallpaperflare.com/preview/483/210/436/car-green-4x4-jeep.jpg" >
+        <h4 class="" style="background: #cccccc;
+            border-radius: 50px;
+            font-size: 12px;
+            margin: 4% 5%;
+            width:40%;
+            color: #fff;
+            padding: 2px 5px;
+            cursor: pointer;
+            background-color:#47bcd4;">English</h4>
+        <h4 style="color:black;padding:5%;text-align:left;">A complete crash course in English:Zero to Hero</h4>
+        <p style="text-align:left; width:80%;margin: 7%; color:#545d7a">
+          An exploration into the truck's polarising design
+        </p>
+        <div style="display: flex;
+            margin-top: auto;text-align:left;" class="user">
+          <img style="border-radius: 50%;
+                    width: 40px;
+                    height: 40px;
+                    margin-right: 10px;" src="https://yt3.ggpht.com/a/AGF-l7-0J1G0Ue0mcZMw-99kMeVuBmRxiPjyvIYONg=s900-c-k-c0xffffffff-no-rj-mo" alt="user" />
+          <div class="user-info">
+            <h5 style="  margin: 0;color:black;">July Dec</h5>
+            <small>2h ago</small>
+          </div>
+        </div>
+      </div>
+      <div style="background-color:#fff;border-radius: 5px; padding-bottom:5%;" class="item"><img style="margin: ;
+                background-color: #fff;
+                border-radius: 10px;
+                box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+                " src="https://c0.wallpaperflare.com/preview/483/210/436/car-green-4x4-jeep.jpg" >
+        <h4 class="" style="background: #cccccc;
+                border-radius: 50px;
+                font-size: 12px;
+                margin: 4% 5%;
+                width:40%;
+                color: #fff;
+                padding: 2px 5px;
+                cursor: pointer;
+                background-color:#47bcd4;">English</h4>
+        <h4 style="color:black;padding:5%;text-align:left;">A complete crash course in English:Zero to Hero</h4>
+        <p style="text-align:left; width:80%;margin: 7%; color:#545d7a">
+          An exploration into the truck's polarising design
+        </p>
+        <div style="display: flex;
+                margin-top: auto;text-align:left;" class="user">
+          <img style="border-radius: 50%;
+                        width: 40px;
+                        height: 40px;
+                        margin-right: 10px;" src="https://yt3.ggpht.com/a/AGF-l7-0J1G0Ue0mcZMw-99kMeVuBmRxiPjyvIYONg=s900-c-k-c0xffffffff-no-rj-mo" alt="user" />
+          <div class="user-info">
+            <h5 style="  margin: 0;color:black;">July Dec</h5>
+            <small>2h ago</small>
+          </div>
+        </div>
+      </div>
+      <div style="background-color:#fff;border-radius: 5px; padding-bottom:5%;" class="item"><img style="margin: ;
+                    background-color: #fff;
+                    border-radius: 10px;
+                    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+                    " src="https://c0.wallpaperflare.com/preview/483/210/436/car-green-4x4-jeep.jpg" >
+        <h4 class="" style="background: #cccccc;
+                    border-radius: 50px;
+                    font-size: 12px;
+                    margin: 4% 5%;
+                    width:40%;
+                    color: #fff;
+                    padding: 2px 5px;
+                    cursor: pointer;
+                    background-color:#47bcd4;">English</h4>
+        <h4 style="color:black;padding:5%;text-align:left;">A complete crash course in English:Zero to Hero</h4>
+        <p style="text-align:left; width:80%;margin: 7%; color:#545d7a">
+          An exploration into the truck's polarising design
+        </p>
+        <div style="display: flex;
+                    margin-top: auto;text-align:left;" class="user">
+          <img style="border-radius: 50%;
+                            width: 40px;
+                            height: 40px;
+                            margin-right: 10px;" src="https://yt3.ggpht.com/a/AGF-l7-0J1G0Ue0mcZMw-99kMeVuBmRxiPjyvIYONg=s900-c-k-c0xffffffff-no-rj-mo" alt="user" />
+          <div class="user-info">
+            <h5 style="  margin: 0;color:black;">July Dec</h5>
+            <small>2h ago</small>
+          </div>
+        </div>
+      </div>
+      <div style="background-color:#fff;border-radius: 5px; padding-bottom:5%;" class="item"><img style="margin: ;
+                        background-color: #fff;
+                        border-radius: 10px;
+                        box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+                        " src="https://c0.wallpaperflare.com/preview/483/210/436/car-green-4x4-jeep.jpg" >
+        <h4 class="" style="background: #cccccc;
+                        border-radius: 50px;
+                        font-size: 12px;
+                        margin: 4% 5%;
+                        width:40%;
+                        color: #fff;
+                        padding: 2px 5px;
+                        cursor: pointer;
+                        background-color:#47bcd4;">English</h4>
+        <h4 style="color:black;padding:5%;text-align:left;">A complete crash course in English:Zero to Hero</h4>
+        <p style="text-align:left; width:80%;margin: 7%; color:#545d7a">
+          An exploration into the truck's polarising design
+        </p>
+        <div style="display: flex;
+                        margin-top: auto;text-align:left;" class="user">
+          <img style="border-radius: 50%;
+                                width: 40px;
+                                height: 40px;
+                                margin-right: 10px;" src="https://yt3.ggpht.com/a/AGF-l7-0J1G0Ue0mcZMw-99kMeVuBmRxiPjyvIYONg=s900-c-k-c0xffffffff-no-rj-mo" alt="user" />
+          <div class="user-info">
+            <h5 style="  margin: 0;color:black;">July Dec</h5>
+            <small>2h ago</small>
+          </div>
+        </div>
+      </div>
+      <div style="background-color:#fff;border-radius: 5px; padding-bottom:5%;" class="item"><img style="margin: ;
+                            background-color: #fff;
+                            border-radius: 10px;
+                            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+                            " src="https://c0.wallpaperflare.com/preview/483/210/436/car-green-4x4-jeep.jpg" >
+        <h4 class="" style="background: #cccccc;
+                            border-radius: 50px;
+                            font-size: 12px;
+                            margin: 4% 5%;
+                            width:40%;
+                            color: #fff;
+                            padding: 2px 5px;
+                            cursor: pointer;
+                            background-color:#47bcd4;">English</h4>
+        <h4 style="color:black;padding:5%;text-align:left;">A complete crash course in English:Zero to Hero</h4>
+        <p style="text-align:left; width:80%;margin: 7%; color:#545d7a">
+          An exploration into the truck's polarising design
+        </p>
+        <div style="display: flex;
+                            margin-top: auto;text-align:left;" class="user">
+          <img style="border-radius: 50%;
+                                    width: 40px;
+                                    height: 40px;
+                                    margin-right: 10px;" src="https://yt3.ggpht.com/a/AGF-l7-0J1G0Ue0mcZMw-99kMeVuBmRxiPjyvIYONg=s900-c-k-c0xffffffff-no-rj-mo" alt="user" />
+          <div class="user-info">
+            <h5 style="  margin: 0;color:black;">July Dec</h5>
+            <small>2h ago</small>
+          </div>
+        </div>
+      </div>
+      <div style="background-color:#fff;border-radius: 5px; padding-bottom:5%;" class="item"><img style="margin: ;
+                                background-color: #fff;
+                                border-radius: 10px;
+                                box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+                                " src="https://c0.wallpaperflare.com/preview/483/210/436/car-green-4x4-jeep.jpg" >
+        <h4 class="" style="background: #cccccc;
+                                border-radius: 50px;
+                                font-size: 12px;
+                                margin: 4% 5%;
+                                width:40%;
+                                color: #fff;
+                                padding: 2px 5px;
+                                cursor: pointer;
+                                background-color:#47bcd4;">English</h4>
+        <h4 style="color:black;padding:5%;text-align:left;">A complete crash course in English:Zero to Hero</h4>
+        <p style="text-align:left; width:80%;margin: 7%; color:#545d7a">
+          An exploration into the truck's polarising design
+        </p>
+        <div style="display: flex;
+                                margin-top: auto;text-align:left;" class="user">
+          <img style="border-radius: 50%;
+                                        width: 40px;
+                                        height: 40px;
+                                        margin-right: 10px;" src="https://yt3.ggpht.com/a/AGF-l7-0J1G0Ue0mcZMw-99kMeVuBmRxiPjyvIYONg=s900-c-k-c0xffffffff-no-rj-mo" alt="user" />
+          <div class="user-info">
+            <h5 style="  margin: 0;color:black;">July Dec</h5>
+            <small>2h ago</small>
+          </div>
+        </div>
+      </div>
+      <div style="background-color:#fff;border-radius: 5px; padding-bottom:5%;" class="item"><img style="margin: ;
+                                    background-color: #fff;
+                                    border-radius: 10px;
+                                    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+                                    " src="https://c0.wallpaperflare.com/preview/483/210/436/car-green-4x4-jeep.jpg" >
+        <h4 class="" style="background: #cccccc;
+                                    border-radius: 50px;
+                                    font-size: 12px;
+                                    margin: 4% 5%;
+                                    width:40%;
+                                    color: #fff;
+                                    padding: 2px 5px;
+                                    cursor: pointer;
+                                    background-color:#47bcd4;">English</h4>
+        <h4 style="color:black;padding:5%;text-align:left;">A complete crash course in English:Zero to Hero</h4>
+        <p style="text-align:left; width:80%;margin: 7%; color:#545d7a">
+          An exploration into the truck's polarising design
+        </p>
+        <div style="display: flex; align-self:flex-start;
+                                    margin-top: auto;text-align:left;" class="user">
+          <img style="border-radius: 50%;
+                                            width: 40px;
+                                            height: 40px;
+                                            margin-right: 10px;" src="https://yt3.ggpht.com/a/AGF-l7-0J1G0Ue0mcZMw-99kMeVuBmRxiPjyvIYONg=s900-c-k-c0xffffffff-no-rj-mo" alt="user" />
+          <div class="user-info">
+            <h5 style="  margin: 0;color:black;">July Dec</h5>
+            <small>2h ago</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+  <!-- <div class="">
+
+    <h1 class="" style=" text-align:left;padding-top:3%;width:90%;margin-left:5%;padding-left:4%;background-color:#B5FFD9;">Maths</h1>
+
+    <div style="text-align:center; width:90%;margin-left:5%;margin-bottom:3%; border-radius:5px; background-color:#B5FFD9;padding-top:3%" class="owl-carousel owl-theme">
+      <div style="background-color:#fff;border-radius: 5px; padding-bottom:5%;" class="item"><img style="margin: ;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+      " src="https://c0.wallpaperflare.com/preview/483/210/436/car-green-4x4-jeep.jpg" >
+        <h4 class="" style="background: #cccccc;
+      border-radius: 50px;
+      font-size: 12px;
+      margin: 4% 5%;
+      width:40%;
+      color: #fff;
+      padding: 2px 5px;
+      cursor: pointer;
+      background-color:#47bcd4;">English</h4>
+        <h4 style="color:black;padding:5%;text-align:left;">A complete crash course in English:Zero to Hero</h4>
+        <p style="text-align:left; width:80%;margin: 7%; color:#545d7a">
+          An exploration into the truck's polarising design
+        </p>
+        <div style="display: flex;
+      margin-top: auto;text-align:left;" class="user">
+          <img style="border-radius: 50%;
+              width: 40px;
+              height: 40px;
+              margin-right: 10px;" src="https://yt3.ggpht.com/a/AGF-l7-0J1G0Ue0mcZMw-99kMeVuBmRxiPjyvIYONg=s900-c-k-c0xffffffff-no-rj-mo" alt="user" />
+          <div class="user-info">
+            <h5 style="  margin: 0;color:black;">July Dec</h5>
+            <small>2h ago</small>
+          </div>
+        </div>
+      </div>
+      <div style="background-color:#fff;border-radius: 5px; padding-bottom:5%;" class="item"><img style="margin: ;
+          background-color: #fff;
+          border-radius: 10px;
+          box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+          " src="https://c0.wallpaperflare.com/preview/483/210/436/car-green-4x4-jeep.jpg" >
+        <h4 class="" style="background: #cccccc;
+          border-radius: 50px;
+          font-size: 12px;
+          margin: 4% 5%;
+          width:40%;
+          color: #fff;
+          padding: 2px 5px;
+          cursor: pointer;
+          background-color:#47bcd4;">English</h4>
+        <h4 style="color:black;padding:5%;text-align:left;">A complete crash course in English:Zero to Hero</h4>
+        <p style="text-align:left; width:80%;margin: 7%; color:#545d7a">
+          An exploration into the truck's polarising design
+        </p>
+        <div style="display: flex;
+          margin-top: auto;text-align:left;" class="user">
+          <img style="border-radius: 50%;
+                  width: 40px;
+                  height: 40px;
+                  margin-right: 10px;" src="https://yt3.ggpht.com/a/AGF-l7-0J1G0Ue0mcZMw-99kMeVuBmRxiPjyvIYONg=s900-c-k-c0xffffffff-no-rj-mo" alt="user" />
+          <div class="user-info">
+            <h5 style="  margin: 0;color:black;">July Dec</h5>
+            <small>2h ago</small>
+          </div>
+        </div>
+      </div>
+      <div style="background-color:#fff;border-radius: 5px; padding-bottom:5%;" class="item"><img style="margin: ;
+              background-color: #fff;
+              border-radius: 10px;
+              box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+              " src="https://c0.wallpaperflare.com/preview/483/210/436/car-green-4x4-jeep.jpg" >
+        <h4 class="" style="background: #cccccc;
+              border-radius: 50px;
+              font-size: 12px;
+              margin: 4% 5%;
+              width:40%;
+              color: #fff;
+              padding: 2px 5px;
+              cursor: pointer;
+              background-color:#47bcd4;">English</h4>
+        <h4 style="color:black;padding:5%;text-align:left;">A complete crash course in English:Zero to Hero</h4>
+        <p style="text-align:left; width:80%;margin: 7%; color:#545d7a">
+          An exploration into the truck's polarising design
+        </p>
+        <div style="display: flex;
+              margin-top: auto;text-align:left;" class="user">
+          <img style="border-radius: 50%;
+                      width: 40px;
+                      height: 40px;
+                      margin-right: 10px;" src="https://yt3.ggpht.com/a/AGF-l7-0J1G0Ue0mcZMw-99kMeVuBmRxiPjyvIYONg=s900-c-k-c0xffffffff-no-rj-mo" alt="user" />
+          <div class="user-info">
+            <h5 style="  margin: 0;color:black;">July Dec</h5>
+            <small>2h ago</small>
+          </div>
+        </div>
+      </div>
+      <div style="background-color:#fff;border-radius: 5px; padding-bottom:5%;" class="item"><img style="margin: ;
+                  background-color: #fff;
+                  border-radius: 10px;
+                  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+                  " src="https://c0.wallpaperflare.com/preview/483/210/436/car-green-4x4-jeep.jpg" >
+        <h4 class="" style="background: #cccccc;
+                  border-radius: 50px;
+                  font-size: 12px;
+                  margin: 4% 5%;
+                  width:40%;
+                  color: #fff;
+                  padding: 2px 5px;
+                  cursor: pointer;
+                  background-color:#47bcd4;">English</h4>
+        <h4 style="color:black;padding:5%;text-align:left;">A complete crash course in English:Zero to Hero</h4>
+        <p style="text-align:left; width:80%;margin: 7%; color:#545d7a">
+          An exploration into the truck's polarising design
+        </p>
+        <div style="display: flex;
+                  margin-top: auto;text-align:left;" class="user">
+          <img style="border-radius: 50%;
+                          width: 40px;
+                          height: 40px;
+                          margin-right: 10px;" src="https://yt3.ggpht.com/a/AGF-l7-0J1G0Ue0mcZMw-99kMeVuBmRxiPjyvIYONg=s900-c-k-c0xffffffff-no-rj-mo" alt="user" />
+          <div class="user-info">
+            <h5 style="  margin: 0;color:black;">July Dec</h5>
+            <small>2h ago</small>
+          </div>
+        </div>
+      </div>
+      <div style="background-color:#fff;border-radius: 5px; padding-bottom:5%;" class="item"><img style="margin: ;
+                      background-color: #fff;
+                      border-radius: 10px;
+                      box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+                      " src="https://c0.wallpaperflare.com/preview/483/210/436/car-green-4x4-jeep.jpg" >
+        <h4 class="" style="background: #cccccc;
+                      border-radius: 50px;
+                      font-size: 12px;
+                      margin: 4% 5%;
+                      width:40%;
+                      color: #fff;
+                      padding: 2px 5px;
+                      cursor: pointer;
+                      background-color:#47bcd4;">English</h4>
+        <h4 style="color:black;padding:5%;text-align:left;">A complete crash course in English:Zero to Hero</h4>
+        <p style="text-align:left; width:80%;margin: 7%; color:#545d7a">
+          An exploration into the truck's polarising design
+        </p>
+        <div style="display: flex;
+                      margin-top: auto;text-align:left;" class="user">
+          <img style="border-radius: 50%;
+                              width: 40px;
+                              height: 40px;
+                              margin-right: 10px;" src="https://yt3.ggpht.com/a/AGF-l7-0J1G0Ue0mcZMw-99kMeVuBmRxiPjyvIYONg=s900-c-k-c0xffffffff-no-rj-mo" alt="user" />
+          <div class="user-info">
+            <h5 style="  margin: 0;color:black;">July Dec</h5>
+            <small>2h ago</small>
+          </div>
+        </div>
+      </div>
+      <div style="background-color:#fff;border-radius: 5px; padding-bottom:5%;" class="item"><img style="margin: ;
+                          background-color: #fff;
+                          border-radius: 10px;
+                          box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+                          " src="https://c0.wallpaperflare.com/preview/483/210/436/car-green-4x4-jeep.jpg" >
+        <h4 class="" style="background: #cccccc;
+                          border-radius: 50px;
+                          font-size: 12px;
+                          margin: 4% 5%;
+                          width:40%;
+                          color: #fff;
+                          padding: 2px 5px;
+                          cursor: pointer;
+                          background-color:#47bcd4;">English</h4>
+        <h4 style="color:black;padding:5%;text-align:left;">A complete crash course in English:Zero to Hero</h4>
+        <p style="text-align:left; width:80%;margin: 7%; color:#545d7a">
+          An exploration into the truck's polarising design
+        </p>
+        <div style="display: flex;
+                          margin-top: auto;text-align:left;" class="user">
+          <img style="border-radius: 50%;
+                                  width: 40px;
+                                  height: 40px;
+                                  margin-right: 10px;" src="https://yt3.ggpht.com/a/AGF-l7-0J1G0Ue0mcZMw-99kMeVuBmRxiPjyvIYONg=s900-c-k-c0xffffffff-no-rj-mo" alt="user" />
+          <div class="user-info">
+            <h5 style="  margin: 0;color:black;">July Dec</h5>
+            <small>2h ago</small>
+          </div>
+        </div>
+      </div>
+      <div style="background-color:#fff;border-radius: 5px; padding-bottom:5%;" class="item"><img style="margin: ;
+                              background-color: #fff;
+                              border-radius: 10px;
+                              box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+                              " src="https://c0.wallpaperflare.com/preview/483/210/436/car-green-4x4-jeep.jpg" >
+        <h4 class="" style="background: #cccccc;
+                              border-radius: 50px;
+                              font-size: 12px;
+                              margin: 4% 5%;
+                              width:40%;
+                              color: #fff;
+                              padding: 2px 5px;
+                              cursor: pointer;
+                              background-color:#47bcd4;">English</h4>
+        <h4 style="color:black;padding:5%;text-align:left;">A complete crash course in English:Zero to Hero</h4>
+        <p style="text-align:left; width:80%;margin: 7%; color:#545d7a">
+          An exploration into the truck's polarising design
+        </p>
+        <div style="display: flex;
+                              margin-top: auto;text-align:left;" class="user">
+          <img style="border-radius: 50%;
+                                      width: 40px;
+                                      height: 40px;
+                                      margin-right: 10px;" src="https://yt3.ggpht.com/a/AGF-l7-0J1G0Ue0mcZMw-99kMeVuBmRxiPjyvIYONg=s900-c-k-c0xffffffff-no-rj-mo" alt="user" />
+          <div class="user-info">
+            <h5 style="  margin: 0;color:black;">July Dec</h5>
+            <small>2h ago</small>
+          </div>
+        </div>
+      </div>
+      <div style="background-color:#fff;border-radius: 5px; padding-bottom:5%;" class="item"><img style="margin: ;
+                                  background-color: #fff;
+                                  border-radius: 10px;
+                                  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+                                  " src="https://c0.wallpaperflare.com/preview/483/210/436/car-green-4x4-jeep.jpg" >
+        <h4 class="" style="background: #cccccc;
+                                  border-radius: 50px;
+                                  font-size: 12px;
+                                  margin: 4% 5%;
+                                  width:40%;
+                                  color: #fff;
+                                  padding: 2px 5px;
+                                  cursor: pointer;
+                                  background-color:#47bcd4;">English</h4>
+        <h4 style="color:black;padding:5%;text-align:left;">A complete crash course in English:Zero to Hero</h4>
+        <p style="text-align:left; width:80%;margin: 7%; color:#545d7a">
+          An exploration into the truck's polarising design
+        </p>
+        <div style="display: flex;
+                                  margin-top: auto;text-align:left;" class="user">
+          <img style="border-radius: 50%;
+                                          width: 40px;
+                                          height: 40px;
+                                          margin-right: 10px;" src="https://yt3.ggpht.com/a/AGF-l7-0J1G0Ue0mcZMw-99kMeVuBmRxiPjyvIYONg=s900-c-k-c0xffffffff-no-rj-mo" alt="user" />
+          <div class="user-info">
+            <h5 style="  margin: 0;color:black;">July Dec</h5>
+            <small>2h ago</small>
+          </div>
+        </div>
+      </div>
+      <div style="background-color:#fff;border-radius: 5px; padding-bottom:5%;" class="item"><img style="margin: ;
+                                      background-color: #fff;
+                                      border-radius: 10px;
+                                      box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+                                      " src="https://c0.wallpaperflare.com/preview/483/210/436/car-green-4x4-jeep.jpg" >
+        <h4 class="" style="background: #cccccc;
+                                      border-radius: 50px;
+                                      font-size: 12px;
+                                      margin: 4% 5%;
+                                      width:40%;
+                                      color: #fff;
+                                      padding: 2px 5px;
+                                      cursor: pointer;
+                                      background-color:#47bcd4;">English</h4>
+        <h4 style="color:black;padding:5%;text-align:left;">A complete crash course in English:Zero to Hero</h4>
+        <p style="text-align:left; width:80%;margin: 7%; color:#545d7a">
+          An exploration into the truck's polarising design
+        </p>
+        <div style="display: flex; align-self:flex-start;
+                                      margin-top: auto;text-align:left;" class="user">
+          <img style="border-radius: 50%;
+                                              width: 40px;
+                                              height: 40px;
+                                              margin-right: 10px;" src="https://yt3.ggpht.com/a/AGF-l7-0J1G0Ue0mcZMw-99kMeVuBmRxiPjyvIYONg=s900-c-k-c0xffffffff-no-rj-mo" alt="user" />
+          <div class="user-info">
+            <h5 style="  margin: 0;color:black;">July Dec</h5>
+            <small>2h ago</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+  <!-- <div class="">
+
+    <h1 class="" style=" text-align:left;padding-top:3%;width:90%;margin-left:5%;padding-left:4%;background-color:#B5FFD9;">Social Studies</h1>
+
+    <div style="text-align:center; width:90%;margin-left:5%;margin-bottom:3%; border-radius:5px; background-color:#B5FFD9;padding-top:3%" class="owl-carousel owl-theme">
+      <div style="background-color:#fff;border-radius: 5px; padding-bottom:5%;" class="item"><img style="margin: ;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+        " src="https://c0.wallpaperflare.com/preview/483/210/436/car-green-4x4-jeep.jpg" >
+        <h4 class="" style="background: #cccccc;
+        border-radius: 50px;
+        font-size: 12px;
+        margin: 4% 5%;
+        width:40%;
+        color: #fff;
+        padding: 2px 5px;
+        cursor: pointer;
+        background-color:#47bcd4;">English</h4>
+        <h4 style="color:black;padding:5%;text-align:left;">A complete crash course in English:Zero to Hero</h4>
+        <p style="text-align:left; width:80%;margin: 7%; color:#545d7a">
+          An exploration into the truck's polarising design
+        </p>
+        <div style="display: flex;
+        margin-top: auto;text-align:left;" class="user">
+          <img style="border-radius: 50%;
+                width: 40px;
+                height: 40px;
+                margin-right: 10px;" src="https://yt3.ggpht.com/a/AGF-l7-0J1G0Ue0mcZMw-99kMeVuBmRxiPjyvIYONg=s900-c-k-c0xffffffff-no-rj-mo" alt="user" />
+          <div class="user-info">
+            <h5 style="  margin: 0;color:black;">July Dec</h5>
+            <small>2h ago</small>
+          </div>
+        </div>
+      </div>
+      <div style="background-color:#fff;border-radius: 5px; padding-bottom:5%;" class="item"><img style="margin: ;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+            " src="https://c0.wallpaperflare.com/preview/483/210/436/car-green-4x4-jeep.jpg" >
+        <h4 class="" style="background: #cccccc;
+            border-radius: 50px;
+            font-size: 12px;
+            margin: 4% 5%;
+            width:40%;
+            color: #fff;
+            padding: 2px 5px;
+            cursor: pointer;
+            background-color:#47bcd4;">English</h4>
+        <h4 style="color:black;padding:5%;text-align:left;">A complete crash course in English:Zero to Hero</h4>
+        <p style="text-align:left; width:80%;margin: 7%; color:#545d7a">
+          An exploration into the truck's polarising design
+        </p>
+        <div style="display: flex;
+            margin-top: auto;text-align:left;" class="user">
+          <img style="border-radius: 50%;
+                    width: 40px;
+                    height: 40px;
+                    margin-right: 10px;" src="https://yt3.ggpht.com/a/AGF-l7-0J1G0Ue0mcZMw-99kMeVuBmRxiPjyvIYONg=s900-c-k-c0xffffffff-no-rj-mo" alt="user" />
+          <div class="user-info">
+            <h5 style="  margin: 0;color:black;">July Dec</h5>
+            <small>2h ago</small>
+          </div>
+        </div>
+      </div>
+      <div style="background-color:#fff;border-radius: 5px; padding-bottom:5%;" class="item"><img style="margin: ;
+                background-color: #fff;
+                border-radius: 10px;
+                box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+                " src="https://c0.wallpaperflare.com/preview/483/210/436/car-green-4x4-jeep.jpg" >
+        <h4 class="" style="background: #cccccc;
+                border-radius: 50px;
+                font-size: 12px;
+                margin: 4% 5%;
+                width:40%;
+                color: #fff;
+                padding: 2px 5px;
+                cursor: pointer;
+                background-color:#47bcd4;">English</h4>
+        <h4 style="color:black;padding:5%;text-align:left;">A complete crash course in English:Zero to Hero</h4>
+        <p style="text-align:left; width:80%;margin: 7%; color:#545d7a">
+          An exploration into the truck's polarising design
+        </p>
+        <div style="display: flex;
+                margin-top: auto;text-align:left;" class="user">
+          <img style="border-radius: 50%;
+                        width: 40px;
+                        height: 40px;
+                        margin-right: 10px;" src="https://yt3.ggpht.com/a/AGF-l7-0J1G0Ue0mcZMw-99kMeVuBmRxiPjyvIYONg=s900-c-k-c0xffffffff-no-rj-mo" alt="user" />
+          <div class="user-info">
+            <h5 style="  margin: 0;color:black;">July Dec</h5>
+            <small>2h ago</small>
+          </div>
+        </div>
+      </div>
+      <div style="background-color:#fff;border-radius: 5px; padding-bottom:5%;" class="item"><img style="margin: ;
+                    background-color: #fff;
+                    border-radius: 10px;
+                    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+                    " src="https://c0.wallpaperflare.com/preview/483/210/436/car-green-4x4-jeep.jpg" >
+        <h4 class="" style="background: #cccccc;
+                    border-radius: 50px;
+                    font-size: 12px;
+                    margin: 4% 5%;
+                    width:40%;
+                    color: #fff;
+                    padding: 2px 5px;
+                    cursor: pointer;
+                    background-color:#47bcd4;">English</h4>
+        <h4 style="color:black;padding:5%;text-align:left;">A complete crash course in English:Zero to Hero</h4>
+        <p style="text-align:left; width:80%;margin: 7%; color:#545d7a">
+          An exploration into the truck's polarising design
+        </p>
+        <div style="display: flex;
+                    margin-top: auto;text-align:left;" class="user">
+          <img style="border-radius: 50%;
+                            width: 40px;
+                            height: 40px;
+                            margin-right: 10px;" src="https://yt3.ggpht.com/a/AGF-l7-0J1G0Ue0mcZMw-99kMeVuBmRxiPjyvIYONg=s900-c-k-c0xffffffff-no-rj-mo" alt="user" />
+          <div class="user-info">
+            <h5 style="  margin: 0;color:black;">July Dec</h5>
+            <small>2h ago</small>
+          </div>
+        </div>
+      </div>
+      <div style="background-color:#fff;border-radius: 5px; padding-bottom:5%;" class="item"><img style="margin: ;
+                        background-color: #fff;
+                        border-radius: 10px;
+                        box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+                        " src="https://c0.wallpaperflare.com/preview/483/210/436/car-green-4x4-jeep.jpg" >
+        <h4 class="" style="background: #cccccc;
+                        border-radius: 50px;
+                        font-size: 12px;
+                        margin: 4% 5%;
+                        width:40%;
+                        color: #fff;
+                        padding: 2px 5px;
+                        cursor: pointer;
+                        background-color:#47bcd4;">English</h4>
+        <h4 style="color:black;padding:5%;text-align:left;">A complete crash course in English:Zero to Hero</h4>
+        <p style="text-align:left; width:80%;margin: 7%; color:#545d7a">
+          An exploration into the truck's polarising design
+        </p>
+        <div style="display: flex;
+                        margin-top: auto;text-align:left;" class="user">
+          <img style="border-radius: 50%;
+                                width: 40px;
+                                height: 40px;
+                                margin-right: 10px;" src="https://yt3.ggpht.com/a/AGF-l7-0J1G0Ue0mcZMw-99kMeVuBmRxiPjyvIYONg=s900-c-k-c0xffffffff-no-rj-mo" alt="user" />
+          <div class="user-info">
+            <h5 style="  margin: 0;color:black;">July Dec</h5>
+            <small>2h ago</small>
+          </div>
+        </div>
+      </div>
+      <div style="background-color:#fff;border-radius: 5px; padding-bottom:5%;" class="item"><img style="margin: ;
+                            background-color: #fff;
+                            border-radius: 10px;
+                            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+                            " src="https://c0.wallpaperflare.com/preview/483/210/436/car-green-4x4-jeep.jpg" >
+        <h4 class="" style="background: #cccccc;
+                            border-radius: 50px;
+                            font-size: 12px;
+                            margin: 4% 5%;
+                            width:40%;
+                            color: #fff;
+                            padding: 2px 5px;
+                            cursor: pointer;
+                            background-color:#47bcd4;">English</h4>
+        <h4 style="color:black;padding:5%;text-align:left;">A complete crash course in English:Zero to Hero</h4>
+        <p style="text-align:left; width:80%;margin: 7%; color:#545d7a">
+          An exploration into the truck's polarising design
+        </p>
+        <div style="display: flex;
+                            margin-top: auto;text-align:left;" class="user">
+          <img style="border-radius: 50%;
+                                    width: 40px;
+                                    height: 40px;
+                                    margin-right: 10px;" src="https://yt3.ggpht.com/a/AGF-l7-0J1G0Ue0mcZMw-99kMeVuBmRxiPjyvIYONg=s900-c-k-c0xffffffff-no-rj-mo" alt="user" />
+          <div class="user-info">
+            <h5 style="  margin: 0;color:black;">July Dec</h5>
+            <small>2h ago</small>
+          </div>
+        </div>
+      </div>
+      <div style="background-color:#fff;border-radius: 5px; padding-bottom:5%;" class="item"><img style="margin: ;
+                                background-color: #fff;
+                                border-radius: 10px;
+                                box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+                                " src="https://c0.wallpaperflare.com/preview/483/210/436/car-green-4x4-jeep.jpg" >
+        <h4 class="" style="background: #cccccc;
+                                border-radius: 50px;
+                                font-size: 12px;
+                                margin: 4% 5%;
+                                width:40%;
+                                color: #fff;
+                                padding: 2px 5px;
+                                cursor: pointer;
+                                background-color:#47bcd4;">English</h4>
+        <h4 style="color:black;padding:5%;text-align:left;">A complete crash course in English:Zero to Hero</h4>
+        <p style="text-align:left; width:80%;margin: 7%; color:#545d7a">
+          An exploration into the truck's polarising design
+        </p>
+        <div style="display: flex;
+                                margin-top: auto;text-align:left;" class="user">
+          <img style="border-radius: 50%;
+                                        width: 40px;
+                                        height: 40px;
+                                        margin-right: 10px;" src="https://yt3.ggpht.com/a/AGF-l7-0J1G0Ue0mcZMw-99kMeVuBmRxiPjyvIYONg=s900-c-k-c0xffffffff-no-rj-mo" alt="user" />
+          <div class="user-info">
+            <h5 style="  margin: 0;color:black;">July Dec</h5>
+            <small>2h ago</small>
+          </div>
+        </div>
+      </div>
+      <div style="background-color:#fff;border-radius: 5px; padding-bottom:5%;" class="item"><img style="margin: ;
+                                    background-color: #fff;
+                                    border-radius: 10px;
+                                    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+                                    " src="https://c0.wallpaperflare.com/preview/483/210/436/car-green-4x4-jeep.jpg" >
+        <h4 class="" style="background: #cccccc;
+                                    border-radius: 50px;
+                                    font-size: 12px;
+                                    margin: 4% 5%;
+                                    width:40%;
+                                    color: #fff;
+                                    padding: 2px 5px;
+                                    cursor: pointer;
+                                    background-color:#47bcd4;">English</h4>
+        <h4 style="color:black;padding:5%;text-align:left;">A complete crash course in English:Zero to Hero</h4>
+        <p style="text-align:left; width:80%;margin: 7%; color:#545d7a">
+          An exploration into the truck's polarising design
+        </p>
+        <div style="display: flex;
+                                    margin-top: auto;text-align:left;" class="user">
+          <img style="border-radius: 50%;
+                                            width: 40px;
+                                            height: 40px;
+                                            margin-right: 10px;" src="https://yt3.ggpht.com/a/AGF-l7-0J1G0Ue0mcZMw-99kMeVuBmRxiPjyvIYONg=s900-c-k-c0xffffffff-no-rj-mo" alt="user" />
+          <div class="user-info">
+            <h5 style="  margin: 0;color:black;">July Dec</h5>
+            <small>2h ago</small>
+          </div>
+        </div>
+      </div>
+      <div style="background-color:#fff;border-radius: 5px; padding-bottom:5%;" class="item"><img style="margin: ;
+                                        background-color: #fff;
+                                        border-radius: 10px;
+                                        box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+                                        " src="https://c0.wallpaperflare.com/preview/483/210/436/car-green-4x4-jeep.jpg" >
+        <h4 class="" style="background: #cccccc;
+                                        border-radius: 50px;
+                                        font-size: 12px;
+                                        margin: 4% 5%;
+                                        width:40%;
+                                        color: #fff;
+                                        padding: 2px 5px;
+                                        cursor: pointer;
+                                        background-color:#47bcd4;">English</h4>
+        <h4 style="color:black;padding:5%;text-align:left;">A complete crash course in English:Zero to Hero</h4>
+        <p style="text-align:left; width:80%;margin: 7%; color:#545d7a">
+          An exploration into the truck's polarising design
+        </p>
+        <div style="display: flex; align-self:flex-start;
+                                        margin-top: auto;text-align:left;" class="user">
+          <img style="border-radius: 50%;
+                                                width: 40px;
+                                                height: 40px;
+                                                margin-right: 10px;" src="https://yt3.ggpht.com/a/AGF-l7-0J1G0Ue0mcZMw-99kMeVuBmRxiPjyvIYONg=s900-c-k-c0xffffffff-no-rj-mo" alt="user" />
+          <div class="user-info">
+            <h5 style="  margin: 0;color:black;">July Dec</h5>
+            <small>2h ago</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> -->
+  <marquee style="background: linear-gradient(to right, #39A6A3, #2F5D62); margin-top: 0;" direction="left" onmouseover="this.stop()" onmouseout="this.start()" scrollamount="20">
+    <div class="marqu">“Education is the passport to the future, for tomorrow belongs to those who prepare for it today.” “Your attitude, not your aptitude, will determine your altitude.” “If you think education is expensive, try ignorance.” “The
+      only person who is educated is the one who has learned how to learn …and change.”</div>
+  </marquee>
+
+  <!-- <footer>
+      		<div class="footer-container">
+      			<div class="left-col">
+      				<img class="imlogo" src="https://ekalshiksha.in/static/webpages/images/Logo.png' %}" style="width: 200px;">
+      				<div class="logo"></div>
+      				<div style="display:flex;"class="social-media">
+      					<a href="https://www.facebook.com/learnbowl"><img src="{% static '/webpages/images/icon\fb.png' %}"></a>
+      					<a href="https://www.instagram.com/learnbowl/"><img src="{% static '/webpages/images/icon\insta.png' %}"></a>
+      					<a href="#"><img src="{% static '/webpages/images/icon\tt.png' %}"></a>
+      					<a href="#"><img src="{% static '/webpages/images/icon\ytube.png' %}"></a>
+      					<a href="#"><img src="{% static '/webpages/images/icon\linkedin.png' %}"></a>
+      				</div><br><br>
+
+      				 <p><img src="{% static '/webpages/images/icon/location.png' %}"> Ekal Shiksha<br>Noida,India.</p><br>
+      				<p>
+      					<img src="{% static '/webpages/images/icon/phone.png' %}"> 9716864415<br><img src="{% static '/webpages/images/icon/mail.png' %}">&nbsp;  Contact@ekalshiksha.in</p>
+      			</div>
+      			<div class="right-col">
+      				<h1 style="color: #fff">Stay Updated</h1>
+      				<div class="border"></div><br>
+      				<p>Enter Your Email to get our News and updates.</p>
+      				<form class="newsletter-form">
+      					<input class="txtb" type="email" placeholder="Enter Your Email">
+      					<input class="btn" type="submit" value="Submit">
+      				</form>
+      			</div>
+
+      		</div>
+      		<br>
+      		<center>
+      			<p class="rights-text">Copyright © 2021 Created Ayush Kumar, All Rights Reserved.</p>
+      		</center>
+      		<br>
+      	</footer> -->
+
+
+  <!-- <footer>
+    <div class="container bottom_border">
+      <div class="columns">
+        <div class="column is-3 mr-3">
+          <h5 class="headin5_amrc col_white_amrc pt2"><strong class="has-text-white">&#169; Ekal Shiksha 2021</strong></h5>
+
+          <p class="mb10">Ekal Shiksha is an Ed-tech company which provides one on one individual online classes.</p>
+          <p><i class="fa fa-location-arrow"></i> C-54 sector 2 noida uttar pradesh Gautam budh nagar </p>
+          <p><i class="fa fa-phone"></i> <a href="tel:9625578335"> 9625578335.</a> </p>
+          <p><i class="fa fa fa-envelope"></i> contact@ekal.com </p>
+
+
+        </div>
+
+
+        <div class="column is-4">
+          <h5 class="headin5_amrc col_white_amrc pt2">Classes</h5>
+
+          <ul class="footer_ul_amrc is-flex">
+            <div class="pr-6">
+                  <li><a href="/6th/">Class 6</a></li>
+                  <li><a href="/7th/">Class 7</a></li>
+                  <li><a href="/8th/">Class 8</a></li>
+                  <li><a href="/9th/">Class 9</a></li>
+                  <li><a href="/10th/">Class 10</a></li>
+                </div>
+                <div class="pr-6">
+                  <li><a href="/Science/11th/">Class 11 Science</a></li>
+                  <li><a href="/Commerce/11th/">Class 11 Commerce</a></li>
+                  <li><a href="/Humanities/11th/">Class 11 Humanities</a></li>
+                  <li><a href="/Science/11th/">Class 12 Science</a></li>
+                  <li><a href="/Commerce/12th/">Class 12 Commerce</a></li>
+                  <li><a href="/Humanities/12th/">Class 12 Humanities</a></li>
+                </div>
+          </ul>
+
+        </div>
+
+        <div class="column is-4">
+          <h5 class="headin5_amrc col_white_amrc pt2">Study Material</h5>
+
+          <ul class="footer_ul_amrc is-flex">
+            <div class="pr-6">
+              <li><a href="https://on-app.in/app/home?orgCode=uhmmr">Class 6</a></li>
+              <li><a href="https://on-app.in/app/home?orgCode=uhmmr">Class 7</a></li>
+              <li><a href="https://on-app.in/app/home?orgCode=uhmmr">Class 8</a></li>
+              <li><a href="https://on-app.in/app/home?orgCode=uhmmr">Class 9</a></li>
+              <li><a href="https://on-app.in/app/home?orgCode=uhmmr">Class 10</a></li>
+            </div>
+            <div class="pr-6">
+              <li><a href="https://on-app.in/app/home?orgCode=uhmmr">Class 11 Science</a></li>
+              <li><a href="https://on-app.in/app/home?orgCode=uhmmr">Class 11 Commerce</a></li>
+              <li><a href="https://on-app.in/app/home?orgCode=uhmmr">Class 11 Humanities</a></li>
+              <li><a href="https://on-app.in/app/home?orgCode=uhmmr">Class 12 Science</a></li>
+              <li><a href="https://on-app.in/app/home?orgCode=uhmmr">Class 12 Commerce</a></li>
+              <li><a href="https://on-app.in/app/home?orgCode=uhmmr">Class 12 Humanities</a></li>
+            </div>
+          </ul>
+
+        </div>
+        <div class="column">
+          <h5 class="headin5_amrc col_white_amrc pt2"> About</h5>
+
+          <ul class="footer_ul_amrc">
+            <li><a href="/AboutUs/">About Us</a></li>
+
+          </ul>
+
+        </div>
+
+      </div>
+    </div>
+
+
+
+
+    <div class="container">
+      <ul class="foote_bottom_ul_amrc is-flex-mobile is-flex-wrap-wrap">
+        <li><a href="{% url 'index' %}">Home</a></li>
+        <li><a href="/AboutUs/">About</a></li>
+        <li><a href="/Doubts/">Doubt Class</a></li>
+
+      </ul>
+
+
+      <ul class="social_footer_ul">
+        <li><a href="https://www.facebook.com/ekalshiksha/"><i class="fab fa-facebook-f"></i></a></li>
+        <li><a href="https://twitter.com/ekalshiksha?lang=en"><i class="fab fa-twitter"></i></a></li>
+        <li><a href="https://in.linkedin.com/company/ekal-shiksha"><i class="fab fa-linkedin"></i></a></li>
+        <li><a href="https://www.instagram.com/ekal_shiksha/?hl=en"><i class="fab fa-instagram"></i></a></li>
+      </ul>
+
+    </div>
+
+  </footer> -->
+  <footer style="padding:3%; ">
+    <div class="container bottom_border">
+      <div class="columns">
+        <div class="column is-3 mr-3">
+          <h5 class="headin5_amrc col_white_amrc pt2"><strong class="has-text-white">&#169; Ekal Shiksha 2021</strong></h5>
+          <!--headin5_amrc-->
+          <p class="mb10">Ekal Shiksha is an Ed-tech company which provides one on one individual online classes.</p>
+          <p><i class="fa fa-location-arrow"></i> C-54 sector 2 Noida Uttar Pradesh Gautam Budh Nagar </p>
+          <p><i class="fa fa-phone"></i> <a href="tel:9625578335"> 9625578335.</a> </p>
+          <a href="mailto:contact@ekalshiksha.in">
+            <p><i class="fa fa fa-envelope"></i> contact@ekal.in </p>
+          </a>
+
+
+        </div>
+
+
+        <div class="column is-4">
+          <h5 class="headin5_amrc col_white_amrc pt2">Classes</h5>
+          <!--headin5_amrc-->
+          <ul class="footer_ul_amrc is-flex">
+            <div class="pr-6">
+                  <li><a href="/6th/">Class 6</a></li>
+                  <li><a href="/7th/">Class 7</a></li>
+                  <li><a href="/8th/">Class 8</a></li>
+                  <li><a href="/9th/">Class 9</a></li>
+                  <li><a href="/10th/">Class 10</a></li>
+                </div>
+                <div class="pr-6">
+                  <li><a href="/Science/11th/">Class 11 Science</a></li>
+                  <li><a href="/Commerce/11th/">Class 11 Commerce</a></li>
+                  <li><a href="/Humanities/11th/">Class 11 Humanities</a></li>
+                  <li><a href="/Science/11th/">Class 12 Science</a></li>
+                  <li><a href="/Commerce/12th/">Class 12 Commerce</a></li>
+                  <li><a href="/Humanities/12th/">Class 12 Humanities</a></li>
+                </div>
+          </ul>
+          <!--footer_ul_amrc ends here-->
+        </div>
+
+        <div class="column is-4">
+          <h5 class="headin5_amrc col_white_amrc pt2">Study Material</h5>
+          <!--headin5_amrc-->
+          <ul class="footer_ul_amrc is-flex">
+            <div class="pr-6">
+              <li><a href="https://on-app.in/app/home?orgCode=uhmmr">Class 6</a></li>
+              <li><a href="https://on-app.in/app/home?orgCode=uhmmr">Class 7</a></li>
+              <li><a href="https://on-app.in/app/home?orgCode=uhmmr">Class 8</a></li>
+              <li><a href="https://on-app.in/app/home?orgCode=uhmmr">Class 9</a></li>
+              <li><a href="https://on-app.in/app/home?orgCode=uhmmr">Class 10</a></li>
+            </div>
+            <div class="pr-6">
+              <li><a href="https://on-app.in/app/home?orgCode=uhmmr">Class 11 Science</a></li>
+              <li><a href="https://on-app.in/app/home?orgCode=uhmmr">Class 11 Commerce</a></li>
+              <li><a href="https://on-app.in/app/home?orgCode=uhmmr">Class 11 Humanities</a></li>
+              <li><a href="https://on-app.in/app/home?orgCode=uhmmr">Class 12 Science</a></li>
+              <li><a href="https://on-app.in/app/home?orgCode=uhmmr">Class 12 Commerce</a></li>
+              <li><a href="https://on-app.in/app/home?orgCode=uhmmr">Class 12 Humanities</a></li>
+            </div>
+          </ul>
+          <!--footer_ul_amrc ends here-->
+        </div>
+        <div class="column">
+          <h5 class="headin5_amrc col_white_amrc pt2"> About</h5>
+          <!--headin5_amrc-->
+          <ul class="footer_ul_amrc">
+            <li><a href="/AboutUs/">About Us</a></li>
+
+          </ul>
+          <!--footer_ul_amrc ends here-->
+        </div>
+
+      </div>
+    </div>
+
+
+
+
+    <div class="container">
+      <ul class="foote_bottom_ul_amrc is-flex-mobile is-flex-wrap-wrap">
+        <li><a href="{% url 'index' %}">Home</a></li>
+        <li><a href="/AboutUs/">About</a></li>
+        <li><a href="/Doubts/">Doubt Class</a></li>
+
+      </ul>
+      <!--foote_bottom_ul_amrc ends here-->
+
+      <ul class="social_footer_ul">
+        <li><a href="https://www.facebook.com/ekalshiksha/"><i class="fab fa-facebook-f"></i></a></li>
+        <li><a href="https://twitter.com/ekalshiksha?lang=en"><i class="fab fa-twitter"></i></a></li>
+        <li><a href="https://in.linkedin.com/company/ekal-shiksha"><i class="fab fa-linkedin"></i></a></li>
+        <li><a href="https://www.instagram.com/ekal_shiksha/?hl=en"><i class="fab fa-instagram"></i></a></li>
+      </ul>
+      <!--social_footer_ul ends here-->
+    </div>
+
+  </footer>
+  <script src="owlcarousel/owl.carousel.min.js"></script>
+  <script>
+    const next = '<i style="color:#8236CB;" class="fa fa-chevron-circle-left fa-2x"></i>';
+    const prev = '<i style="color:#8236CB;" class="fa fa-chevron-circle-right fa-2x"></i>';
+    $('.owl-carousel').owlCarousel({
+      loop: false,
+      margin: 20,
+      items:3,
+      nav: true,
+      dots: false,
+      navText: [
+        next,
+        prev,
+      ],
+      autoplay: false,
+      // autoplayTimeout: 5000,
+      autoplayHoverPause: true,
+      responsive: {
+        0: {
+          items: 1
+        },
+        600: {
+          items: 2
+        },
+        1000: {
+          items: 4
+        }
+      }
+    });
+  </script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+
+    // Get all "navbar-burger" elements
+    const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+    // Check if there are any navbar burgers
+    if ($navbarBurgers.length > 0) {
+
+      const navbarDropdown = [].slice.call(document.querySelectorAll("#navbarDropdown"));
+
+
+
+      // Add a click event on each of them
+      $navbarBurgers.forEach(el => {
+        el.addEventListener('click', () => {
+
+          // Get the target from the "data-target" attribute
+          const target = el.dataset.target;
+          const $target = document.getElementById(target);
+
+          // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+          el.classList.toggle('is-active');
+          $target.classList.toggle('is-active');
+
+          if ($target.classList.contains("is-active")) {
+            navbarDropdown.map((e) => {
+              e.lastElementChild.style.display = "none"
+            })
+          } else {
+            navbarDropdown.map((e) => {
+              e.lastElementChild.style.removeProperty("display")
+            })
+          }
+
+          navbarDropdown.map((e) => {
+            const button = e.firstElementChild;
+            button.addEventListener("click", () => {
+              if (e.lastElementChild.style.display === "none") {
+                e.lastElementChild.style.display = "block";
+              } else {
+                e.lastElementChild.style.display = "none";
+              }
+            });
+          });
+
+        });
+      });
+    }
+  });
+</script>
+
+
+
+</body>
+
+</html>
