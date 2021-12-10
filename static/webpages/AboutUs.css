@@ -11,6 +11,11 @@
  p{
    justify-content: space-evenly;
  }
+
+ body{
+  overflow-x:hidden;
+ }
+
  .block{
    display: inline;
    margin-top: -100em ;
@@ -58,7 +63,7 @@
 
 .read-more{
   margin-bottom: 10%;
-  color: red;
+  /* color: red; */
   }
 
 .block1{
@@ -4566,7 +4571,7 @@ height: 380px;
 }
 @media (max-width: 500px){
 p{
-  font-size: 8px !important;
+  font-size: 1rem !important;
 }
   .img1{
     flex-direction: column;
@@ -4616,7 +4621,7 @@ p{
   }
 
   #detail p{
-    font-size: 10px !important;
+    font-size: 0.9rem !important;
   }
 }
 .hr hr{

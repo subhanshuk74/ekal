@@ -75,7 +75,7 @@
 
 <body>
 
-  <nav class="navbar px-5 is-fixed-top" role="navigation" aria-label="main navigation">
+  <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
       <a class="navbar-item" href="{% url 'index' %}">
          <img alt="ekal shiksha logo" src="{% static 'webpages/images/Logo head.jpeg' %}">
@@ -330,32 +330,32 @@
         <p style="font-size: 50px; margin-top: 50px; ">Originators of Ekal Shiksha</p>
       </center>
       <div class="totalcard ">
-        <div class="card readmore">
+        <div class="card">
           <center><img style="margin-top:10%" src="{% static 'webpages/images/Sanchit.jpg' %}"></center>
           <div class="card-title">Sanchit Singhal (Founder)</div>
           <div id="detail">
             <!-- <h5 style="text-align:left; margin-left:10%;margin-bottom:5%;">IT INCLUDES</h5> -->
 
-            <p style="justify-content: space-between;">A highly amicable person who likes interacting with students, parents and teachers to help the students succeed academically. Sanchit, being an educator for the past 6 years, has a passion for
+            <p style="justify-content: space-between;" class="readmore">A highly amicable person who likes interacting with students, parents and teachers to help the students succeed academically. Sanchit, being an educator for the past 6 years, has a passion for
               educational research for innovating the teaching strategies laid down by mentors. Moreover, he always listens to student’s academic, social and behavioural concerns in a non-judgemental way so that their goals do not get disrupted.</p>
             <!-- <br> -->
-            <a href="" class="read-more">Read More</a>
+            
 
             <div class="duty"></div>
             <!-- <a href="https://on-app.in/app/home?orgCode=uhmmr" target="_blank"><button class="btn-b">Acess Now</button></button></a> -->
           </div>
           </center>
         </div>
-        <div class="card readmore">
+        <div class="card ">
           <center><img style="margin-top:10%" src="{% static 'webpages/images/Vanshika.jpg' %}"></center>
           <div class="card-title">Vanshika Garg (Co-founder)</div>
           <div id="detail">
             <!-- <h5 style="text-align:left; margin-left:10%; margin-bottom:5%;">IT INCLUDES</h5> -->
 
-            <p style="justify-content: space-between;">A firm believer in communication in all possible forms. She started as a teacher where her teaching style was very patient, friendly and accomodating. Also, Vanshika values real-world learning
+            <p style="justify-content: space-between;" class="readmore read-more">A firm believer in communication in all possible forms. She started as a teacher where her teaching style was very patient, friendly and accomodating. Also, Vanshika values real-world learning
               and engages with her students while teaching by identifying the resources that students need to make the grade. By providing actionable feedback to each student, Vanshika helps the students focus on the results..</p>
             <!-- <br> -->
-            <a href="" class="read-more">Read More</a>
+            
             
             
 
@@ -366,13 +366,13 @@
           </div>
           </center>
         </div>
-        <div class="card readmore">
+        <div class="card ">
           <center><img style="margin-top:10%" src="{% static 'webpages/images/Bhavya.jpg' %}"></center>
           <div class="card-title">Bhavya Sharma (Co-founder)</div>
           <div id="detail">
             <!-- <h5 style="text-align:left; margin-left:10%; margin-bottom:5%;">IT INCLUDES</h5> -->
 
-            <p style="justify-content: space-between; ">A software engineer by profession and a teacher by his desire. He has strategic thinking and strong communication skills. His technical integrity and good mentorship provide in-depth knowledge
+            <p style="justify-content: space-between; " class="readmore">A software engineer by profession and a teacher by his desire. He has strategic thinking and strong communication skills. His technical integrity and good mentorship provide in-depth knowledge
               to students for their upliftment and enrichment. Bhavya ensures that students are listening, acting and improving in every class they take with Ekal Shiksha.</p>
             <!-- <br><br> -->
             
@@ -571,14 +571,15 @@
       });
     });
   </script>
+  <script src="{% static 'webpages/Js/readMoreJS.min.js' %}"></script>
   <script>
     
       $readMoreJS.init({
         target: '.readmore', // Selector of the element the plugin applies to (any CSS selector, eg: '#', '.'). Default: ''
-        numOfWords: 0, // Number of words to initially display (any number). Default: 50
+        numOfWords: 20, // Number of words to initially display (any number). Default: 50
         toggle: true, // If true, user can toggle between 'read more' and 'read less'. Default: true
-        moreLink: '<button class="get-started" style="margin:auto;">Read More</button>', // The text of 'Read more' link. Default: 'read more ...'
-        lessLink: '<button class="get-started" style="margin:auto;">Read Less</button>' // The text of 'Read less' link. Default: 'read less'
+        moreLink: '<button class="read-more" style="margin-left:10%;border:none;float:left;background-color:#1DB9C3;font-size:1rem;color:#fff;border-radius:5%;padding:1% 2%">Read More</button>', // The text of 'Read more' link. Default: 'read more ...'
+        lessLink: '<button class="read-more" style="margin-left:10%;border:none;float:left;background-color:#1DB9C3;font-size:1rem;color:#fff;border-radius:5%;padding:1% 2%; ">Read Less</button>' // The text of 'Read less' link. Default: 'read less'
       });
     
   </script>

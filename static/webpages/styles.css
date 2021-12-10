@@ -250,6 +250,9 @@ lll {
   cursor: pointer;
   transition-duration: 0.4s;
 }
+.read-more{
+  border: none ;
+}
 #detail a {
   bottom: 80px;
   text-decoration: none;
@@ -368,7 +371,7 @@ footer p { font-size:13px; color:#CCC; padding-bottom:0px; margin-bottom:8px;}
 	.totalcard .card {
 	  margin: 50px;
 	  width: 300px;
-	  height: 450px;
+	  /* height: 450px; */
 	  border-radius: 10px;
 	  background: #fff;
 	}
