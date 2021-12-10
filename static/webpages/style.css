@@ -863,6 +863,9 @@ display: flex;
     font-size: 1.7rem !important;
   }
 
+  figure {
+    height: 12rem !important;
+  }
 }
 
 .front,
@@ -968,13 +971,14 @@ display: flex;
     padding-bottom: 1.5rem;
   }
   figure{
-    height: 9rem !important;
+    height: 11rem !important;
   }
   .rotate {
     position: static;
     transform: rotate(0deg);
     font-size: 2rem !important;
 }
+
 
 .Booknow-btn{
   /* padding-left: 10%; */
