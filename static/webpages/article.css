@@ -25,3 +25,13 @@
       font-weight: 400;
       height: 2em;
 }
+
+
+@media (max-width: 900px) {
+  .article-title h1{
+    font-size: 1.5rem;
+  }
+  .article-content{
+    font-size: 1.2rem !important;
+  }
+}

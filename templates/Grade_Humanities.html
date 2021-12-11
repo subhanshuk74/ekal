@@ -359,7 +359,7 @@
   <div class="bbop background" style="position:sticky;">
     <br>
     <br>
-    <h1 class="bop is-size-2" style="padding-top:0%; ">{{object.Grade_Title}}</h1>
+    <h1 class="bop" style="padding-top:0%; ">{{object.Grade_Title}}</h1>
     <br>
 
     <p class="is-size-5 px-6 readmore">{{object.info}}
@@ -400,7 +400,7 @@
           <br>
           <h2 class="is-size-4">English</h2>
           <br>
-          <p class="is-size-6">{{object.English}}</p>
+          <p class="is-size-6 read-more">{{object.English}}</p>
           <br>
         </div>
       </div>
@@ -415,7 +415,7 @@
           <br>
           <h2 class="is-size-4">Political Science</h2>
           <br>
-          <p class="is-size-6">{{object.PolSc}} </p>
+          <p class="is-size-6 read-more">{{object.PolSc}} </p>
           <br>
         </div>
       </div>
@@ -429,7 +429,7 @@
           <br>
           <h2 class="is-size-4">Geography</h2>
           <br>
-          <p class="is-size-6">{{object.Geo}}</p>
+          <p class="is-size-6 read-more">{{object.Geo}}</p>
           <br>
         </div>
       </div>
@@ -443,7 +443,7 @@
           <br>
           <h2 class="is-size-4">History</h2>
           <br>
-          <p class="is-size-6">{{object.History}}</p>
+          <p class="is-size-6 read-more">{{object.History}}</p>
           <br>
         </div>
       </div>
@@ -456,7 +456,7 @@
           <br>
           <h2 class="is-size-4">Sociology</h2>
           <br>
-          <p class="is-size-6">{{object.Sociology}}</p>
+          <p class="is-size-6 read-more">{{object.Sociology}}</p>
           <br>
         </div>
       </div>
@@ -469,7 +469,7 @@
           <br>
           <h2 class="is-size-4">Psycology</h2>
           <br>
-          <p class="is-size-6">{{object.Psycology}}</p>
+          <p class="is-size-6 read-more">{{object.Psycology}}</p>
           <br>
         </div>
       </div>
@@ -925,6 +925,17 @@
     $readMoreJS.init({
       target: '.readmore', // Selector of the element the plugin applies to (any CSS selector, eg: '#', '.'). Default: ''
       numOfWords: 100, // Number of words to initially display (any number). Default: 50
+      toggle: true, // If true, user can toggle between 'read more' and 'read less'. Default: true
+      moreLink: '<button class="get-started" style="margin:auto;">Read More</button>', // The text of 'Read more' link. Default: 'read more ...'
+      lessLink: '<button class="get-started" style="margin:auto;">Read Less</button>' // The text of 'Read less' link. Default: 'read less'
+    });
+  }
+</script>
+<script>
+  if (screen.width < 500) {
+    $readMoreJS.init({
+      target: '.read-more', // Selector of the element the plugin applies to (any CSS selector, eg: '#', '.'). Default: ''
+      numOfWords: 30, // Number of words to initially display (any number). Default: 50
       toggle: true, // If true, user can toggle between 'read more' and 'read less'. Default: true
       moreLink: '<button class="get-started" style="margin:auto;">Read More</button>', // The text of 'Read more' link. Default: 'read more ...'
       lessLink: '<button class="get-started" style="margin:auto;">Read Less</button>' // The text of 'Read less' link. Default: 'read less'

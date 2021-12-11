@@ -1452,6 +1452,9 @@ section {
   color: #7d93b2;
   font-size: 18px;
 }
+.heading-size{
+  font-size: 3rem !important;
+}
 .mb-anchors-active{
   border: 4px solid !important;
 }
@@ -1832,7 +1835,7 @@ h2 {
 }
 
 .container {
-  display: flex;
+  /* display: flex; */
   justify-content: center;
   align-items: center;
   width: 100%;
@@ -2354,7 +2357,7 @@ h2 {
   }
 
   .bbop h1 {
-    font-size: 10px;
+    font-size: 1.5rem;
   }
 }
 

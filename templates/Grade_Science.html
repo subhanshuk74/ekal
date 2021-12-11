@@ -359,7 +359,7 @@
   <div class="bbop background" style="position:sticky;">
     <br>
     <br>
-    <h1 class="bop is-size-2" style="padding-top:0%; ">{{object.Grade_Title}}</h1>
+    <h1 class="bop" style="padding-top:0%; ">{{object.Grade_Title}}</h1>
     <br>
 
     <p class="is-size-5 px-6 readmore">{{object.info}}
@@ -400,7 +400,7 @@
           <br>
           <h2 class="is-size-4">Maths</h2>
           <br>
-          <p class="is-size-6">{{object.Math}}</p>
+          <p class="is-size-6 read-more">{{object.Math}}</p>
           <br>
         </div>
       </div>
@@ -415,7 +415,7 @@
           <br>
           <h2 class="is-size-4">Physics</h2>
           <br>
-          <p class="is-size-6">{{object.Physics}} </p>
+          <p class="is-size-6 read-more">{{object.Physics}} </p>
           <br>
         </div>
       </div>
@@ -429,7 +429,7 @@
           <br>
           <h2 class="is-size-4">Chemistry</h2>
           <br>
-          <p class="is-size-6">{{object.Chemistry}}</p>
+          <p class="is-size-6 read-more">{{object.Chemistry}}</p>
           <br>
         </div>
       </div>
@@ -443,7 +443,7 @@
           <br>
           <h2 class="is-size-4">Biology</h2>
           <br>
-          <p class="is-size-6">{{object.Bio}}</p>
+          <p class="is-size-6 read-more">{{object.Bio}}</p>
           <br>
         </div>
       </div>
@@ -456,7 +456,7 @@
           <br>
           <h2 class="is-size-4">English</h2>
           <br>
-          <p class="is-size-6">{{object.English}}</p>
+          <p class="is-size-6 read-more">{{object.English}}</p>
           <br>
         </div>
       </div>
@@ -466,7 +466,7 @@
 
     <div style="	background-image:linear-gradient(rgba(23,78,64,0.8),rgba(23,78,64,0.8)),url('/static/webpages/images/what we have for you child.svg');background-size: cover;padding-top:5%;" class="swiper-container mySwiper">
     <!-- <div style="background-color:#175b58;padding-top:5%;" class="swiper-container mySwiper"> -->
-      <h2 class="bop " style="padding-bottom:4%;color: #fff;font-size:3rem;font-weight:500">What we have for your child</h2>
+      <h2 class="bop wha-we-have" style="padding-bottom:4%;color: #fff;font-weight:500">What we have for your child</h2>
 
       <div class="swiper-wrapper">
         <div class="swiper-slide">
@@ -908,6 +908,17 @@
     $readMoreJS.init({
       target: '.readmore', // Selector of the element the plugin applies to (any CSS selector, eg: '#', '.'). Default: ''
       numOfWords: 100, // Number of words to initially display (any number). Default: 50
+      toggle: true, // If true, user can toggle between 'read more' and 'read less'. Default: true
+      moreLink: '<button class="get-started" style="margin:auto;">Read More</button>', // The text of 'Read more' link. Default: 'read more ...'
+      lessLink: '<button class="get-started" style="margin:auto;">Read Less</button>' // The text of 'Read less' link. Default: 'read less'
+    });
+  }
+</script>
+<script>
+  if (screen.width < 500) {
+    $readMoreJS.init({
+      target: '.read-more', // Selector of the element the plugin applies to (any CSS selector, eg: '#', '.'). Default: ''
+      numOfWords: 30, // Number of words to initially display (any number). Default: 50
       toggle: true, // If true, user can toggle between 'read more' and 'read less'. Default: true
       moreLink: '<button class="get-started" style="margin:auto;">Read More</button>', // The text of 'Read more' link. Default: 'read more ...'
       lessLink: '<button class="get-started" style="margin:auto;">Read Less</button>' // The text of 'Read less' link. Default: 'read less'
