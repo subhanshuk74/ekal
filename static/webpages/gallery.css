@@ -1,0 +1,48 @@
+
+.gal-heading{
+  font-size: 3rem;
+  text-align: center;
+}
+
+.gallery{
+  margin: 3%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.gal-item{
+  padding: 2%;
+  width: 33%;
+  
+}
+
+.gal-item img{
+  box-shadow: 10px 10px 4px grey;
+  border-radius:10px 0 10px 0;
+  transition: 1s;
+}
+
+.gal-item img:hover{
+  transform: translateY(0) scale(1.2);
+  
+}
+
+@media screen and (max-width:900px) {
+  .gal-item{
+    
+    width: 50%;
+  }
+}
+
+@media screen and (max-width:500px) {
+  .gallery{
+    align-items: center;
+  }
+  
+  .gal-item{
+    width: 90%;
+  }
+}

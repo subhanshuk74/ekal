@@ -34,7 +34,10 @@ urlpatterns = [
     url(r'^Humanities/(?P<Grade_Id>\w{0,5})/$', views.Grade_Humanities, name='Humanities'),
     # url(r'^Study/(?P<Id>\w{0,5})/$', Download.as_view(), name='Study'),
     url(r'^(?P<Grade_Id>\w{0,5})/$', views.Grades, name='Course'),
-
+    path('testimonial/',views.Testimonial, name='testimonial'),
+    path('teacher/',Teacher.as_view(),name='teacher'),
+    path('student/',Student.as_view(),name='student'),
+    path('gallery/',Gallery.as_view(),name='gallery'),
 
 
 

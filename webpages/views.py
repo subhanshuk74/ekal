@@ -255,11 +255,34 @@ class contact(CreateView):
         
         msg.send()
         return super(contact, self).form_valid(form)
+
+
 class work(CreateView):
     model = student
     form_class = Teach
     template_name = 'work.html'
 
+            
+class Teacher(CreateView):
+    model = student
+    form_class = Teach
+    template_name = 'teacher.html'
+
+            
+class Student(CreateView):
+    model = student
+    form_class = Teach
+    template_name = 'student.html'
+
+
+class Gallery(CreateView):
+    model = student
+    form_class = Teach
+    template_name = 'gallery.html'
+
+
+def Testimonial(request):
+    return render(request, "testimonial.html")
 
 
 def error_404(request,exception):

@@ -1,0 +1,58 @@
+
+.display{
+    display: flex;
+}
+
+.survey{
+    margin: auto;
+    text-align: left;
+    width: 70%;
+    padding: 5%;
+}
+
+.survey_heading{
+    font-size: 3rem;
+}
+
+.survey_detail{
+    font-size: 1.3rem;
+}
+
+.box label{
+    color: #fff;
+}
+.page_container{
+    padding: 5%;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+    margin: auto;
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)), url("images/extra/animated.gif");
+}
+
+.page_title{
+    margin: auto;
+    text-align: center;
+}
+
+.page_title h1{
+    font-size: 3rem;
+}
+.columns{
+    padding: 2%;
+}
+
+@media (max-width: 600px) {
+    .display{
+        display: block;
+    }
+    .page_title h1{
+        font-size: 1.5rem;
+    }
+    .survey_heading{
+        font-size: 2rem;
+    }
+    .survey_detail{
+        font-size: 1rem;
+        padding-bottom: 2rem;
+    }
+}

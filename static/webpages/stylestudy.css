@@ -110,9 +110,7 @@ body{
   overflow-x: hidden;
 
 }
-*{
-  overflow-x: hidden;
-}
+
 .bbop{
   text-align: center;
   justify-content: space-between;

@@ -1832,7 +1832,7 @@ h2 {
   .bbop {
     height: auto;
   }
-}
+]
 
 .container {
   /* display: flex; */
@@ -2363,7 +2363,7 @@ h2 {
 
 @media screen and (max-width: 450px) {
   .bop{
-    font-size: 1rem;
+    font-size: 2rem !important;
   }
 
 }
