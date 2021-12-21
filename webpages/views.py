@@ -281,8 +281,17 @@ class Gallery(CreateView):
     template_name = 'gallery.html'
 
 
+class Test(CreateView):
+    model = student
+    form_class = Teach
+    template_name = 'testPage.html'
+
+
 def Testimonial(request):
     return render(request, "testimonial.html")
+
+# def Test(request):
+#     return render(request, "testPage.html")
 
 
 def error_404(request,exception):

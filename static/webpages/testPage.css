@@ -1,0 +1,197 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap");
+
+
+.instruction{
+  position: relative;
+  margin: 8% auto;
+  min-height: 60%;
+  width: 40%;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.6);
+  background: white;
+  padding: 3rem 0 1rem 3rem;
+  box-sizing: border-box;
+  border-radius: 8px;
+}
+
+.btn {
+  font-family: "PT Sans", sans-serif;
+  font-size: 1.2rem;
+  padding: 1rem 2.5rem;
+  cursor: pointer;
+  border: none;
+}
+.open-modal {
+  background: #fff;
+  border-radius: 2rem;
+  border: 1px solid transparent;
+  box-shadow: 0 5px 10px 2px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s linear;
+}
+.open-modal:hover {
+  box-shadow: none;
+  background: rgba(255, 255, 255, 0.5);
+  border-color: #fff;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+.modal.open {
+  display: flex;
+}
+.modal-container-1 {
+  background-color: #fff;
+  width: 100%;
+  max-width: 450px;
+  position: relative;
+}
+.modal.open .modal-container {
+  animation: move 0.6s ease-out;
+}
+@keyframes move {
+  from {
+    transform: translateY(-50px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+
+.modal-content-1{
+  padding: 3rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.video-md{
+  width: 100%;
+  height: 14rem;
+}
+
+/* .modal-content > *:not(img) {
+  padding: 1rem;
+} */
+.modal-content h2 {
+  margin: 1.5rem 0 0.6rem 0;
+}
+.modal-content p {
+  font-size: 0.9rem;
+  margin-bottom: 0.4rem;
+}
+.modal-content a {
+  font-size: 0.8rem;
+  text-decoration: none;
+  padding-bottom: 1rem;
+  display: inline-block;
+}
+.modal-content a:hover {
+  color: salmon;
+}
+
+.close-modal {
+  font-size: 3rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #fff;
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  line-height: 40px;
+  cursor: pointer;
+  transition: color 0.15s linear;
+}
+.close-modal:hover {
+  color: #f00;
+}
+
+
+
+
+#form-1{
+  display: none;
+}
+
+.content-md{
+  margin-top: 20%;
+	font-size: 2rem;
+	font-family: 'Work Sans', sans-serif;
+	color: #333;
+  font-weight: 300;
+  text-align: center;
+  background-color: #f8f6f0;
+  /* margin: 0 30rem 0 30rem; */
+}
+.content-md h1{
+  font-weight: 300;
+  margin: 0px;
+  padding: 1rem;
+  font-size: 2rem;
+  background-color: #444;
+  color: #fff;
+}
+.question{
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+.answers {
+  margin-bottom: 1rem;
+  text-align: left;
+  display: inline-block;
+}
+.answers label{
+  display: block;
+  margin-bottom: 1rem;
+}
+button{
+  font-family: 'Work Sans', sans-serif;
+	font-size: 1rem;
+	background-color: #279;
+	color: #fff;
+	border: 0px;
+	border-radius: 3p1remx;
+	padding: 1rem;
+	cursor: pointer;
+	margin-bottom: 2rem;
+}
+button:hover{
+	background-color: #38a;
+}
+
+.slide{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+.active-slide{
+  opacity: 1;
+  z-index: 2;
+}
+.quiz-container{
+  position: relative;
+  height: 200px;
+  margin-top: 40px;
+}
+
+
+@media screen and (max-width:500px) {
+  .instruction{
+    width: 80%;
+  }
+
+  .box{
+    width: 80%;
+  }
+}

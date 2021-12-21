@@ -38,6 +38,8 @@ urlpatterns = [
     path('teacher/',Teacher.as_view(),name='teacher'),
     path('student/',Student.as_view(),name='student'),
     path('gallery/',Gallery.as_view(),name='gallery'),
+    path('testPage/',Test.as_view(),name='testPage'),
+    # path('testPage/',views.Test,name='testPage'),
 
 
 
